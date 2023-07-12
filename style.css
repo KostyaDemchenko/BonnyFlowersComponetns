@@ -642,7 +642,7 @@ button {
 }
 
 .form-check-input:focus {
-    border-color: var(--light-red);
+    border-color: var(--red);
     outline: 0;
     box-shadow: var(--shadow-red);
 }
@@ -808,10 +808,9 @@ button {
     border: none;
 }
 
-.accordion-button:not(.collapsed) {
+.accordion-from-to .accordion-button:not(.collapsed) {
     color: var(--darck-gray);
     background-color: var(--white);
-    box-shadow: none;
 }
 
 
@@ -1952,5 +1951,5 @@ button {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-
 }
+

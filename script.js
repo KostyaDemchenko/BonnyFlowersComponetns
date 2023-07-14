@@ -77,7 +77,7 @@ incrementBtn.addEventListener('click', function () {
 
 
 
-// SLIDER
+// RANGE-FROM-TO-SLIDER
 
 
 

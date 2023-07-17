@@ -53,9 +53,9 @@ openCtaGroup.addEventListener('click', () => {
 
 
 // Получаем ссылки на необходимые элементы
-const decrementBtn = document.getElementById('decrement');
-const incrementBtn = document.getElementById('increment');
-const countSpan = document.getElementById('count');
+let decrementBtn = document.getElementById('decrement');
+let incrementBtn = document.getElementById('increment');
+let countSpan = document.getElementById('count');
 
 // Устанавливаем начальное значение счетчика
 let count = 1;

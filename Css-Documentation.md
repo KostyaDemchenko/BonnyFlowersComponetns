@@ -1074,9 +1074,9 @@ button {
 
 ### 16.2. Дуже великий розмір картки товару (card-XL) <a name="дуже-великий-розмір-картки-товару-card-xl)"></a>
 
-![Alt text](image-2.png)
+![Alt text](./screenshot/image-2.png)
 
-![Alt text](image-1.png)
+![Alt text](./screenshot/image-1.png)
 
 ```css
 /* card-XL */
@@ -1182,9 +1182,9 @@ button {
 
 ### 16.2. Великий розмір картки товару (card-L)<a name="великий-розмір-картки-товару-card-l)"></a>
 
-![Alt text](image-4.png)
+![Alt text](./screenshot/image-4.png)
 
-![Alt text](image-3.png)
+![Alt text](./screenshot/image-3.png)
 
 ```css
 /* card-L */
@@ -1329,9 +1329,9 @@ button {
 
 ### 16.4. Середній розмір картки товару (card-M)<a name="середній-розмір-картки-товару-card-m"></a>
 
-![Alt text](image-5.png)
+![Alt text](./screenshot/image-5.png)
 
-![Alt text](image-6.png)
+![Alt text](./screenshot/image-6.png)
 
 ```css
 /* card-M */
@@ -1477,9 +1477,9 @@ button {
 
 ### 16.5. Малий розмір картки товару (card-S) <a name="малий-розмір-картки-товару-card-s"></a>
 
-![Alt text](image-7.png)
+![Alt text](./screenshot/image-7.png)
 
-![Alt text](image-8.png)
+![Alt text](./screenshot/image-8.png)
 
 ```css
 /* card-S */
@@ -1601,9 +1601,9 @@ button {
 
 ### 16.6. Дуже малий розмір картки товару (card-XS) <a name="дуже-малий-розмір-картки-товару-card-xs"></a>
 
-![Alt text](image-9.png)
+![Alt text](./screenshot/image-9.png)
 
-![Alt text](image-10.png)
+![Alt text](./screenshot/image-10.png)
 
 ```css
 /* card-XS */
@@ -1748,9 +1748,9 @@ button {
 
 ### 16.7. Картка товару для сторінки замовлення (CARD-FOR-ORDERING-PAGE-L)<a name="картка-товару-для-сторінки-замовлення-card-for-ordering-page-l"></a>
 
-![Alt text](image-11.png)
+![Alt text](./screenshot/image-11.png)
 
-![Alt text](image-12.png)
+![Alt text](./screenshot/image-12.png)
 
 ```css
 /* CARD-FOR-ORDERING-PAGE-L */
@@ -1856,9 +1856,9 @@ button {
 
 ### 16.8. Картка товару для сторінки замовлення (CARD-FOR-ORDERING-PAGE-S)<a name="картка-товару-для-сторінки-замовлення-card-for-ordering-page-s"></a>
 
-![Alt text](image-13.png)
+![Alt text](./screenshot/image-13.png)
 
-![Alt text](image-14.png)
+![Alt text](./screenshot/image-14.png)
 
 ```css
 /* CARD-FOR-ORDERING-PAGE-S */

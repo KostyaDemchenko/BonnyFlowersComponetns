@@ -45,7 +45,13 @@
 
     16.6. [Дуже малий розмір картки товару (card-XS)](#дуже-малий-розмір-картки-товару-card-xs)
 
-17. [](#)
+    16.7. [Картка товару для сторінки замовлення (CARD-FOR-ORDERING-PAGE-L)](#картка-товару-для-сторінки-замовлення-card-for-ordering-page-l)
+
+    16.8. [Картка товару для сторінки замовлення (CARD-FOR-ORDERING-PAGE-S)](#картка-товару-для-сторінки-замовлення-card-for-ordering-page-s)
+
+    16.9. [Стилі кнопки видалення (DELETE-BTN-CARD)](#стилі-кнопки-видалення-delete-btn-card)
+
+    16.10. [Стилі лічильника (COUNTER)](#стилі-лічильника-counter)
 
 ## 1. Імпорт шрифтів <a name="імпорт-шрифтів"></a>
 
@@ -1702,3 +1708,280 @@ button {
 
 Ці стилі стосуються найменшого розміру картки товару у кошику (`card-XS`). Найменший розмір картки має подібний вигляд до дуже малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
 
+Продовжуємо описувати код:
+
+### 16.7. Картка товару для сторінки замовлення (CARD-FOR-ORDERING-PAGE-L)<a name="картка-товару-для-сторінки-замовлення-card-for-ordering-page-l"></a>
+
+```css
+/* CARD-FOR-ORDERING-PAGE-L */
+
+.card-order-l {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    padding: 5px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.card-order-l .img-box {
+    width: 100%;
+    max-width: 300px;
+}
+
+.card-order-l .img-box img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-order-l .prod-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-order-l .prod-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word;
+    height: 56px;
+}
+
+.card-order-l .prod-title h3 {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+.card-order-l .prod-desc .prod-price {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card-order-l .card-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .card-order-l {
+        gap: 5px;
+        padding: 5px;
+        background-color: var(--white);
+        border-radius: 5px;
+    }
+
+    .card-order-l .img-box {
+        max-width: 125px;
+    }
+
+    .card-order-l .prod-title {
+        max-width: 125px;
+        height: 34px;
+    }
+
+    .card-order-l .prod-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .card-order-l .prod-title h3 {
+        max-width: 125px;
+        width: 100%;
+    }
+
+    .card-order-l .prod-desc .prod-price {
+        gap: 5px;
+    }
+
+    .card-order-l .card-btn {
+        gap: 15px;
+    }
+}
+```
+
+Ці стилі стосуються великого розміру картки товару для сторінки замовлення (`CARD-FOR-ORDERING-PAGE-L`). Великий розмір картки має спеціальний стиль для відображення на сторінці оформлення замовлення з більшим розміром зображення товару та збільшеним максимальним розміром заголовка товару. Ці дві карти будуть використовуватися тільки на сторінці оформлення замовлення.
+
+### 16.8. Картка товару для сторінки замовлення (CARD-FOR-ORDERING-PAGE-S)<a name="картка-товару-для-сторінки-замовлення-card-for-ordering-page-s"></a>
+
+```css
+/* CARD-FOR-ORDERING-PAGE-S */
+
+.card-order-s {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--white);
+    padding: 10px;
+    gap: 15px;
+    border-radius: 5px;
+    max-width: 450px;
+    width: 100%;
+}
+
+.card-order-s .img-box {
+    width: 100%;
+    max-width: 120px;
+}
+
+.card-order-s .img-box img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-order-s .card-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-order-s .prod-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.card-order-s .prod-desc .prod-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-order-s .prod-desc .prod-title h3 {
+    height: 42px;
+    max-width: 290px;
+    width: 100%;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.card-order-s .card-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-order-s .prod-desc .prod-price {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card-order-s .prod-desc .prod-price .current-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .card-order-s {
+        padding: 10px;
+        gap: 10px;
+        border-radius: 5px;
+        max-width: 295px;
+        width: 100%;
+    }
+
+    .card-order-s .img-box {
+        max-width: 70px;
+    }
+
+    .card-order-s .prod-desc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .card-order-s .prod-desc .prod-title h3 {
+        height: 28px;
+        max-width: 190px;
+    }
+
+    .card-order-s .prod-desc .prod-title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .card-order-s .card-bottom {
+        width: 100%;
+        align-items: center;
+    }
+}
+```
+
+Ці стилі стосуються меншого розміру картки товару для сторінки замовлення (`CARD-FOR-ORDERING-PAGE-S`). Менший розмір картки має спеціальний стиль для відображення на сторінці оформлення замовлення з меншим розміром зображення товару та зменшеним максимальним розміром заголовка товару.
+
+### 16.9. Стилі кнопки видалення (DELETE-BTN-CARD)<a name="стилі-кнопки-видалення-delete-btn-card"></a>
+
+```css
+/* DELETE-BTN-card */
+
+.delete-button {
+    border: none;
+    background-color: var(--white);
+    transition: .3s;
+}
+
+.delete-button:hover {
+    color: var(--red);
+    transition: .3s;
+}
+```
+
+Ці стилі стосуються
+
+ кнопки видалення (`DELETE-BTN-CARD`). Кнопка має спеціальний стиль для відображення на картках товарів, де при наведенні миші змінюється колір тексту на червоний.
+
+### 16.10. Стилі лічильника (COUNTER)<a name="стилі-лічильника-counter"></a>
+
+```css
+/* COUNTER */
+
+.counter {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+@media screen and (max-width: 700px) {
+    .counter {
+        background-color: var(--light-gray);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        border-radius: 5px;
+        height: 24px;
+    }
+}
+```
+
+Ці стилі стосуються лічильника (`COUNTER`), що міститься на картках товарів. Лічильник має спеціальний стиль зі зміненим кольором фону та іншими розмірами для різних екранів (`@media screen and (max-width: 700px)`).

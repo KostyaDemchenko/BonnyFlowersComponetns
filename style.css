@@ -2293,7 +2293,6 @@ a.slide_btn {
     width: 100%;
     position: relative;
     top: calc((-100vw * 9) /17);
-    z-index: var(--layer-3);
 }
 
 .previous_btn {
@@ -2318,6 +2317,7 @@ a.slide_btn {
     height: 100%;
     opacity: 0;
     width: 13%;
+    z-index: var(--layer-4);
 }
 
 .previous_btn:hover,

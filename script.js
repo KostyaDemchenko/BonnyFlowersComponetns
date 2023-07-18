@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
           group.classList.add('animated');
 
           slides[newIndex].style.opacity = '1';
-          slides[newIndex].style.zIndex = '1';
+          slides[newIndex].style.zIndex = 'var(--layer-4)';
           slides[newIndex].style.left = slideLeft;
           group.style.left = animateLeft;
 

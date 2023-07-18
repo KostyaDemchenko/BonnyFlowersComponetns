@@ -1,6 +1,7 @@
 # Документація для CSS бібліотеки
 У цій документації наведено опис інструкцій, класів та стилів, доступних у бібліотеці, за для того щоб слідкувати принципу DRY (Do Not Repeat Yourself). 
 Документація надається українською мовою та в форматі Markdown (.md).
+Також у нашій бібліотеці використовується перезапис стилів bootstrap v5.0.3 Прошу звернути на це увагу і бути уважним при розробці.
 
 ## Зміст
 
@@ -51,6 +52,7 @@
 ```
 
 Ці змінні визначають палітру кольорів та шари, які можна використовувати у вашому CSS для створення стилів.
+Також прошу бути дуже уважним із шарами (слоями) бо можуть виникнути пенві проблеми з цим.
 
 ## 3. Стилі для прокручування <a name="стилі-для-прокручування"></a>
 
@@ -756,4 +758,224 @@ button {
 ```
 
 У цьому розділі наведено стилі для перемикачів (toggle switches) у стилі iOS. Вони надають вигляд перемикачам, схожим на ті, що використовуються у пристроях Apple. Застосування класу `toggle-switch` до вхідних полів дозволяє застосовувати ці стилі до ваших перемикачів.
+
+## 15. Акордеон <a name="акордеон"></a>
+
+```css
+/* ACCORDION */
+
+.accordion-button:focus {
+    z-index: var(--layer-2);
+    border-color: var(--aquamarine);
+    outline: 0;
+    box-shadow: 0 0 0 1px var(--aquamarine);
+}
+```
+Це налаштування перезаписує головні стилі bootstrap для акардконів.
+Ці стилі визначають зовнішній вигляд для елементів акордеону, коли вони отримують фокус. Зокрема, стилі задають порядок накладання шарів (z-index), колір рамки, тінь і акцентують активний елемент акордеону під час фокусування.
+
+## 16. Акордеон з можливістю сортування <a name="акордеон-з-можливістю-сортування"></a>
+
+```css
+/* ACCORDION-SORT */
+
+.accordion-sort {
+    max-width: 250px;
+    width: 100%;
+}
+
+.accordion-sort .accordion-item {
+    background-color: var(--white);
+    border: 1px solid var(--light-gray);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--darck-gray);
+    background-color: var(--light-red);
+    box-shadow: none;
+}
+
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.accordion-item:first-of-type {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.accordion-sort .accordion-body ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .accordion-sort {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .accordion-sort .accordion-body {
+        padding: 12px 10px;
+    }
+}
+```
+
+Ці стилі стосуються акордеону з можливістю сортування. Елементи акордеону мають фоновий колір і обрамлення. Застосування класу `.collapsed` до елемента 
+`.accordion-button` визначає стилі для згорнутих елементів акордеону. Крім того, останній елемент має зроблені заокруглені кути знизу, а перший - зверху. Налаштовані стилі для відображення списку елементів у вертикальному положенні.
+
+## 17. Кнопка акордеону <a name="кнопка-акордеону"></a>
+
+```css
+/* ACCORDION-BTN */
+
+.accordion-button::after {
+    flex-shrink: 0;
+    margin-left: auto;
+    content: "";
+    font-size: 24px;
+    font-family: 'icomoon';
+    background-image: none;
+    transform: rotate(-180deg);
+    transition: transform .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-sort .accordion-button:focus {
+    z-index: 3;
+    border-color: var(--light-red);
+    outline: 0;
+    box-shadow: none;
+}
+```
+
+Ці стилі стосуються зовнішнього вигляду кнопок акордеону. Кнопка має символ позначення, що вказує на згортання або розгортання елемента. При фокусуванні кнопки задано стилі для зміни зовнішнього вигляду.
+
+## 18. Активна кнопка акордеону <a name="активна-кнопка-акордеону"></a>
+
+```css
+/* ACCORDION-BTN-ACTIVE */
+
+.accordion-button:not(.collapsed)::after {
+    content: "";
+    font-family: 'icomoon';
+    font-size: 24px;
+    background-image: none;
+    transform: rotate(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+```
+
+Ці стилі визначають зовнішній вигляд активної кнопки акордеону (тобто коли елемент розгорнуто). При цьому змінюється символ позначення, який вказує на активний стан.
+
+## 19. Акордеон для сторінки користувача <a name="акордеон-для-сторінки-користувача"></a>
+
+```css
+/* ACCORDION-USER-PAGE */
+
+.accordion-user-page {
+    max-width: 460px;
+    width: 100%;
+}
+
+.accordion-user-page .accordion-body ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion-user-page .accordion-item {
+    background-color: var(--white);
+    border: 1px solid var(--light-gray);
+}
+
+.accordion-user-page .accordion-button:focus {
+    z-index: 3;
+    border-color: var(--light-red);
+    outline: 0;
+    box-shadow: 0px 0px 0px 1px var(--aquamarine);
+}
+
+.accordion-user-page .accordion-button:not(.collapsed) {
+    color: var(--darck-gray);
+    background-color: var(--light-red);
+    box-shadow: 0px 0px 0px 0px var(--aquamarine);
+}
+
+@media screen and (max-width: 700px) {
+    .accordion-user-page {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .accordion-user-page .accordion-body {
+        padding: 12px 10px;
+    }
+}
+```
+
+Ці стилі стосуються акордеону на сторінці користувача. Застосовуються стилі для контейнера акордеону, елементів списку, а також задається зовнішній вигляд для кнопок акордеону при фокусуванні і активному стані.
+
+## 20. Акордеон "Від... До..." <a name="акордеон-від-до"></a>
+
+```css
+/* ACCORDION-FROM-TO */
+
+.accordion-from-to {
+    max-width: 295px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-from-to .accordion-item {
+    background-color: var(--white);
+    border: none;
+}
+
+.accordion-from-to .accordion-button:not(.collapsed) {
+    color: var(--darck-gray);
+    background-color: var(--white);
+}
+
+.accordion-from-to .accordion-item {
+    border-radius: 5px;
+}
+
+.accordion-from-to .accordion-body ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .accordion-from-to {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .accordion-from-to .accordion-body {
+        padding: 10px;
+    }
+}
+```
+
+Ці стилі стосуються акордеону "Від... До..." (from-to). Застосовуються стилі для контейнера акордеону та його елементів, які здійснюють відображення відповідних полів для вибору дат "від" і "до". Крім того, стилі задають зовнішній вигляд для активних елементів, коли обрані дати "від" і "до".
 

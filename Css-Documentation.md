@@ -53,6 +53,12 @@
 
     16.10. [Стилі лічильника (COUNTER)](#стилі-лічильника-counter)
 
+17. [Навігаційний блок (NAVIGATION-BLOCK)](#навігаційний-блок-navigation-block)
+
+    17.1. [Хлібні крошки (BREADCRUMBS)](#стилі-кнопки-видалення-delete-btn-card)
+
+    17.2. [Пагінація (PAGINATION)](#пагінація-pagination)
+
 ## 1. Імпорт шрифтів <a name="імпорт-шрифтів"></a>
 
 ```css
@@ -1708,8 +1714,6 @@ button {
 
 Ці стилі стосуються найменшого розміру картки товару у кошику (`card-XS`). Найменший розмір картки має подібний вигляд до дуже малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
 
-Продовжуємо описувати код:
-
 ### 16.7. Картка товару для сторінки замовлення (CARD-FOR-ORDERING-PAGE-L)<a name="картка-товару-для-сторінки-замовлення-card-for-ordering-page-l"></a>
 
 ```css
@@ -1952,9 +1956,7 @@ button {
 }
 ```
 
-Ці стилі стосуються
-
- кнопки видалення (`DELETE-BTN-CARD`). Кнопка має спеціальний стиль для відображення на картках товарів, де при наведенні миші змінюється колір тексту на червоний.
+Ці стилі стосуються кнопки видалення (`DELETE-BTN-CARD`). Кнопка має спеціальний стиль для відображення на картках товарів, де при наведенні миші змінюється колір тексту на червоний.
 
 ### 16.10. Стилі лічильника (COUNTER)<a name="стилі-лічильника-counter"></a>
 
@@ -1985,3 +1987,120 @@ button {
 ```
 
 Ці стилі стосуються лічильника (`COUNTER`), що міститься на картках товарів. Лічильник має спеціальний стиль зі зміненим кольором фону та іншими розмірами для різних екранів (`@media screen and (max-width: 700px)`).
+
+## 17. Навігаційний блок (NAVIGATION-BLOCK)<a name="навігаційний-блок-navigation-block"></a>
+
+### 17.1. Хлібні крошки (BREADCRUMBS)<a name="хлібні-крошки-breadcrumbs"></a>
+
+```css
+/* NAVIGATION-BLOCK */
+
+/* BREADCRUMBS */
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+    padding: 5px;
+    background-color: var(--white);
+    border-radius: 5px;
+    z-index: var(--layer-2);
+}
+
+.breadcrumbs .icon {
+    font-weight: 600;
+}
+
+.breadcrumbs ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+}
+
+.breadcrumbs ul li {
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.breadcrumbs ul li:first-child {
+    margin-left: 0;
+}
+
+.breadcrumbs ul li:first-child::before {
+    content: none;
+}
+
+.breadcrumbs ul li::before {
+    content: "/";
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    color: var(--gray);
+    transform: translate(0, -45%);
+}
+
+@media screen and (max-width: 700px) {
+    .breadcrumbs ul li::before {
+        font-size: 10px;
+    }
+}
+```
+
+Ці стилі стосуються навігаційного блока (`NAVIGATION-BLOCK`) і його складової частини - "breadcrumbs" (хлібні крихти). 
+"Breadcrumbs" - це шлях, який відображається у вигляді послідовності зв'язаних між собою посилань, які показують користувачеві поточну сторінку та її розташування в ієрархії сайту.
+
+### 17.2. Пагінація (PAGINATION)<a name="пагінація-pagination"></a>
+
+```css
+/* PAGINATION */
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+
+.pagination ul {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pagination ul .selected-page {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--darck-gray) !important;
+}
+
+@media screen and (max-width: 700px) {
+    .pagination {
+        gap: 10px;
+        border-radius: 5px;
+        background-color: var(--white);
+    }
+
+    .pagination ul {
+        gap: 10px;
+    }
+
+    .pagination ul .selected-page {
+        font-size: 14px;
+    }
+
+}
+```
+
+Ці стилі стосуються пагінації (`PAGINATION`) - це механізм розділення великої кількості контенту на декілька сторінок, що дозволяє користувачам переглядати дані частинами. Стилі визначають вигляд елементів пагінації та їх поведінку для різних екранів (`@media screen and (max-width: 700px)`), де збільшують розміри тексту для кращого відображення на маленьких пристроях. 
+Також для активної сторінки є незалежний стиль (`.selected-page`)

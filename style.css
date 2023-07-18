@@ -2297,8 +2297,7 @@ a.slide_btn {
 
 .directional_nav {
     height: calc((100vw * 9) /16);
-    margin: 0 auto;
-    max-width: 940px;
+    width: 100%;
     position: relative;
     top:calc((-100vw * 9) /16);
     z-index: var(--layer-3);

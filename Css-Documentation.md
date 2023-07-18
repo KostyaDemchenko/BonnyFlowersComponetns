@@ -33,17 +33,17 @@
 
 16. [Картки товарі](#картки-товарів)
 
-    16.1. [Знижка (CART-DISCOUNT)](#знижка-cart-discount)
+    16.1. [Знижка (card-DISCOUNT)](#знижка-card-discount)
     
-    16.2. [Дуже великий розмір картки товару (CART-XL)](#дуже-великий-розмір-картки-товару-cart-xl)
+    16.2. [Дуже великий розмір картки товару (card-XL)](#дуже-великий-розмір-картки-товару-card-xl)
 
-    16.3. [Великий розмір картки товару (CART-L)](#великий-розмір-картки-товару-cart-l)
+    16.3. [Великий розмір картки товару (card-L)](#великий-розмір-картки-товару-card-l)
 
-    16.4. [Середній розмір картки товару (CART-M)](#середній-розмір-картки-товару-cart-m)
+    16.4. [Середній розмір картки товару (card-M)](#середній-розмір-картки-товару-card-m)
 
-    16.5. [Малий розмір картки товару (CART-S)](#малий-розмір-картки-товару-cart-s)
+    16.5. [Малий розмір картки товару (card-S)](#малий-розмір-картки-товару-card-s)
 
-    16.6. [Дуже малий розмір картки товару (CART-XS)](#дуже-малий-розмір-картки-товару-cart-xs)
+    16.6. [Дуже малий розмір картки товару (card-XS)](#дуже-малий-розмір-картки-товару-card-xs)
 
 17. [](#)
 
@@ -1015,10 +1015,10 @@ button {
 
 ## 16. Картки товарів <a name="картки-товарів"></a>
 
-### 16.1. Знижка (CART-DISCOUNT) <a name="знижка-cart-discount"></a>
+### 16.1. Знижка (card-DISCOUNT) <a name="знижка-card-discount"></a>
 
 ```css
-/* CART-DISCOUNT */
+/* card-DISCOUNT */
 
 .discount {
     padding: 12px 12px;
@@ -1046,12 +1046,12 @@ button {
 
 Ці стилі стосуються відображення знижки на товар у кошику. Знижка відображається у вигляді плашки (`discount`) з червоним фоном, що знаходиться над товаром, який має знижку. Крім того, для зниженої ціни використовується підкреслений текст з використанням `text-decoration: line-through` і сірого кольору для кращої видимості.
 
-### 16.2. Дуже великий розмір картки товару (CART-XL) <a name="дуже-великий-розмір-картки-товару-cart-xl)"></a>
+### 16.2. Дуже великий розмір картки товару (card-XL) <a name="дуже-великий-розмір-картки-товару-card-xl)"></a>
 
 ```css
-/* CART-XL */
+/* card-XL */
 
-.cart-xl {
+.card-xl {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1062,24 +1062,24 @@ button {
     border-radius: 5px;
 }
 
-.cart-xl .img-box {
+.card-xl .img-box {
     width: 100%;
     max-width: 300px;
 }
 
-.cart-xl .img-box img {
+.card-xl .img-box img {
     width: 100%;
     border-radius: 5px;
 }
 
-.cart-xl .prod-desc {
+.card-xl .prod-desc {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-.cart-xl .prod-title {
+.card-xl .prod-title {
     width: 100%;
     display: flex;
     align-items: center;
@@ -1088,13 +1088,13 @@ button {
     height: 56px;
 }
 
-.cart-xl .prod-title h3 {
+.card-xl .prod-title h3 {
     max-width: 300px;
     width: 100%;
     text-align: center;
 }
 
-.cart-xl .prod-desc .prod-price {
+.card-xl .prod-desc .prod-price {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -1102,7 +1102,7 @@ button {
     align-items: baseline;
 }
 
-.cart-xl .cart-btn {
+.card-xl .card-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1110,52 +1110,52 @@ button {
 }
 
 @media screen and (max-width: 700px) {
-    .cart-xl {
+    .card-xl {
         gap: 10px;
         padding: 5px;
         background-color: var(--white);
         border-radius: 5px;
     }
 
-    .cart-xl .img-box {
+    .card-xl .img-box {
         max-width: 125px;
     }
 
-    .cart-xl .prod-title {
+    .card-xl .prod-title {
         max-width: 125px;
         height: 34px;
     }
 
-    .cart-xl .prod-desc {
+    .card-xl .prod-desc {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5px;
     }
 
-    .cart-xl .prod-title h3 {
+    .card-xl .prod-title h3 {
         max-width: 125px;
         width: 100%;
     }
 
-    .cart-xl .prod-desc .prod-price {
+    .card-xl .prod-desc .prod-price {
         gap: 5px;
     }
 
-    .cart-xl .cart-btn {
+    .card-xl .card-btn {
         gap: 15px;
     }
 }
 ```
 
-Ці стилі стосуються великого розміру картки товару у кошику (`CART-XL`). Велика картка товару містить зображення товару (`img-box`), заголовок товару (`prod-title`), інформацію про ціну (`prod-price`) та кнопки дій із товаром (`cart-btn`). Велика картка має заданий максимальний розмір зображення товару, а також регулює розмір та розташування заголовка товару та кнопок дій для різних розмірів екрану (`@media screen and (max-width: 700px)`).
+Ці стилі стосуються великого розміру картки товару у кошику (`card-XL`). Велика картка товару містить зображення товару (`img-box`), заголовок товару (`prod-title`), інформацію про ціну (`prod-price`) та кнопки дій із товаром (`card-btn`). Велика картка має заданий максимальний розмір зображення товару, а також регулює розмір та розташування заголовка товару та кнопок дій для різних розмірів екрану (`@media screen and (max-width: 700px)`).
 
-### 16.2. Великий розмір картки товару (CART-L)<a name="великий-розмір-картки-товару-cart-l)"></a>
+### 16.2. Великий розмір картки товару (card-L)<a name="великий-розмір-картки-товару-card-l)"></a>
 
 ```css
-/* CART-L */
+/* card-L */
 
-.cart-l {
+.card-l {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -1167,24 +1167,24 @@ button {
     width: 100%;
 }
 
-.cart-l .img-box {
+.card-l .img-box {
     width: 100%;
     max-width: 200px;
 }
 
-.cart-l .img-box img {
+.card-l .img-box img {
     width: 100%;
     border-radius: 5px;
 }
 
-.cart-l .cart-top {
+.card-l .card-top {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.cart-l .prod-desc {
+.card-l .prod-desc {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1192,7 +1192,7 @@ button {
     gap: 35px;
 }
 
-.cart-l .prod-desc .prod-title {
+.card-l .prod-desc .prod-title {
     display: flex;
     flex-direction: column;
     max-width: 400px;
@@ -1201,7 +1201,7 @@ button {
     overflow-wrap: break-word;
 }
 
-.cart-l .prod-desc .prod-title h3 {
+.card-l .prod-desc .prod-title h3 {
     height: 58px;
     width: 100%;
     display: flex;
@@ -1209,7 +1209,7 @@ button {
     text-align: left;
 }
 
-.cart-l .cart-bottom {
+.card-l .card-bottom {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1217,7 +1217,7 @@ button {
     align-items: flex-end;
 }
 
-.cart-l .prod-desc .prod-price {
+.card-l .prod-desc .prod-price {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -1225,7 +1225,7 @@ button {
     align-items: end;
 }
 
-.cart-l .prod-desc .prod-price .current-price {
+.card-l .prod-desc .prod-price .current-price {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1233,7 +1233,7 @@ button {
 }
 
 @media screen and (max-width: 700px) {
-    .cart-l {
+    .card-l {
         background-color: var(--white);
         padding: 10px;
         gap: 10px;
@@ -1241,34 +1241,34 @@ button {
         width: 100%;
     }
 
-    .cart-l .img-box {
+    .card-l .img-box {
         width: 100%;
         max-width: 80px;
     }
 
-    .cart-l .img-box img {
+    .card-l .img-box img {
         width: 100%;
         border-radius:
 
  5px;
     }
 
-    .cart-l .cart-top {
+    .card-l .card-top {
         width: 100%;
     }
 
-    .cart-l .prod-desc {
+    .card-l .prod-desc {
         width: 100%;
         gap: 5px;
     }
 
-    .cart-l .prod-desc .prod-title {
+    .card-l .prod-desc .prod-title {
         max-width: 170px;
         gap: 5px;
         overflow-wrap: break-word;
     }
 
-    .cart-l .prod-desc .prod-title h3 {
+    .card-l .prod-desc .prod-title h3 {
         height: 28px;
         width: 100%;
         display: flex;
@@ -1276,15 +1276,15 @@ button {
         text-align: left;
     }
 
-    .cart-l .cart-bottom {
+    .card-l .card-bottom {
         width: 100%;
     }
 
-    .cart-l .prod-desc .prod-price {
+    .card-l .prod-desc .prod-price {
         gap: 5px;
     }
 
-    .cart-l .prod-desc .prod-price .current-price {
+    .card-l .prod-desc .prod-price .current-price {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1293,14 +1293,14 @@ button {
 }
 ```
 
-Ці стилі стосуються середнього розміру картки товару у кошику (`CART-L`). Середній розмір картки має подібний вигляд до великого розміру картки, але з більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
+Ці стилі стосуються середнього розміру картки товару у кошику (`card-L`). Середній розмір картки має подібний вигляд до великого розміру картки, але з більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
 
-### 16.4. Середній розмір картки товару (CART-M)<a name="середній-розмір-картки-товару-cart-m"></a>
+### 16.4. Середній розмір картки товару (card-M)<a name="середній-розмір-картки-товару-card-m"></a>
 
 ```css
-/* CART-M */
+/* card-M */
 
-.cart-m {
+.card-m {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -1312,24 +1312,24 @@ button {
     width: 100%;
 }
 
-.cart-m .img-box {
+.card-m .img-box {
     width: 100%;
     max-width: 150px;
 }
 
-.cart-m .img-box img {
+.card-m .img-box img {
     width: 100%;
     border-radius: 5px;
 }
 
-.cart-m .cart-top {
+.card-m .card-top {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.cart-m .prod-desc {
+.card-m .prod-desc {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1339,13 +1339,13 @@ button {
     gap: 20px;
 }
 
-.cart-m .prod-desc .prod-title {
+.card-m .prod-desc .prod-title {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.cart-m .prod-desc .prod-title h3 {
+.card-m .prod-desc .prod-title h3 {
     height: 40px;
     max-width: 250px;
     text-align: left;
@@ -1354,13 +1354,13 @@ button {
     overflow-wrap: break-word;
 }
 
-.cart-m .prod-desc .prod-title .prod-price {
+.card-m .prod-desc .prod-title .prod-price {
     display: flex;
     flex-direction: row;
     gap: 3px;
 }
 
-.cart-m .cart-bottom {
+.card-m .card-bottom {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1368,7 +1368,7 @@ button {
     align-items: flex-end;
 }
 
-.cart-m .prod-desc .cart-bottom .product-info {
+.card-m .prod-desc .card-bottom .product-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1376,15 +1376,15 @@ button {
     align-items: start;
 }
 
-.cart-m .prod-desc .cart-bottom .product-info .product-order-date,
-.cart-m .prod-desc .cart-bottom .product-info .product-order-status {
+.card-m .prod-desc .card-bottom .product-info .product-order-date,
+.card-m .prod-desc .card-bottom .product-info .product-order-status {
     display: flex;
     flex-direction: row;
     gap: 3px;
 }
 
 @media screen and (max-width: 700px) {
-    .cart-m {
+    .card-m {
         background-color: var(--white);
         padding: 10px;
         gap: 10px;
@@ -1393,41 +1393,41 @@ button {
         width: 100%;
     }
 
-    .cart-m .img-box {
+    .card-m .img-box {
         width: 100%;
         max-width: 80px;
     }
 
-    .cart-m .cart-top {
+    .card-m .card-top {
         width: 100%;
     }
 
-    .cart-m .prod-desc {
+    .card-m .prod-desc {
         width: 100%;
         padding: 0;
     }
 
-    .cart-m .prod-desc .prod-title {
+    .card-m .prod-desc .prod-title {
         display: flex;
         flex-direction: column;
         gap: 5px;
     }
 
-    .cart-m .prod-desc .prod-title h3 {
+    .card-m .prod-desc .prod-title h3 {
         height: 22px;
         max-width: 200px;
         text-align: left;
     }
 
-    .cart-m .prod-desc .prod-title .prod-price {
+    .card-m .prod-desc .prod-title .prod-price {
         gap: 3px;
     }
 
-    .cart-m .cart-bottom {
+    .card-m .card-bottom {
         width: 100%;
     }
 
-    .cart-m .prod-desc .cart-bottom .product-info {
+    .card-m .prod-desc .card-bottom .product-info {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -1437,14 +1437,14 @@ button {
 }
 ```
 
-Ці стилі стосуються малого розміру картки товару у кошику (`CART-M`). Малий розмір картки має подібний вигляд до середнього розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
+Ці стилі стосуються малого розміру картки товару у кошику (`card-M`). Малий розмір картки має подібний вигляд до середнього розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
 
-### 16.5. Малий розмір картки товару (CART-S) <a name="малий-розмір-картки-товару-cart-s"></a>
+### 16.5. Малий розмір картки товару (card-S) <a name="малий-розмір-картки-товару-card-s"></a>
 
 ```css
-/* CART-S */
+/* card-S */
 
-.cart-s {
+.card-s {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -1456,24 +1456,24 @@ button {
     width: 100%;
 }
 
-.cart-s .img-box {
+.card-s .img-box {
     width: 100%;
     max-width: 115px;
 }
 
-.cart-s .img-box img {
+.card-s .img-box img {
     width: 100%;
     border-radius: 5px;
 }
 
-.cart-s .cart-top {
+.card-s .card-top {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.cart-s .prod-desc {
+.card-s .prod-desc {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1481,13 +1481,13 @@ button {
     gap: 10px;
 }
 
-.cart-s .prod-desc .prod-title {
+.card-s .prod-desc .prod-title {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.cart-s .prod-desc .prod-title h3 {
+.card-s .prod-desc .prod-title h3 {
     max-width: 220px;
     width: 100%;
     height: 40px;
@@ -1498,7 +1498,7 @@ button {
 }
 
 
-.cart-s .cart-bottom {
+.card-s .card-bottom {
     width: 100%;
     display: flex;
    
@@ -1508,7 +1508,7 @@ button {
     align-items: flex-end;
 }
 
-.cart-s .prod-desc .prod-price {
+.card-s .prod-desc .prod-price {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -1516,7 +1516,7 @@ button {
     align-items: end;
 }
 
-.cart-s .prod-desc .prod-price .current-price {
+.card-s .prod-desc .prod-price .current-price {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1524,7 +1524,7 @@ button {
 }
 
 @media screen and (max-width: 700px) {
-    .cart-s {
+    .card-s {
         padding: 10px;
         gap: 10px;
         border-radius: 5px;
@@ -1532,11 +1532,11 @@ button {
         width: 100%;
     }
 
-    .cart-s .img-box {
+    .card-s .img-box {
         max-width: 80px;
     }
 
-    .cart-s .prod-desc {
+    .card-s .prod-desc {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1544,12 +1544,12 @@ button {
         gap: 10px;
     }
 
-    .cart-s .prod-desc .prod-title h3 {
+    .card-s .prod-desc .prod-title h3 {
         max-width: 190px;
         height: 22px;
     }
 
-    .cart-s .prod-desc .prod-title {
+    .card-s .prod-desc .prod-title {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -1557,14 +1557,14 @@ button {
 }
 ```
 
-Ці стилі стосуються дуже малого розміру картки товару у кошику (`CART-S`). Дуже малий розмір картки має подібний вигляд до малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
+Ці стилі стосуються дуже малого розміру картки товару у кошику (`card-S`). Дуже малий розмір картки має подібний вигляд до малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
 
-### 16.6. Дуже малий розмір картки товару (CART-XS) <a name="дуже-малий-розмір-картки-товару-cart-xs"></a>
+### 16.6. Дуже малий розмір картки товару (card-XS) <a name="дуже-малий-розмір-картки-товару-card-xs"></a>
 
 ```css
-/* CART-XS */
+/* card-XS */
 
-.cart-xs {
+.card-xs {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -1576,17 +1576,17 @@ button {
     width: 100%;
 }
 
-.cart-xs .img-box {
+.card-xs .img-box {
     width: 100%;
     max-width: 150px;
 }
 
-.cart-xs .img-box img {
+.card-xs .img-box img {
     width: 100%;
     border-radius: 5px;
 }
 
-.cart-xs .cart-top {
+.card-xs .card-top {
     width: 100%;
     height: 50%;
     display: flex;
@@ -1594,7 +1594,7 @@ button {
     justify-content: space-between;
 }
 
-.cart-xs .prod-desc {
+.card-xs .prod-desc {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1603,13 +1603,13 @@ button {
     padding: 10px 0;
 }
 
-.cart-xs .prod-desc .prod-title {
+.card-xs .prod-desc .prod-title {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.cart-xs .prod-desc .prod-title h3 {
+.card-xs .prod-desc .prod-title h3 {
     max-width: 130px;
     width: 100%;
     height: 38px;
@@ -1620,7 +1620,7 @@ button {
 }
 
 
-.cart-xs .cart-bottom {
+.card-xs .card-bottom {
     width: 100%;
     height: 50%;
     display: flex;
@@ -1629,7 +1629,7 @@ button {
     align-items: flex-end;
 }
 
-.cart-xs .prod-desc .prod-price {
+.card-xs .prod-desc .prod-price {
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -1637,7 +1637,7 @@ button {
     align-items: end;
 }
 
-.cart-xs .prod-desc .prod-price .current-price {
+.card-xs .prod-desc .prod-price .current-price {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1645,53 +1645,53 @@ button {
 }
 
 @media screen and (max-width: 700px) {
-    .cart-xs {
+    .card-xs {
         padding: 10px;
         gap: 10px;
         border-radius: 5px;
         max-width: 225px;
     }
 
-    .cart-xs .img-box {
+    .card-xs .img-box {
         width: 100%;
         max-width: 70px;
     }
 
-    .cart-xs .img-box img {
+    .card-xs .img-box img {
         width: 100%;
         border-radius: 5px;
     }
 
-    .cart-xs .cart-top {
+    .card-xs .card-top {
         width: 100%;
         height: 55%;
     }
 
-    .cart-xs .prod-desc {
+    .card-xs .prod-desc {
         width: 100%;
         padding: 0;
     }
 
-    .cart-xs .prod-desc .prod-title {
+    .card-xs .prod-desc .prod-title {
         display: flex;
         flex-direction: column;
         gap: 5px;
     }
 
-    .cart-xs .prod-desc .prod-title h3 {
+    .card-xs .prod-desc .prod-title h3 {
         height: 22px;
     }
 
-    .cart-xs .cart-bottom {
+    .card-xs .card-bottom {
         width: 100%;
         height: 50%;
     }
 
-    .cart-xs .prod-desc .prod-price {
+    .card-xs .prod-desc .prod-price {
         gap: 8px;
     }
 
-    .cart-xs .prod-desc .prod-price .current-price {
+    .card-xs .prod-desc .prod-price .current-price {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1700,4 +1700,4 @@ button {
 }
 ```
 
-Ці стилі стосуються найменшого розміру картки товару у кошику (`CART-XS`). Найменший розмір картки має подібний вигляд до дуже малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
+Ці стилі стосуються найменшого розміру картки товару у кошику (`card-XS`). Найменший розмір картки має подібний вигляд до дуже малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).

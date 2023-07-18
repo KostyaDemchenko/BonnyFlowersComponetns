@@ -429,3 +429,331 @@ button {
 ```
 
 Ці стилі відповідають за адаптацію шрифтів для різних розмірів екрану. У розділі `@media` визначаються стилі для елементів при роздільній здатності екрану менше 700px.
+
+
+## 8. Стилі для іконок <a name="стилі-для-іконок"></a>
+
+```css
+/* СТИЛІ ДЛЯ ІКОНОК */
+
+.icon {
+    font-family: 'icomoon';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+@media screen and (max-width: 700px) {
+    .icon {
+        font-size: 24px;
+        line-height: 1;
+    }
+}
+```
+
+У цьому розділі наведено стилі для іконок, які використовують шрифтову іконку `icomoon`. Застосування цих стилів дозволяє легко використовувати іконки у вашому HTML-коді, присвоюючи клас `icon` до елементів, де потрібно показати іконку.
+
+## 9. Стилі для групи елементів <a name="стилі-для-групи-елементів"></a>
+
+```css
+/* СТИЛІ ДЛЯ ГРУПИ ЕЛЕМЕНТІВ */
+
+.group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 100px 20px;
+    margin: 0 20px 30px;
+    border-radius: 10px;
+    background-color: var(--gray);
+}
+
+@media screen and (max-width: 700px) {
+    .group {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+}
+```
+
+У цьому розділі наведено стилі для групи елементів з класом `group`. Він потрібен лише як свого роду тестовий-контайнер для елементів. 
+
+## 10. Стилі для кнопок <a name="стилі-для-кнопок"></a>
+
+```css
+/* СТИЛІ ДЛЯ КНОПОК */
+
+.button-main {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    padding: 15px 30px;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--red, #8E1533);
+    color: var(--white, #FFF);
+    box-shadow: var(--shadow-red);
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media screen and (max-width: 700px) {
+    .button-main {
+        padding: 5px 15px;
+        line-height: 24px;
+    }
+}
+
+.button-main:hover,
+.cta-button:hover,
+.contact-us-btn:hover {
+    background: var(--gray);
+    color: var(--white, #FFF);
+    transition: .3s;
+}
+```
+
+Ці стилі застосовуються до кнопок, які мають клас `button-main`.
+
+## 11. Група кнопок "Call to Action" <a name="група-кнопок-call-to-action"></a>
+
+```css
+/* ГРУПА КНОПОК "CALL TO ACTION" */
+
+.cta-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: var(--layer-5);
+}
+
+@media screen and (max-width: 700px) {
+    .cta-btn-group {
+        gap: 10px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+.cta-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 20px;
+    border-radius: 50vh;
+    background: var(--red, #8E1533);
+    color: var(--white, #FFF);
+    box-shadow: var(--shadow-red);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .cta-button {
+        padding: 12px;
+    }
+}
+
+.cta-button .icon {
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 700px) {
+    .cta-button .icon {
+        font-size: 24px;
+    }
+}
+```
+
+У цьому розділі наведено стилі для групи кнопок "Call to Action" (кнопок, що стимулюють дії користувачів). Ця кнопка використовується для виклаканння деккількох інших кнопок з посиланнями до інстаграмму.
+## 12. Кнопки "Contact Us" <a name="кнопки-contact-us"></a>
+
+```css
+/* КНОПКИ "CONTACT US" */
+
+.contact-us {
+    position: relative;
+}
+
+.contact-us-btn-group {
+    display: none;
+}
+
+.contact-us-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50vh;
+    background: var(--red);
+    color: var(--white, #FFF);
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+
+    font-size: 50px;
+    line-height: 1;
+}
+
+.contact-us-btn:nth-child(1) {
+    right: 70px;
+    top: 50%;
+    background: #7E57C2;
+}
+
+.contact-us-btn:nth-child(2) {
+    right: 45px;
+    top: -70%;
+    background: linear-gradient(180deg, #2AABEE 0%, #229ED9 100%);
+}
+
+.contact-us-btn:nth-child(3) {
+    left: 50%;
+    bottom: 70px;
+    background: linear-gradient(0deg, #20B038 0%, #60D66A 100%);
+}
+
+.show-contact-us-btn-group {
+    display: block;
+}
+
+.show-contact-us-btn-group .cta-button {
+    transform: translateX(-120px) translateY(-120px);
+    transition: transform 0.5s;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-us-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 30px;
+    }
+
+    .contact-us-btn:nth-child(1) {
+        right: 40px;
+        top: 50%;
+    }
+
+    .contact-us-btn:nth-child(2) {
+        right: 30px;
+        top: -60%;
+    }
+
+    .contact-us-btn:nth-child(3) {
+        left: 50%;
+        bottom: 40px;
+    }
+}
+```
+
+Вони надають ефекту "плаваючої" кнопки з використанням позиціонування і анімації. Ці кнопки використовуються як посилання до наших соц. мереж. Також ці кнопки використвують класс <icon> у HTML.
+## 13. Стилі для вхідних полів <a name="стилі-для-вхідних-полів"></a>
+
+```css
+/* СТИЛІ ДЛЯ ВХІДНИХ ПОЛІВ */
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    vertical-align: top;
+    background-color: var(--white);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid var(--gray);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+.form-check-input:checked {
+    background-color: var(--red, #8E1533);
+    border-color: var(--red, #8E1533);
+}
+
+.form-check-input:focus {
+    border-color: var(--red);
+    outline: 0;
+    box-shadow: var(--shadow-red);
+}
+```
+
+Ці стилі застосовуються до вхідних полів, які мають клас `form-check-input`. Вони створюють стилізацію для відмічених та невідмічених вхідних полів, зокрема встановлюють розмір, внутрішні відступи, обрамлення та інші властивості. Крім того, наведено стилі для фокусування на вхідних полях.
+
+## 14. Стилі для перемикачів у стилі iOS <a name="стилі-для-перемикачів-у-стилі-ios"></a>
+
+```css
+/* СТИЛІ ДЛЯ ПЕРЕМИКАЧІВ У СТИЛІ iOS */
+
+.toggle-switch {
+    position: relative;
+    display: inline-flex;
+    width: 35px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light-red);
+    border-radius: 50vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch label:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    width: 13px;
+    height: 13px;
+    background-color: var(--white);
+    border-radius: 50vw;
+    transform: translate(0, -50%);
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch input:checked+label {
+    background-color: var(--red);
+}
+
+.toggle-switch input:checked+label:before {
+    transform: translate(17px, -50%);
+}
+
+@media screen and (max-width: 700px) {
+    .toggle-switch label:before {
+        left: 3px;
+    }
+
+    .toggle-switch input:checked+label:before {
+        transform: translate(15px, -50%);
+    }
+}
+```
+
+У цьому розділі наведено стилі для перемикачів (toggle switches) у стилі iOS. Вони надають вигляд перемикачам, схожим на ті, що використовуються у пристроях Apple. Застосування класу `toggle-switch` до вхідних полів дозволяє застосовувати ці стилі до ваших перемикачів.
+

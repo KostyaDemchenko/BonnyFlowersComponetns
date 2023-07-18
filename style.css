@@ -2239,13 +2239,6 @@ button {
     width: 100%;
 }
 
-.slide {
-    display: none;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-
 .slide:first-child {
     display: block;
 }
@@ -2336,8 +2329,11 @@ a.slide_btn {
 
 /* SLIDE-STUCTURE-SLIDER-HEADDER */
 
-.slide{
-    position: relative;
+.slide {
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
 }
 
 .slide-bg {
@@ -2362,4 +2358,10 @@ a.slide_btn {
     padding: 10px 15px;
     width: 100%;
     z-index: var(--layer-4);
+}
+
+/* SLIDE-ANIMATION */
+
+.slide_group.animated {
+    transition: left 0.5s ease;
 }

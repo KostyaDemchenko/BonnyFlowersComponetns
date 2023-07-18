@@ -166,12 +166,18 @@ document.addEventListener("DOMContentLoaded", function() {
 // SLIDER
 
 document.addEventListener('DOMContentLoaded', function () {
+  function isTouchDevice() {
+      return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  }
+
   document.querySelectorAll('.slider-container').forEach(function (slider) {
       var group = slider.querySelector('.slide_group');
       var slides = slider.querySelectorAll('.slide');
       var bulletArray = [];
       var currentIndex = 0;
       var timeout;
+      var touchStartX = 0;
+      var touchEndX = 0;
 
       function move(newIndex) {
           var animateLeft, slideLeft;
@@ -193,19 +199,24 @@ document.addEventListener('DOMContentLoaded', function () {
               animateLeft = '100%';
           }
 
-          slides[newIndex].style.display = 'block';
+          group.classList.add('animated');
+
+          slides[newIndex].style.opacity = '1';
+          slides[newIndex].style.zIndex = '1';
           slides[newIndex].style.left = slideLeft;
           group.style.left = animateLeft;
 
           setTimeout(function () {
-              slides[currentIndex].style.display = 'none';
+              group.classList.remove('animated');
+
+              slides[currentIndex].style.opacity = '0';
+              slides[currentIndex].style.zIndex = '0';
               slides[newIndex].style.left = '0';
               group.style.left = '0';
               currentIndex = newIndex;
-          }, 500); // Adjust the animation duration here (milliseconds)
+          }, 500);
       }
 
-      // TIMER-SLIDE-SCROLL
       function advance() {
           clearTimeout(timeout);
           timeout = setTimeout(function () {
@@ -229,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (currentIndex !== 0) {
               move(currentIndex - 1);
           } else {
-              move(3); // Assuming there are always four slides (0-based index)
+              move(slides.length - 1);
           }
       });
 
@@ -249,6 +260,36 @@ document.addEventListener('DOMContentLoaded', function () {
           slider.querySelector('.slide_buttons').appendChild(button);
           bulletArray.push(button);
       });
+
+      // Swipe Gesture Handling
+      if (isTouchDevice()) {
+          slider.addEventListener('touchstart', function (e) {
+              touchStartX = e.changedTouches[0].clientX;
+          });
+
+          slider.addEventListener('touchend', function (e) {
+              touchEndX = e.changedTouches[0].clientX;
+              handleSwipe();
+          });
+
+          function handleSwipe() {
+              var swipeThreshold = 50;
+
+              if (touchEndX - touchStartX > swipeThreshold) {
+                  if (currentIndex !== 0) {
+                      move(currentIndex - 1);
+                  } else {
+                      move(slides.length - 1);
+                  }
+              } else if (touchStartX - touchEndX > swipeThreshold) {
+                  if (currentIndex < slides.length - 1) {
+                      move(currentIndex + 1);
+                  } else {
+                      move(0);
+                  }
+              }
+          }
+      }
 
       advance();
   });

@@ -12,6 +12,27 @@
 5. [Основні стилі](#основні-стилі)
 6. [Стилі для шрифтів](#стилі-для-шрифтів)
 7. [Адаптація шрифтів](#адаптація-шрифтів)
+8. [Стилі для іконок](#стилі-для-іконок)
+9. [Стилі для групи елементів](#стилі-для-групи-елементів)
+10. [Стилі для кнопок](#стилі-для-кнопок)
+11. [Група кнопок "Call to Action"](#група-кнопок-call-to-action)
+12. [Кнопки "Contact Us"](#кнопки-contact-us)
+13. [Стилі для вхідних полів](#стилі-для-вхідних-полів)
+14. [тилі для перемикачів у стилі iOS](#стилі-для-перемикачів-у-стилі-ios)
+15. [Акордеон](#акордеон)
+  15.1. [Акордеон з можливістю сортування](#акордеон-з-можливістю-сортування)
+  15.2. [Кнопка акордеону](#кнопка-акордеону)
+  15.3. [Активна кнопка акордеону](#активна-кнопка-акордеону)
+  15.4. [Акордеон для сторінки користувача](#акордеон-для-сторінки-користувача)
+  15.5. [Акордеон "Від... До..."](#акордеон-від-до)
+16. [Картки товарі](#картки-товарів)
+  16.1. [Знижка (CART-DISCOUNT)](#знижка-cart-discount)
+  16.2. [Дуже великий розмір картки товару (CART-XL)](#дуже-великий-розмір-картки-товару-cart-xl)
+  16.3. [Великий розмір картки товару (CART-L)](#великий-розмір-картки-товару-cart-l)
+  16.4. [Середній розмір картки товару (CART-M)](#середній-розмір-картки-товару-cart-m)
+  16.5. [Малий розмір картки товару (CART-S)](#малий-розмір-картки-товару-cart-s)
+  16.6. [Дуже малий розмір картки товару (CART-XS)](#дуже-малий-розмір-картки-товару-cart-xs)
+17. [](#)
 
 ## 1. Імпорт шрифтів <a name="імпорт-шрифтів"></a>
 
@@ -774,7 +795,7 @@ button {
 Це налаштування перезаписує головні стилі bootstrap для акардконів.
 Ці стилі визначають зовнішній вигляд для елементів акордеону, коли вони отримують фокус. Зокрема, стилі задають порядок накладання шарів (z-index), колір рамки, тінь і акцентують активний елемент акордеону під час фокусування.
 
-## 16. Акордеон з можливістю сортування <a name="акордеон-з-можливістю-сортування"></a>
+## 15.1. Акордеон з можливістю сортування <a name="акордеон-з-можливістю-сортування"></a>
 
 ```css
 /* ACCORDION-SORT */
@@ -835,7 +856,7 @@ button {
 Ці стилі стосуються акордеону з можливістю сортування. Елементи акордеону мають фоновий колір і обрамлення. Застосування класу `.collapsed` до елемента 
 `.accordion-button` визначає стилі для згорнутих елементів акордеону. Крім того, останній елемент має зроблені заокруглені кути знизу, а перший - зверху. Налаштовані стилі для відображення списку елементів у вертикальному положенні.
 
-## 17. Кнопка акордеону <a name="кнопка-акордеону"></a>
+## 15.2. Кнопка акордеону <a name="кнопка-акордеону"></a>
 
 ```css
 /* ACCORDION-BTN */
@@ -864,7 +885,7 @@ button {
 
 Ці стилі стосуються зовнішнього вигляду кнопок акордеону. Кнопка має символ позначення, що вказує на згортання або розгортання елемента. При фокусуванні кнопки задано стилі для зміни зовнішнього вигляду.
 
-## 18. Активна кнопка акордеону <a name="активна-кнопка-акордеону"></a>
+## 15.3. Активна кнопка акордеону <a name="активна-кнопка-акордеону"></a>
 
 ```css
 /* ACCORDION-BTN-ACTIVE */
@@ -883,7 +904,7 @@ button {
 
 Ці стилі визначають зовнішній вигляд активної кнопки акордеону (тобто коли елемент розгорнуто). При цьому змінюється символ позначення, який вказує на активний стан.
 
-## 19. Акордеон для сторінки користувача <a name="акордеон-для-сторінки-користувача"></a>
+## 15.4. Акордеон для сторінки користувача <a name="акордеон-для-сторінки-користувача"></a>
 
 ```css
 /* ACCORDION-USER-PAGE */
@@ -931,7 +952,7 @@ button {
 
 Ці стилі стосуються акордеону на сторінці користувача. Застосовуються стилі для контейнера акордеону, елементів списку, а також задається зовнішній вигляд для кнопок акордеону при фокусуванні і активному стані.
 
-## 20. Акордеон "Від... До..." <a name="акордеон-від-до"></a>
+## 15.5. Акордеон "Від... До..." <a name="акордеон-від-до"></a>
 
 ```css
 /* ACCORDION-FROM-TO */
@@ -979,3 +1000,691 @@ button {
 
 Ці стилі стосуються акордеону "Від... До..." (from-to). Застосовуються стилі для контейнера акордеону та його елементів, які здійснюють відображення відповідних полів для вибору дат "від" і "до". Крім того, стилі задають зовнішній вигляд для активних елементів, коли обрані дати "від" і "до".
 
+## 16. Картки товарів <a name="картки-товарів"></a>
+
+### 16.1. Знижка (CART-DISCOUNT) <a name="знижка-cart-discount"></a>
+
+```css
+/* CART-DISCOUNT */
+
+.discount {
+    padding: 12px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border-radius: 5px;
+}
+
+.old-price p {
+    text-decoration: line-through;
+    color: var(--gray);
+}
+
+@media screen and (max-width: 700px) {
+    .discount {
+        padding: 7px 8px;
+    }
+}
+```
+
+Ці стилі стосуються відображення знижки на товар у кошику. Знижка відображається у вигляді плашки (`discount`) з червоним фоном, що знаходиться над товаром, який має знижку. Крім того, для зниженої ціни використовується підкреслений текст з використанням `text-decoration: line-through` і сірого кольору для кращої видимості.
+
+### 16.2. Дуже великий розмір картки товару (CART-XL) <a name="дуже-великий-розмір-картки-товару-cart-xl)"></a>
+
+```css
+/* CART-XL */
+
+.cart-xl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    padding: 5px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.cart-xl .img-box {
+    width: 100%;
+    max-width: 300px;
+}
+
+.cart-xl .img-box img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cart-xl .prod-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-xl .prod-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word;
+    height: 56px;
+}
+
+.cart-xl .prod-title h3 {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+.cart-xl .prod-desc .prod-price {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cart-xl .cart-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .cart-xl {
+        gap: 10px;
+        padding: 5px;
+        background-color: var(--white);
+        border-radius: 5px;
+    }
+
+    .cart-xl .img-box {
+        max-width: 125px;
+    }
+
+    .cart-xl .prod-title {
+        max-width: 125px;
+        height: 34px;
+    }
+
+    .cart-xl .prod-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .cart-xl .prod-title h3 {
+        max-width: 125px;
+        width: 100%;
+    }
+
+    .cart-xl .prod-desc .prod-price {
+        gap: 5px;
+    }
+
+    .cart-xl .cart-btn {
+        gap: 15px;
+    }
+}
+```
+
+Ці стилі стосуються великого розміру картки товару у кошику (`CART-XL`). Велика картка товару містить зображення товару (`img-box`), заголовок товару (`prod-title`), інформацію про ціну (`prod-price`) та кнопки дій із товаром (`cart-btn`). Велика картка має заданий максимальний розмір зображення товару, а також регулює розмір та розташування заголовка товару та кнопок дій для різних розмірів екрану (`@media screen and (max-width: 700px)`).
+
+### 16.2. Великий розмір картки товару (CART-L)<a name="великий-розмір-картки-товару-cart-l)"></a>
+
+```css
+/* CART-L */
+
+.cart-l {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--white);
+    padding: 15px;
+    gap: 20px;
+    border-radius: 5px;
+    max-width: 910px;
+    width: 100%;
+}
+
+.cart-l .img-box {
+    width: 100%;
+    max-width: 200px;
+}
+
+.cart-l .img-box img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cart-l .cart-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-l .prod-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.cart-l .prod-desc .prod-title {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    gap: 15px;
+    overflow-wrap: break-word;
+}
+
+.cart-l .prod-desc .prod-title h3 {
+    height: 58px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.cart-l .cart-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cart-l .prod-desc .prod-price {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.cart-l .prod-desc .prod-price .current-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .cart-l {
+        background-color: var(--white);
+        padding: 10px;
+        gap: 10px;
+        max-width: 310px;
+        width: 100%;
+    }
+
+    .cart-l .img-box {
+        width: 100%;
+        max-width: 80px;
+    }
+
+    .cart-l .img-box img {
+        width: 100%;
+        border-radius:
+
+ 5px;
+    }
+
+    .cart-l .cart-top {
+        width: 100%;
+    }
+
+    .cart-l .prod-desc {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .cart-l .prod-desc .prod-title {
+        max-width: 170px;
+        gap: 5px;
+        overflow-wrap: break-word;
+    }
+
+    .cart-l .prod-desc .prod-title h3 {
+        height: 28px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .cart-l .cart-bottom {
+        width: 100%;
+    }
+
+    .cart-l .prod-desc .prod-price {
+        gap: 5px;
+    }
+
+    .cart-l .prod-desc .prod-price .current-price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+```
+
+Ці стилі стосуються середнього розміру картки товару у кошику (`CART-L`). Середній розмір картки має подібний вигляд до великого розміру картки, але з більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
+
+### 16.4. Середній розмір картки товару (CART-M)<a name="середній-розмір-картки-товару-cart-m"></a>
+
+```css
+/* CART-M */
+
+.cart-m {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--white);
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    max-width: 450px;
+    width: 100%;
+}
+
+.cart-m .img-box {
+    width: 100%;
+    max-width: 150px;
+}
+
+.cart-m .img-box img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cart-m .cart-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-m .prod-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.cart-m .prod-desc .prod-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-m .prod-desc .prod-title h3 {
+    height: 40px;
+    max-width: 250px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    overflow-wrap: break-word;
+}
+
+.cart-m .prod-desc .prod-title .prod-price {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.cart-m .cart-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cart-m .prod-desc .cart-bottom .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.cart-m .prod-desc .cart-bottom .product-info .product-order-date,
+.cart-m .prod-desc .cart-bottom .product-info .product-order-status {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+@media screen and (max-width: 700px) {
+    .cart-m {
+        background-color: var(--white);
+        padding: 10px;
+        gap: 10px;
+        border-radius: 5px;
+        max-width: 310px;
+        width: 100%;
+    }
+
+    .cart-m .img-box {
+        width: 100%;
+        max-width: 80px;
+    }
+
+    .cart-m .cart-top {
+        width: 100%;
+    }
+
+    .cart-m .prod-desc {
+        width: 100%;
+        padding: 0;
+    }
+
+    .cart-m .prod-desc .prod-title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cart-m .prod-desc .prod-title h3 {
+        height: 22px;
+        max-width: 200px;
+        text-align: left;
+    }
+
+    .cart-m .prod-desc .prod-title .prod-price {
+        gap: 3px;
+    }
+
+    .cart-m .cart-bottom {
+        width: 100%;
+    }
+
+    .cart-m .prod-desc .cart-bottom .product-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+```
+
+Ці стилі стосуються малого розміру картки товару у кошику (`CART-M`). Малий розмір картки має подібний вигляд до середнього розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
+
+### 16.5. Малий розмір картки товару (CART-S) <a name="малий-розмір-картки-товару-cart-s"></a>
+
+```css
+/* CART-S */
+
+.cart-s {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--white);
+    padding: 10px;
+    gap: 15px;
+    border-radius: 5px;
+    max-width: 380px;
+    width: 100%;
+}
+
+.cart-s .img-box {
+    width: 100%;
+    max-width: 115px;
+}
+
+.cart-s .img-box img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cart-s .cart-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-s .prod-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cart-s .prod-desc .prod-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-s .prod-desc .prod-title h3 {
+    max-width: 220px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+
+.cart-s .cart-bottom {
+    width: 100%;
+    display: flex;
+   
+
+ flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cart-s .prod-desc .prod-price {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.cart-s .prod-desc .prod-price .current-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .cart-s {
+        padding: 10px;
+        gap: 10px;
+        border-radius: 5px;
+        max-width: 295px;
+        width: 100%;
+    }
+
+    .cart-s .img-box {
+        max-width: 80px;
+    }
+
+    .cart-s .prod-desc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cart-s .prod-desc .prod-title h3 {
+        max-width: 190px;
+        height: 22px;
+    }
+
+    .cart-s .prod-desc .prod-title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+```
+
+Ці стилі стосуються дуже малого розміру картки товару у кошику (`CART-S`). Дуже малий розмір картки має подібний вигляд до малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).
+
+### 16.6. Дуже малий розмір картки товару (CART-XS) <a name="дуже-малий-розмір-картки-товару-cart-xs"></a>
+
+```css
+/* CART-XS */
+
+.cart-xs {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: var(--white);
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    max-width: 305px;
+    width: 100%;
+}
+
+.cart-xs .img-box {
+    width: 100%;
+    max-width: 150px;
+}
+
+.cart-xs .img-box img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cart-xs .cart-top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-xs .prod-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.cart-xs .prod-desc .prod-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-xs .prod-desc .prod-title h3 {
+    max-width: 130px;
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+
+.cart-xs .cart-bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cart-xs .prod-desc .prod-price {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.cart-xs .prod-desc .prod-price .current-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .cart-xs {
+        padding: 10px;
+        gap: 10px;
+        border-radius: 5px;
+        max-width: 225px;
+    }
+
+    .cart-xs .img-box {
+        width: 100%;
+        max-width: 70px;
+    }
+
+    .cart-xs .img-box img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .cart-xs .cart-top {
+        width: 100%;
+        height: 55%;
+    }
+
+    .cart-xs .prod-desc {
+        width: 100%;
+        padding: 0;
+    }
+
+    .cart-xs .prod-desc .prod-title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cart-xs .prod-desc .prod-title h3 {
+        height: 22px;
+    }
+
+    .cart-xs .cart-bottom {
+        width: 100%;
+        height: 50%;
+    }
+
+    .cart-xs .prod-desc .prod-price {
+        gap: 8px;
+    }
+
+    .cart-xs .prod-desc .prod-price .current-price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+```
+
+Ці стилі стосуються найменшого розміру картки товару у кошику (`CART-XS`). Найменший розмір картки має подібний вигляд до дуже малого розміру картки, але з ще більш обмеженим максимальним розміром зображення товару і розміром заголовка товару для малих екранів (`@media screen and (max-width: 700px)`).

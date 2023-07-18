@@ -205,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }, 500); // Adjust the animation duration here (milliseconds)
       }
 
+      // TIMER-SLIDE-SCROLL
       function advance() {
           clearTimeout(timeout);
           timeout = setTimeout(function () {

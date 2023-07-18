@@ -386,9 +386,7 @@ button {
         font-weight: 300;
     }
 
-    .p-16
-
--auto-bold {
+    .p-16-auto-bold {
         font-size: 11px;
         font-family: Montserrat;
         font-weight: 700;

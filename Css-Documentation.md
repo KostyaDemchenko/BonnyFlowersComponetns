@@ -55,9 +55,17 @@
 
 17. [Навігаційний блок (NAVIGATION-BLOCK)](#навігаційний-блок-navigation-block)
 
-    17.1. [Хлібні крошки (BREADCRUMBS)](#стилі-кнопки-видалення-delete-btn-card)
+    17.1. [Хлібні крошки (BREADCRUMBS)](#хлібні-крошки-breadcrumbs)
 
     17.2. [Пагінація (PAGINATION)](#пагінація-pagination)
+
+18. [Поля введення (INPUTS)](#введення-даних-inputs)
+
+    18.1. [Введення телефону (INPUT-PHONE-TELL)](#введення-телефону-input-phone-tell)
+
+    18.2. [Пошукове поле (SEARCH-INPUT)](#пошукове-поле-search-input)
+    
+    18.3. [Від/До (FROM-TO)](#від/до-from-to)
 
 ## 1. Імпорт шрифтів <a name="імпорт-шрифтів"></a>
 
@@ -2104,3 +2112,336 @@ button {
 
 Ці стилі стосуються пагінації (`PAGINATION`) - це механізм розділення великої кількості контенту на декілька сторінок, що дозволяє користувачам переглядати дані частинами. Стилі визначають вигляд елементів пагінації та їх поведінку для різних екранів (`@media screen and (max-width: 700px)`), де збільшують розміри тексту для кращого відображення на маленьких пристроях. 
 Також для активної сторінки є незалежний стиль (`.selected-page`)
+
+## 18. Поля введення (INPUTS)<a name="введення-даних-inputs"></a>
+
+```css
+/* INPUTS */
+
+.input-text {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+    background-color: var(--white);
+}
+
+.input-text:focus {
+    border: 1px solid var(--aquamarine);
+    outline: none !important;
+    border-color: var(--aquamarine);
+    box-shadow: 0 0 1px var(--aquamarine);
+}
+
+.input-text::placeholder {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 700px) {
+    .input-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .input-text::placeholder {
+        font-size: 12px;
+    }
+}
+```
+
+Ці стилі визначають зовнішній вигляд для текстових полів введення (`<input type="text">`). Вони задають ширину, відступи, радіус кутів, колір межі, фоновий колір та стилі підказки. При отриманні фокусу поле має інший колір межі та ефект тіні, що показує активне поле введення.
+
+### 18.1. Введення телефону (INPUT-PHONE-TELL)<a name="введення-телефону-input-phone-tell"></a>
+
+```css
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=text],
+.iti--allow-dropdown input[type=tel],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=text],
+.iti--separate-dial-code input[type=tel] {
+    padding-right: 50px;
+}
+
+.input-tell-container,
+.input-tell-container form,
+.input-tell-container form .form-group,
+.input-tell-container form .form-group .iti {
+    width: 100%;
+}
+
+.input-tell-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.input-tell-container .form-control:focus {
+    color: var(--darck-gray);
+    background-color: var(--white);
+    border-color: var(--aquamarine);
+    outline: 0;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background-color: var(--white);
+}
+
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag:focus {
+    border: none;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.iti__country-list {
+    position: absolute;
+    z-index: var(--layer-2);
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    white-space: nowrap;
+    max-height: 300px;
+    max-width: calc(100vw - 60px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+```
+
+Ці стилі визначають зовнішній вигляд для поля введення номера телефону. 
+Класи стилів `.iti--allow-dropdown` та `.iti--separate-dial-code` використовуються для інтеграції з бібліотекою
+[International Telephone Input](https://github.com/jackocnr/intl-tel-input), яка дозволяє створювати поля введення номера телефону з випадаючим списком кодів країн.
+Ми перезаписуємо дуякі зі стилей котрі призодять нам з цієїї CSS бібліотеки. 
+Якщо у майбутьньому щось у цьому інпуту будет редагуватися велике прохання слідити за цим.
+
+### 18.2. Пошукове поле (SEARCH-INPUT)<a name="пошукове-поле-search-input"></a>
+
+```css
+.search-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 515px;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+}
+
+.search-input::placeholder {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-input:focus {
+    border: 1px solid var(--aquamarine);
+    outline: none !important;
+    border-color: var(--aquamarine);
+    box-shadow: 0 0 1px var(--aquamarine);
+}
+
+.search-input-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: var(--darck-gray);
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 700px) {
+    .search-input {
+        width: 100%;
+    }
+
+    .search-input::placeholder {
+        font-size: 12px;
+    }
+}
+```
+
+Ці стилі визначають зовнішній вигляд для пошукового поля. 
+Вони встановлюють ширину, відступи, колір межі, радіус кутів, стилі підказки та поведінку при фокусуванні на полі. Також стилізується кнопка пошуку, яка розташовується праворуч від поля введення.
+
+### 18.3. Від/До (FROM-TO)<a name="від/до-from-to"></a>
+
+```css
+.from-to-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.range-slider {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.range-slider .number-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--white);
+}
+
+.range-slider .number-group .number-input {
+    padding: 10px;
+    text-align: left;
+    max-width: 80px;
+    width: 100%;
+    color:
+
+ var(--darck-gray);
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+}
+
+.range-slider .number-group .number-input::placeholder {
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.range-slider .number-group .number-input:focus {
+    border: 1px solid var(--aquamarine);
+    outline: none !important;
+    border-color: var(--aquamarine);
+    box-shadow: 0 0 1px var(--aquamarine);
+}
+
+.range-slider .number-group .number-input::-webkit-outer-spin-button,
+.range-slider .number-group .number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.range-slider .number-group .number-input:invalid,
+.range-slider .number-group .number-input:out-of-range {
+    border: 2px solid var(--red);
+}
+
+.range-slider .range-group {
+    position: relative;
+    width: 100%;
+    height: 8px;
+}
+
+.range-slider .range-group .range-input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    border-bottom: 0;
+}
+
+.range-slider .range-group .range-input:focus {
+    outline: 0;
+}
+
+.range-slider .range-group .range-input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animation: 0.2s;
+    background: var(--red);
+    border-radius: 50px;
+    box-shadow: none;
+    border: 0;
+}
+
+.range-slider .range-group .range-input::-webkit-slider-thumb {
+    z-index: 2;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--red);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+
+.range-slider .range-group .range-input::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animation: 0.2s;
+    background: var(--gray);
+    border-radius: 1px;
+    box-shadow: none;
+    border: 0;
+}
+
+.range-slider .range-group .range-input::-moz-range-thumb {
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px 0px 1px var(--aquamarine);
+    border: 1px solid var(--red);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--red);
+    cursor: pointer;
+}
+
+.range-slider .range-group .range-input::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animation: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.range-slider .range-group .range-input::-ms-fill-lower,
+.range-slider .range-group .range-input::-ms-fill-upper {
+    background: var(--red);
+    border-radius: 1px;
+    box-shadow: none;
+    border: 0;
+}
+
+.range-slider .range-group .range-input::-ms-thumb {
+    z-index: 2;
+    position: relative;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: var(--red);
+    cursor: pointer;
+}
+```
+
+Ці стилі стосуються вводу діапазону значень (від/до). Елемент з класом `.from-to-input-container` містить групу елементів для вибору діапазону значень. 
+Вони складаються з полів введення чисел (`.number-group .number-input`) та слайдера діапазону (`.range-group .range-input`). 
+Стилізовані підказки, рамки та ручки слайдера, щоб зробити їх більш користувацьки зрозумілими.
+Також напимані стилі, що дозволяють ввести числові значення або вибрати діапазон, рухаючи повзунки (`Від` - `До`).

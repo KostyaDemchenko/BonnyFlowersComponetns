@@ -83,7 +83,7 @@ incrementBtn.addEventListener('click', function () {
 
 (function () {
   const parent = document.querySelector("#rangeSlider");
-  if (!parent) return;
+  if (!parent) return; 
 
   const rangeS = parent.querySelectorAll("input[type=range]");
   const numberS = parent.querySelectorAll("input[type=number]");
@@ -163,24 +163,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-// SLIDER
+// SLIDER-HEADDER
 
 document.addEventListener('DOMContentLoaded', function () {
   function isTouchDevice() {
       return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
   }
 
-  document.querySelectorAll('.slider-container').forEach(function (slider) {
-      var group = slider.querySelector('.slide_group');
-      var slides = slider.querySelectorAll('.slide');
-      var bulletArray = [];
-      var currentIndex = 0;
-      var timeout;
-      var touchStartX = 0;
-      var touchEndX = 0;
+  document.querySelectorAll('.slider-container-headder').forEach(function (slider) {
+      const group = slider.querySelector('.slide_group');
+      const slides = slider.querySelectorAll('.slide-hedder');
+      const bulletArray = [];
+      let currentIndex = 0;
+      let timeout;
+      let touchStartX = 0;
+      let touchEndX = 0;
 
       function move(newIndex) {
-          var animateLeft, slideLeft;
+          let animateLeft, slideLeft;
 
           advance();
 
@@ -225,8 +225,12 @@ document.addEventListener('DOMContentLoaded', function () {
               } else {
                   move(0);
               }
-          }, 4000000);
+          }, 4000); // Change the interval to 4000ms (4 seconds)
       }
+
+      // Set initial opacity to 1 for the first slide
+      slides[currentIndex].style.opacity = '1';
+      slides[currentIndex].style.zIndex = 'var(--layer-4)';
 
       slider.querySelector('.next_btn').addEventListener('click', function () {
           if (currentIndex < (slides.length - 1)) {
@@ -245,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       slides.forEach(function (slide, index) {
-          var button = document.createElement('a');
+          const button = document.createElement('a');
           button.className = 'slide_btn';
           button.innerHTML = ' ';
 
@@ -273,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
 
           function handleSwipe() {
-              var swipeThreshold = 50;
+              const swipeThreshold = 50;
 
               if (touchEndX - touchStartX > swipeThreshold) {
                   if (currentIndex !== 0) {
@@ -291,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
       }
 
+      // Start the automatic slide transition
       advance();
   });
 });

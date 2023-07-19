@@ -2492,3 +2492,397 @@ button {
 
 ## 19. Слайдери (Slider)<a name="слайдери-slider"></a>
 ### 19. Слайдер для хеддеру(HEADDER-SLIDER)<a name="слайдер-для-хеддеру-headder-slider"></a>
+
+![Alt text](./screenshot/hedder-slider(desc).png)
+
+![Alt text](./screenshot/hedder-slider(mobile).png)
+
+```css
+/* SLIDER-HEADDER */
+
+.slider-container-headder {
+    width: 100%;
+    height: calc((100vw * 5) /17);
+    position: relative;
+}
+
+.slider-container-headder .slide_viewer {
+    width: 100%;
+    height: calc((100vw * 5) /17);
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container-headder .slide_group {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+```
+
+Ці стилі стосуються створення слайдера для заголовка. Елемент з класом `.slider-container-headder` представляє контейнер слайдера заголовка. Усі слайди заголовка мають розмір, розрахований на основі ширини вікна (100vw). Висота слайдера обчислюється як 5/17 частини ширини вікна.
+
+### 21.18. Навігація та кнопки слайдера (SLIDE-HEADDER-NAVIGATION-AND-BOXES)
+
+```css
+.slider-container-headder .slide_buttons {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    bottom: 40px;
+    right: 15vw;
+    z-index: var(--layer-4);
+}
+
+.slider-container-headder a.slide_btn {
+    display: flex;
+    height: 14px;
+    width: 14px;
+    border-radius: 50vh;
+    background-color: transparent;
+    border: 1px solid var(--white);
+}
+
+.slider-container-headder .slide_btn.active,
+.slider-container-headder .slide_btn:hover {
+    background-color: var(--white);
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+.slider-container-headder .directional_nav {
+    height: calc((100vw * 5) /17);
+    width: 100%;
+    position: relative;
+    top: calc((-100vw * 5) /17);
+}
+
+.slider-container-headder .previous_btn {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.slider-container-headder .next_btn {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.slider-container-headder .previous_btn,
+.slider-container-headder .next_btn {
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    width: 13%;
+    z-index: var(--layer-4);
+}
+```
+
+Ці стилі відповідають за навігацію та кнопки у слайдері заголовка. Елемент з класом `.slider-container-headder .slide_buttons` містить кнопки, що показують активний слайд, а також вузли навігації до попереднього та наступного слайдів. Кнопки мають зовнішній вигляд круглих точок із білою межею. Коли кнопка активна або їй наведений курсор, вона отримує білий фон та більший розмір.
+
+### 21.19. Структура слайдів у слайдері (SLIDE-HEADDER-STUCTURE)
+
+```css
+.slider-container-headder .slide-hedder {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-container-headder .slide-bg {
+    width: 100%;
+    position: absolute;
+    z-index: var(--layer-1);
+    height: calc((100vw * 5) /17);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider-container-headder .slide-info-conatiner {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    max-width: 1390px;
+    z-index: var(--layer-4);
+}
+
+.slider-container-headder .slide-info {
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 45px;
+}
+```
+
+Ці стилі стосуються структури слайдів у слайдері заголовка. Елемент `.slider-container-headder .slide-hedder` визначає структуру кожного слайда. Елемент `.slider-container-headder .slide-bg` представляє фоновий зображення слайда, який розміщений зверху слайдера. Елемент `.slider-container-headder .slide-info-conatiner` містить інформацію про слайдер, яка розташована внизу слайдера. Кожний окремий слайд має максимальну ширину `1390px`, а інформація про нього (`slide-info`) розміщена у максимальній ширині `700px`.
+
+### 21.20. Анімація слайдера (SLIDE-ANIMATION)
+
+```css
+.slider-container-headder .slide_group.animated {
+    transition: left 0.5s ease;
+}
+
+@media only screen and (max-width: 767px) {
+    /* SLIDER-HEADDER */
+
+    .slider-container-headder {
+        height: calc((100vw * 9) /17);
+    }
+
+    .slider-container-headder .slide_viewer {
+        height: calc((100vw * 9) /17);
+    }
+
+    .slider-container-headder .slide_group {
+        height: 100%;
+        width: 100%;
+    }
+
+    .slider-container-headder .slide_buttons {
+        gap: 12px;
+        bottom: 10px;
+        right: 15px;
+    }
+
+    .slider-container-headder a.slide_btn {
+        height: 6px;
+        width: 6px;
+    }
+
+    .slider-container-headder .slide_btn.active,
+    .
+
+slider-container-headder .slide_btn:hover {
+        height: 9px;
+        width: 9px;
+    }
+
+    .slider-container-headder .directional_nav {
+        height: calc((100vw * 9) /17);
+        top: calc((-100vw * 9) /17);
+    }
+
+    .slider-container-headder .previous_btn,
+    .slider-container-headder .next_btn {
+        width: 5%;
+    }
+
+    /* SLIDE-STUCTURE-SLIDER-HEADDER */
+
+    .slider-container-headder .slide-bg {
+        width: 100%;
+        height: calc((100vw * 9) /17);
+    }
+
+    .slider-container-headder .slide-info-conatiner {
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+    }
+
+    .slider-container-headder .slide-info {
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 80%;
+        max-width: 70%;
+        gap: 20px;
+    }
+}
+```
+
+Ці стилі додають анімацію до слайдера заголовка. Елемент з класом `.slider-container-headder .slide_group.animated` отримує перехід з лівої сторони протягом `0.5s` з ефектом `ease`. При перегляді на екранах з шириною до `767px`, виконуються медіазапити, які змінюють розміри слайдера та його елементів для відповідності маленьким екранам.
+
+Також ось опис JS коду:
+
+```js
+
+document.addEventListener('DOMContentLoaded', function () {
+  function isTouchDevice() {
+    // Перевіряємо, чи пристрій підтримує сенсорний ввід (дотик)
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  }
+
+  document.querySelectorAll('.slider-container').forEach(function (slider) {
+    // Отримуємо елементи слайдера
+
+    const group = slider.querySelector('.slide_group'); // Контейнер для слайдів
+    const slides = slider.querySelectorAll('.slide-hedder'); // Список слайдів
+    const bulletArray = []; // Масив для збереження кнопок-булетів (індикаторів слайдів)
+    let currentIndex = 0; // Поточний індекс слайда
+    let timeout; // Змінна для збереження таймеру для автоматичної прокрутки слайдів
+    let touchStartX = 0; // Координата дотику при початку перетягування слайдера
+    let touchEndX = 0; // Координата дотику при завершенні перетягування слайдера
+
+    function move(newIndex) {
+      var animateLeft, slideLeft;
+
+      // Запускаємо автоматичну прокрутку слайдів
+      advance();
+
+      // Перевіряємо, чи немає активних анімацій або чи не збігається поточний індекс з новим
+      if (group.classList.contains('animated') || currentIndex === newIndex) {
+        return;
+      }
+
+      // Змінюємо активний булет
+      bulletArray[currentIndex].classList.remove('active');
+      bulletArray[newIndex].classList.add('active');
+
+      // Визначаємо напрямок анімації (ліво чи право) в залежності від нового і поточного індексу
+      if (newIndex > currentIndex) {
+        slideLeft = '100%';
+        animateLeft = '-100%';
+      } else {
+        slideLeft = '-100%';
+        animateLeft = '100%';
+      }
+
+      // Додаємо клас 'animated', щоб забезпечити анімацію переходу
+      group.classList.add('animated');
+
+      // Встановлюємо видимість та позицію нового слайда для анімації
+      slides[newIndex].style.opacity = '1';
+      slides[newIndex].style.zIndex = 'var(--layer-4)';
+      slides[newIndex].style.left = slideLeft;
+      group.style.left = animateLeft;
+
+      // По завершенні анімації слайдів, знімаємо клас 'animated', оновлюємо стилі і поточний індекс
+      setTimeout(function () {
+        group.classList.remove('animated');
+
+        slides[currentIndex].style.opacity = '0';
+        slides[currentIndex].style.zIndex = '0';
+        slides[newIndex].style.left = '0';
+        group.style.left = '0';
+        currentIndex = newIndex;
+      }, 500);
+    }
+
+    function advance() {
+      // Очищуємо таймер для запобігання дублюванню таймерів
+      clearTimeout(timeout);
+
+      // Запускаємо таймер для автоматичної прокрутки слайдів через 4 секунди (4000 мілісекунд)
+      timeout = setTimeout(function () {
+        if (currentIndex < slides.length - 1) {
+          // Якщо не досягнуто останнього слайда, переходимо до наступного
+          move(currentIndex + 1);
+        } else {
+          // Інакше, переходимо до першого слайда
+          move(0);
+        }
+      }, 4000);
+    }
+
+    // Встановлюємо початкову видимість для першого слайда
+    slides[currentIndex].style.opacity = '1';
+    slides[currentIndex].style.zIndex = 'var(--layer-4)';
+
+    // Додаємо обробник події для кнопки "Next" (Наступний слайд)
+    slider.querySelector('.next_btn').addEventListener('click', function () {
+      if (currentIndex < slides.length - 1) {
+        // Якщо не досягнуто останнього слайда, переходимо до наступного
+        move(currentIndex + 1);
+      } else {
+        // Інакше, переходимо до першого слайда
+        move(0);
+      }
+    });
+
+    // Додаємо обробник події для кнопки "Previous" (Попередній слайд)
+    slider.querySelector('.previous_btn').addEventListener('click', function () {
+      if (currentIndex !== 0) {
+        // Якщо не перебуваємо на першому слайді, переходимо до попереднього
+        move(currentIndex - 1);
+      } else {
+        // Інакше, переходимо до останнього слайда
+        move(slides.length - 1);
+      }
+    });
+
+    // Додаємо кнопки-булети (індикатори слайдів) для кожного слайда
+    slides.forEach(function (slide, index) {
+      var button = document.createElement('a');
+      button.className = 'slide_btn';
+      button.innerHTML = ' ';
+
+      if (index === currentIndex) {
+        // Встановлюємо клас 'active' для активного слайда
+        button.classList.add('active');
+      }
+
+      button.addEventListener('click', function () {
+        // При кліку на кнопку-булет переходимо до відповідного слайда
+        move(index);
+      });
+
+      // Додаємо кнопку-булет до контейнера кнопок-булетів
+      slider.querySelector('.slide_buttons').appendChild(button);
+      bulletArray.push(button);
+    });
+
+    // Обробка жестів сенсорного вводу (свайпів) для переходу між слайдами
+    if (isTouchDevice()) {
+      slider.addEventListener('touchstart', function (e) {
+        // Запам'ятовуємо координату дотику при початку перетягування слайдера
+        touchStartX = e.changedTouches[0].clientX;
+      });
+
+      slider.addEventListener('touchend', function (e) {
+        // Запам'ятовуємо координату дотику при завершенні перетягування слайдера
+        touchEndX = e.changedTouches[0].clientX;
+        // Оброблюємо свайп-жест
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        var swipeThreshold = 50; // Мінімальне відстань для визначення свайпу
+
+        if (touchEndX - touchStartX > swipeThreshold) {
+          // Якщо відстань свайпу більша за поріг, переходимо до попереднього слайда
+          if (currentIndex !== 0) {
+            move(currentIndex - 1);
+          } else {
+            // Якщо перебуваємо на першому слайді, переходимо до останнього
+            move(slides.length - 1);
+          }
+        } else if (touchStartX - touchEndX > swipeThreshold) {
+          // Якщо відстань свайпу менша за поріг, переходимо до наступного слайда
+          if (currentIndex < slides.length - 1) {
+            move(currentIndex + 1);
+          } else {
+            // Якщо перебуваємо на останньому слайді, переходимо до першого
+            move(0);
+          }
+        }
+      }
+    }
+
+    // Запускаємо автоматичну прокрутку слайдів
+    advance();
+  });
+});
+
+```
+

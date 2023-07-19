@@ -69,11 +69,11 @@
 
 19. [Слайдери (Slider)](#слайдери-slider)
 
-    19.1.[Слайдер для хеддеру(HEADDER-SLIDER)](#слайдер-для-хеддеру-headder-slider)
+    19.1.[Слайдер для хеддеру(header-SLIDER)](#слайдер-для-хеддеру-header-slider)
 
-    19.2.[Навігація та кнопки слайдера (SLIDE-HEADDER-NAVIGATION-AND-BOXES)](#навігація-та-кнопки-слайдера-slide-headder-navigation-and-boxes)
+    19.2.[Навігація та кнопки слайдера (SLIDE-header-NAVIGATION-AND-BOXES)](#навігація-та-кнопки-слайдера-slide-header-navigation-and-boxes)
 
-    19.3.[Структура слайдів у слайдері (SLIDE-HEADDER-STUCTURE)](#структура-слайдів-у-слайдері-slide-headder-stucture)
+    19.3.[Структура слайдів у слайдері (SLIDE-header-STUCTURE)](#структура-слайдів-у-слайдері-slide-header-stucture)
 
     19.4.[Анімація слайдера (SLIDE-ANIMATION)](#анімація-слайдера-slide-animation)
 
@@ -2499,43 +2499,43 @@ button {
 
 
 ## 19. Слайдери (Slider)<a name="слайдери-slider"></a>
-### 19.1. Слайдер для хеддеру(HEADDER-SLIDER)<a name="слайдер-для-хеддеру-headder-slider"></a>
+### 19.1. Слайдер для хеддеру(header-SLIDER)<a name="слайдер-для-хеддеру-header-slider"></a>
 
-![Alt text](./screenshot/hedder-slider(desc).png)
+![Alt text](./screenshot/header-slider(desc).png)
 
-![Alt text](./screenshot/hedder-slider(mobile).png)
+![Alt text](./screenshot/header-slider(mobile).png)
 
 ```css
-/* SLIDER-HEADDER */
+/* SLIDER-header */
 
-.slider-container-headder {
+.slider-container-header {
     width: 100%;
     height: calc((100vw * 5) /17);
     position: relative;
 }
 
-.slider-container-headder .slide_viewer {
+.slider-container-header .slide_viewer {
     width: 100%;
     height: calc((100vw * 5) /17);
     overflow: hidden;
     position: relative;
 }
 
-.slider-container-headder .slide_group {
+.slider-container-header .slide_group {
     height: 100%;
     position: relative;
     width: 100%;
 }
 ```
 
-Ці стилі стосуються створення слайдера для заголовка. Елемент з класом `.slider-container-headder` представляє контейнер слайдера заголовка. 
+Ці стилі стосуються створення слайдера для заголовка. Елемент з класом `.slider-container-header` представляє контейнер слайдера заголовка. 
 Усі слайди заголовка мають розмір, розрахований на основі ширини вікна (100vw). 
 Висота слайдера обчислюється як 5/17 частини ширини вікна.
 
-### 19.2. Навігація та кнопки слайдера (SLIDE-HEADDER-NAVIGATION-AND-BOXES)<a name="навігація-та-кнопки-слайдера-slide-headder-navigation-and-boxes"></a>
+### 19.2. Навігація та кнопки слайдера (SLIDE-header-NAVIGATION-AND-BOXES)<a name="навігація-та-кнопки-слайдера-slide-header-navigation-and-boxes"></a>
 
 ```css
-.slider-container-headder .slide_buttons {
+.slider-container-header .slide_buttons {
     position: absolute;
     text-align: center;
     display: flex;
@@ -2547,7 +2547,7 @@ button {
     z-index: var(--layer-4);
 }
 
-.slider-container-headder a.slide_btn {
+.slider-container-header a.slide_btn {
     display: flex;
     height: 14px;
     width: 14px;
@@ -2556,22 +2556,22 @@ button {
     border: 1px solid var(--white);
 }
 
-.slider-container-headder .slide_btn.active,
-.slider-container-headder .slide_btn:hover {
+.slider-container-header .slide_btn.active,
+.slider-container-header .slide_btn:hover {
     background-color: var(--white);
     cursor: pointer;
     height: 16px;
     width: 16px;
 }
 
-.slider-container-headder .directional_nav {
+.slider-container-header .directional_nav {
     height: calc((100vw * 5) /17);
     width: 100%;
     position: relative;
     top: calc((-100vw * 5) /17);
 }
 
-.slider-container-headder .previous_btn {
+.slider-container-header .previous_btn {
     bottom: 0;
     top: 0;
     left: 0;
@@ -2579,7 +2579,7 @@ button {
     position: absolute;
 }
 
-.slider-container-headder .next_btn {
+.slider-container-header .next_btn {
     bottom: 0;
     top: 0;
     right: 0;
@@ -2587,8 +2587,8 @@ button {
     position: absolute;
 }
 
-.slider-container-headder .previous_btn,
-.slider-container-headder .next_btn {
+.slider-container-header .previous_btn,
+.slider-container-header .next_btn {
     cursor: pointer;
     height: 100%;
     opacity: 0;
@@ -2597,12 +2597,12 @@ button {
 }
 ```
 
-Ці стилі відповідають за навігацію та кнопки у слайдері заголовка. Елемент з класом `.slider-container-headder .slide_buttons` містить кнопки, що показують активний слайд, а також вузли навігації до попереднього та наступного слайдів. Кнопки мають зовнішній вигляд круглих точок із білою межею. Коли кнопка активна або їй наведений курсор, вона отримує білий фон та більший розмір.
+Ці стилі відповідають за навігацію та кнопки у слайдері заголовка. Елемент з класом `.slider-container-header .slide_buttons` містить кнопки, що показують активний слайд, а також вузли навігації до попереднього та наступного слайдів. Кнопки мають зовнішній вигляд круглих точок із білою межею. Коли кнопка активна або їй наведений курсор, вона отримує білий фон та більший розмір.
 
-### 19.3. Структура слайдів у слайдері (SLIDE-HEADDER-STUCTURE)<a name="структура-слайдів-у-слайдері-slide-headder-stucture"></a>
+### 19.3. Структура слайдів у слайдері (SLIDE-header-STUCTURE)<a name="структура-слайдів-у-слайдері-slide-header-stucture"></a>
 
 ```css
-.slider-container-headder .slide-hedder {
+.slider-container-header .slide-header {
     opacity: 0;
     height: 100%;
     width: 100%;
@@ -2611,7 +2611,7 @@ button {
     justify-content: center;
 }
 
-.slider-container-headder .slide-bg {
+.slider-container-header .slide-bg {
     width: 100%;
     position: absolute;
     z-index: var(--layer-1);
@@ -2621,7 +2621,7 @@ button {
     background-repeat: no-repeat;
 }
 
-.slider-container-headder .slide-info-conatiner {
+.slider-container-header .slide-info-conatiner {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -2631,7 +2631,7 @@ button {
     z-index: var(--layer-4);
 }
 
-.slider-container-headder .slide-info {
+.slider-container-header .slide-info {
     height: 100%;
     width: 100%;
     max-width: 700px;
@@ -2643,73 +2643,73 @@ button {
 }
 ```
 
-Ці стилі стосуються структури слайдів у слайдері заголовка. Елемент `.slider-container-headder .slide-hedder` визначає структуру кожного слайда. Елемент `.slider-container-headder .slide-bg` представляє фоновий зображення слайда, який розміщений зверху слайдера. Елемент `.slider-container-headder .slide-info-conatiner` містить інформацію про слайдер, яка розташована внизу слайдера. Кожний окремий слайд має максимальну ширину `1390px`, а інформація про нього (`slide-info`) розміщена у максимальній ширині `700px`.
+Ці стилі стосуються структури слайдів у слайдері заголовка. Елемент `.slider-container-header .slide-header` визначає структуру кожного слайда. Елемент `.slider-container-header .slide-bg` представляє фоновий зображення слайда, який розміщений зверху слайдера. Елемент `.slider-container-header .slide-info-conatiner` містить інформацію про слайдер, яка розташована внизу слайдера. Кожний окремий слайд має максимальну ширину `1390px`, а інформація про нього (`slide-info`) розміщена у максимальній ширині `700px`.
 
 ### 19.4. Анімація слайдера (SLIDE-ANIMATION)<a name="анімація-слайдера-slide-animation"></a>
 
 ```css
-.slider-container-headder .slide_group.animated {
+.slider-container-header .slide_group.animated {
     transition: left 0.5s ease;
 }
 
 @media only screen and (max-width: 767px) {
-    /* SLIDER-HEADDER */
+    /* SLIDER-header */
 
-    .slider-container-headder {
+    .slider-container-header {
         height: calc((100vw * 9) /17);
     }
 
-    .slider-container-headder .slide_viewer {
+    .slider-container-header .slide_viewer {
         height: calc((100vw * 9) /17);
     }
 
-    .slider-container-headder .slide_group {
+    .slider-container-header .slide_group {
         height: 100%;
         width: 100%;
     }
 
-    .slider-container-headder .slide_buttons {
+    .slider-container-header .slide_buttons {
         gap: 12px;
         bottom: 10px;
         right: 15px;
     }
 
-    .slider-container-headder a.slide_btn {
+    .slider-container-header a.slide_btn {
         height: 6px;
         width: 6px;
     }
 
-    .slider-container-headder .slide_btn.active,
-    .slider-container-headder .slide_btn:hover {
+    .slider-container-header .slide_btn.active,
+    .slider-container-header .slide_btn:hover {
         height: 9px;
         width: 9px;
     }
 
-    .slider-container-headder .directional_nav {
+    .slider-container-header .directional_nav {
         height: calc((100vw * 9) /17);
         top: calc((-100vw * 9) /17);
     }
 
-    .slider-container-headder .previous_btn,
-    .slider-container-headder .next_btn {
+    .slider-container-header .previous_btn,
+    .slider-container-header .next_btn {
         width: 5%;
     }
 
-    /* SLIDE-STUCTURE-SLIDER-HEADDER */
+    /* SLIDE-STUCTURE-SLIDER-header */
 
-    .slider-container-headder .slide-bg {
+    .slider-container-header .slide-bg {
         width: 100%;
         height: calc((100vw * 9) /17);
     }
 
-    .slider-container-headder .slide-info-conatiner {
+    .slider-container-header .slide-info-conatiner {
         justify-content: start;
         align-items: center;
         height: 100%;
         width: 90%;
     }
 
-    .slider-container-headder .slide-info {
+    .slider-container-header .slide-info {
         align-items: flex-start;
         justify-content: flex-start;
         height: 80%;
@@ -2720,9 +2720,9 @@ button {
 ```
 
 Ці стилі додають анімацію до слайдера заголовка. 
-Елемент з класом `.slider-container-headder .slide_group.animated` отримує перехід з лівої сторони протягом `0.5s` з ефектом `ease`. 
+Елемент з класом `.slider-container-header .slide_group.animated` отримує перехід з лівої сторони протягом `0.5s` з ефектом `ease`. 
 При перегляді на екранах з шириною до `767px`, виконуються медіазапити, які змінюють розміри слайдера та його елементів для відповідності маленьким екранам.
-Також бекграунд для слайдерів передається через html за допомоги (`style="background-image: url(./img/bg-headder-slider.jpg);`)
+Також бекграунд для слайдерів передається через html за допомоги (`style="background-image: url(./img/bg-header-slider.jpg);`)
 
 ### 19.5. Опис JS-коду<a name="опис-js-коду"></a>
 
@@ -2740,7 +2740,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Отримуємо елементи слайдера
 
     const group = slider.querySelector('.slide_group'); // Контейнер для слайдів
-    const slides = slider.querySelectorAll('.slide-hedder'); // Список слайдів
+    const slides = slider.querySelectorAll('.slide-header'); // Список слайдів
     const bulletArray = []; // Масив для збереження кнопок-булетів (індикаторів слайдів)
     let currentIndex = 0; // Поточний індекс слайда
     let timeout; // Змінна для збереження таймеру для автоматичної прокрутки слайдів

@@ -163,16 +163,16 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-// SLIDER-HEADDER
+// SLIDER-header
 
 document.addEventListener('DOMContentLoaded', function () {
   function isTouchDevice() {
       return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
   }
 
-  document.querySelectorAll('.slider-container-headder').forEach(function (slider) {
+  document.querySelectorAll('.slider-container-header').forEach(function (slider) {
       const group = slider.querySelector('.slide_group');
-      const slides = slider.querySelectorAll('.slide-hedder');
+      const slides = slider.querySelectorAll('.slide-header');
       const bulletArray = [];
       let currentIndex = 0;
       let timeout;

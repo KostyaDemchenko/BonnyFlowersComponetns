@@ -2008,6 +2008,8 @@ button {
 
 ### 16.10. Стилі лічильника (COUNTER)<a name="стилі-лічильника-counter"></a>
 
+![Alt text](./screenshot/counet-screnshot.png)
+
 ```css
 /* COUNTER */
 
@@ -2032,6 +2034,49 @@ button {
         height: 24px;
     }
 }
+```
+
+```js
+
+// COUNTER
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Отримуємо посилання на всі лічильники на сторінці
+  let counters = document.querySelectorAll('.counter');
+
+  // Обробляємо кожен лічильник окремо
+  counters.forEach(function (counter) {
+    // Отримуємо посилання на кнопку "Зменшити" для поточного лічильника
+    let decrementBtn = counter.querySelector('.decrement');
+
+    // Отримуємо посилання на кнопку "Збільшити" для поточного лічильника
+    let incrementBtn = counter.querySelector('.increment');
+
+    // Отримуємо посилання на блок, де відображається значення лічильника
+    let countSpan = counter.querySelector('.count');
+
+    // Встановлюємо початкове значення лічильника для кожного лічильника (1)
+    let count = 1;
+    countSpan.textContent = count;
+
+    // Обробник події для зменшення значення лічильника
+    decrementBtn.addEventListener('click', function () {
+      // Перевіряємо, щоб лічильник не став менше 1
+      if (count > 1) {
+        count--;
+        countSpan.textContent = count;
+      }
+    });
+
+    // Обробник події для збільшення значення лічильника
+    incrementBtn.addEventListener('click', function () {
+      count++;
+      countSpan.textContent = count;
+    });
+  });
+});
+
+
 ```
 
 Ці стилі стосуються лічильника (`COUNTER`), що міститься на картках товарів. Лічильник має спеціальний стиль зі зміненим кольором фону та іншими розмірами для різних екранів (`@media screen and (max-width: 700px)`).

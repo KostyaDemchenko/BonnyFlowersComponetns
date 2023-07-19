@@ -1,7 +1,6 @@
 // SCROLL UP
 
 
-
 // Получаем ссылку на кнопку прокрутки вверх
 const scrollButton = document.getElementById('scroll-up');
 
@@ -36,8 +35,6 @@ scrollButton.addEventListener('click', function (e) {
 
 // FEEDBACK-SHOW
 
-
-
 const openCtaGroup = document.getElementById('open-cta');
 
 const contactUsBtnGroup = document.querySelector('.contact-us-btn-group');
@@ -50,74 +47,81 @@ openCtaGroup.addEventListener('click', () => {
 
 // COUNTER
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Получаем ссылки на все счетчики на странице
+  let counters = document.querySelectorAll('.counter');
 
+  // Обрабатываем каждый счетчик отдельно
+  counters.forEach(function (counter) {
+    let decrementBtn = counter.querySelector('.decrement');
+    let incrementBtn = counter.querySelector('.increment');
+    let countSpan = counter.querySelector('.count');
 
-// Получаем ссылки на необходимые элементы
-let decrementBtn = document.getElementById('decrement');
-let incrementBtn = document.getElementById('increment');
-let countSpan = document.getElementById('count');
-
-// Устанавливаем начальное значение счетчика
-let count = 1;
-countSpan.textContent = count;
-
-// Обработчик события для уменьшения значения
-decrementBtn.addEventListener('click', function () {
-  if (count > 1) {
-    count--;
+    // Устанавливаем начальное значение счетчика для каждого счетчика
+    let count = 1;
     countSpan.textContent = count;
-  }
+
+    // Обработчик события для уменьшения значения
+    decrementBtn.addEventListener('click', function () {
+      if (count > 1) {
+        count--;
+        countSpan.textContent = count;
+      }
+    });
+
+    // Обработчик события для увеличения значения
+    incrementBtn.addEventListener('click', function () {
+      count++;
+      countSpan.textContent = count;
+    });
+  });
 });
 
-// Обработчик события для увеличения значения
-incrementBtn.addEventListener('click', function () {
-  count++;
-  countSpan.textContent = count;
-});
 
 
 
 // RANGE-FROM-TO-SLIDER
 
-
-
 (function () {
-  const parent = document.querySelector("#rangeSlider");
-  if (!parent) return; 
+  const sliders = document.querySelectorAll("#rangeSlider");
 
-  const rangeS = parent.querySelectorAll("input[type=range]");
-  const numberS = parent.querySelectorAll("input[type=number]");
+  sliders.forEach(function (parent) {
+    const rangeS = parent.querySelectorAll("input[type=range]");
+    const numberS = parent.querySelectorAll("input[type=number]");
 
-  rangeS.forEach(function (el) {
-    el.oninput = function () {
-      let slide1 = parseFloat(rangeS[0].value);
-      let slide2 = parseFloat(rangeS[1].value);
+    rangeS.forEach(function (el) {
+      el.oninput = function () {
+        let slide1 = parseFloat(rangeS[0].value);
+        let slide2 = parseFloat(rangeS[1].value);
 
-      if (slide1 > slide2) {
-        [slide1, slide2] = [slide2, slide1];
-      }
+        if (slide1 > slide2) {
+          [slide1, slide2] = [slide2, slide1];
+        }
 
-      numberS[0].value = slide1;
-      numberS[1].value = slide2;
-    };
-  });
+        numberS[0].value = slide1;
+        numberS[1].value = slide2;
+      };
+    });
 
-  numberS.forEach(function (el) {
-    el.oninput = function () {
-      let number1 = parseFloat(numberS[0].value);
-      let number2 = parseFloat(numberS[1].value);
+    numberS.forEach(function (el) {
+      el.oninput = function () {
+        let number1 = parseFloat(numberS[0].value);
+        let number2 = parseFloat(numberS[1].value);
 
-      if (number1 > number2) {
-        let tmp = number1;
-        numberS[0].value = number2;
-        numberS[1].value = tmp;
-      }
+        if (number1 > number2) {
+          let tmp = number1;
+          numberS[0].value = number2;
+          numberS[1].value = tmp;
+        }
 
-      rangeS[0].value = number1;
-      rangeS[1].value = number2;
-    };
+        rangeS[0].value = number1;
+        rangeS[1].value = number2;
+      };
+    });
   });
 })();
+
+
 
 
 // INPUT-TELL
@@ -162,6 +166,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+
 
 // SLIDER-header
 

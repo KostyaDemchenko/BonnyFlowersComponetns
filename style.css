@@ -2216,11 +2216,15 @@ button {
     flex-direction: column;
 }
 
+
+
 /* SLIDER-HEADDER */
+
+/* SLIDE-HEADDER-NAVIGATION-AND-BOXES */
 
 .slider-container {
     width: 100%;
-    height: calc((100vw * 9) /17);
+    height: calc((100vw * 5) /17);
     position: relative;
     /* for testting */
     margin-bottom: 520px;
@@ -2228,7 +2232,7 @@ button {
 
 .slide_viewer {
     width: 100%;
-    height: calc((100vw * 9) /17);
+    height: calc((100vw * 5) /17);
     overflow: hidden;
     position: relative;
 }
@@ -2237,14 +2241,6 @@ button {
     height: 100%;
     position: relative;
     width: 100%;
-}
-
-.slide:first-child {
-    display: block;
-}
-
-.slide:nth-of-type(1) {
-    background: #D7A151;
 }
 
 .slide:nth-of-type(2) {
@@ -2265,16 +2261,16 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
-    bottom: 10px;
-    right: 15px;
+    gap: 15px;
+    bottom: 40px;
+    right: 15vw;
     z-index: var(--layer-4);
 }
 
 a.slide_btn {
     display: flex;
-    height: 6px;
-    width: 6px;
+    height: 14px;
+    width: 14px;
     border-radius: 50vh;
     background-color: transparent;
     border: 1px solid var(--white);
@@ -2284,15 +2280,15 @@ a.slide_btn {
 .slide_btn:hover {
     background-color: var(--white);
     cursor: pointer;
-    height: 9px;
-    width: 9px;
+    height: 16px;
+    width: 16px;
 }
 
 .directional_nav {
-    height: calc((100vw * 9) /17);
+    height: calc((100vw * 5) /17);
     width: 100%;
     position: relative;
-    top: calc((-100vw * 9) /17);
+    top: calc((-100vw * 5) /17);
 }
 
 .previous_btn {
@@ -2320,48 +2316,118 @@ a.slide_btn {
     z-index: var(--layer-4);
 }
 
-.previous_btn:hover,
-.next_btn:hover {
-    opacity: 1;
-}
-
-@media only screen and (max-width: 767px) {}
-
 /* SLIDE-STUCTURE-SLIDER-HEADDER */
 
 .slide {
     opacity: 0;
     height: 100%;
-    position: absolute;
     width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
 }
 
 .slide-bg {
     width: 100%;
     position: absolute;
     z-index: var(--layer-1);
+    height: calc((100vw * 5) /17);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.slide-bg img {
-    width: 100%;
-    height: max-content;
-}
 
-.slide-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 70%;
+.slide-info-conatiner {
     position: relative;
-    max-width: 300px;
-    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
     width: 100%;
+    max-width: 1390px;
     z-index: var(--layer-4);
+}
+
+.slide-info{
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 45px;
 }
 
 /* SLIDE-ANIMATION */
 
 .slide_group.animated {
     transition: left 0.5s ease;
+}
+
+
+@media only screen and (max-width: 767px) {
+    /* SLIDER-HEADDER */
+
+    .slider-container {
+        height: calc((100vw * 9) /17);
+    }
+
+    .slide_viewer {
+        height: calc((100vw * 9) /17);
+    }
+
+    .slide_group {
+        height: 100%;
+        width: 100%;
+    }
+
+    .slide_buttons {
+        gap: 12px;
+        bottom: 10px;
+        right: 15px;
+    }
+
+    a.slide_btn {
+        height: 6px;
+        width: 6px;
+    }
+
+    .slide_btn.active,
+    .slide_btn:hover {
+        height: 9px;
+        width: 9px;
+    }
+
+    .directional_nav {
+        height: calc((100vw * 9) /17);
+        top: calc((-100vw * 9) /17);
+    }
+
+    .previous_btn,
+    .next_btn {
+        width: 5%;
+    }
+
+    /* SLIDE-STUCTURE-SLIDER-HEADDER */
+
+    .slide-bg {
+        width: 100%;
+        height: calc((100vw * 9) /17);
+    }
+
+    .slide-info-conatiner {
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+    }
+    
+    .slide-info {
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 80%;
+        max-width: 70%;
+        gap: 20px;
+    }
 }

@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
               } else {
                   move(0);
               }
-          }, 4000);
+          }, 4000000);
       }
 
       slider.querySelector('.next_btn').addEventListener('click', function () {

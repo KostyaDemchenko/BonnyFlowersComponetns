@@ -2748,7 +2748,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let touchEndX = 0; // Координата дотику при завершенні перетягування слайдера
 
     function move(newIndex) {
-      var animateLeft, slideLeft;
+      let animateLeft, slideLeft;
 
       // Запускаємо автоматичну прокрутку слайдів
       advance();
@@ -2836,7 +2836,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Додаємо кнопки-булети (індикатори слайдів) для кожного слайда
     slides.forEach(function (slide, index) {
-      var button = document.createElement('a');
+      const button = document.createElement('a');
       button.className = 'slide_btn';
       button.innerHTML = ' ';
 
@@ -2870,7 +2870,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       function handleSwipe() {
-        var swipeThreshold = 50; // Мінімальне відстань для визначення свайпу
+        const swipeThreshold = 50; // Мінімальне відстань для визначення свайпу
 
         if (touchEndX - touchStartX > swipeThreshold) {
           // Якщо відстань свайпу більша за поріг, переходимо до попереднього слайда

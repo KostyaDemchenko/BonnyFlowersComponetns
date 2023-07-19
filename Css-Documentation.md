@@ -71,6 +71,14 @@
 
     19.1.[Слайдер для хеддеру(HEADDER-SLIDER)](#слайдер-для-хеддеру-headder-slider)
 
+    19.2.[Навігація та кнопки слайдера (SLIDE-HEADDER-NAVIGATION-AND-BOXES)](#навігація-та-кнопки-слайдера-slide-headder-navigation-and-boxes)
+
+    19.3.[Структура слайдів у слайдері (SLIDE-HEADDER-STUCTURE)](#структура-слайдів-у-слайдері-slide-headder-stucture)
+
+    19.4.[Анімація слайдера (SLIDE-ANIMATION)](#анімація-слайдера-slide-animation)
+
+    19.5.[Опис JS-коду](#опис-js-коду)
+
 ## 1. Імпорт шрифтів <a name="імпорт-шрифтів"></a>
 
 ```css
@@ -2491,7 +2499,7 @@ button {
 
 
 ## 19. Слайдери (Slider)<a name="слайдери-slider"></a>
-### 19. Слайдер для хеддеру(HEADDER-SLIDER)<a name="слайдер-для-хеддеру-headder-slider"></a>
+### 19.1. Слайдер для хеддеру(HEADDER-SLIDER)<a name="слайдер-для-хеддеру-headder-slider"></a>
 
 ![Alt text](./screenshot/hedder-slider(desc).png)
 
@@ -2522,7 +2530,7 @@ button {
 
 Ці стилі стосуються створення слайдера для заголовка. Елемент з класом `.slider-container-headder` представляє контейнер слайдера заголовка. Усі слайди заголовка мають розмір, розрахований на основі ширини вікна (100vw). Висота слайдера обчислюється як 5/17 частини ширини вікна.
 
-### 21.18. Навігація та кнопки слайдера (SLIDE-HEADDER-NAVIGATION-AND-BOXES)
+### 19.2. Навігація та кнопки слайдера (SLIDE-HEADDER-NAVIGATION-AND-BOXES)<a name="навігація-та-кнопки-слайдера-slide-headder-navigation-and-boxes"></a>
 
 ```css
 .slider-container-headder .slide_buttons {
@@ -2589,7 +2597,7 @@ button {
 
 Ці стилі відповідають за навігацію та кнопки у слайдері заголовка. Елемент з класом `.slider-container-headder .slide_buttons` містить кнопки, що показують активний слайд, а також вузли навігації до попереднього та наступного слайдів. Кнопки мають зовнішній вигляд круглих точок із білою межею. Коли кнопка активна або їй наведений курсор, вона отримує білий фон та більший розмір.
 
-### 21.19. Структура слайдів у слайдері (SLIDE-HEADDER-STUCTURE)
+### 19.3. Структура слайдів у слайдері (SLIDE-HEADDER-STUCTURE)<a name="структура-слайдів-у-слайдері-slide-headder-stucture"></a>
 
 ```css
 .slider-container-headder .slide-hedder {
@@ -2635,7 +2643,7 @@ button {
 
 Ці стилі стосуються структури слайдів у слайдері заголовка. Елемент `.slider-container-headder .slide-hedder` визначає структуру кожного слайда. Елемент `.slider-container-headder .slide-bg` представляє фоновий зображення слайда, який розміщений зверху слайдера. Елемент `.slider-container-headder .slide-info-conatiner` містить інформацію про слайдер, яка розташована внизу слайдера. Кожний окремий слайд має максимальну ширину `1390px`, а інформація про нього (`slide-info`) розміщена у максимальній ширині `700px`.
 
-### 21.20. Анімація слайдера (SLIDE-ANIMATION)
+### 19.4. Анімація слайдера (SLIDE-ANIMATION)<a name="анімація-слайдера-slide-animation"></a>
 
 ```css
 .slider-container-headder .slide_group.animated {
@@ -2670,9 +2678,7 @@ button {
     }
 
     .slider-container-headder .slide_btn.active,
-    .
-
-slider-container-headder .slide_btn:hover {
+    .slider-container-headder .slide_btn:hover {
         height: 9px;
         width: 9px;
     }
@@ -2712,6 +2718,8 @@ slider-container-headder .slide_btn:hover {
 ```
 
 Ці стилі додають анімацію до слайдера заголовка. Елемент з класом `.slider-container-headder .slide_group.animated` отримує перехід з лівої сторони протягом `0.5s` з ефектом `ease`. При перегляді на екранах з шириною до `767px`, виконуються медіазапити, які змінюють розміри слайдера та його елементів для відповідності маленьким екранам.
+
+### 19.5. Опис JS-коду<a name="опис-js-коду"></a>
 
 Також ось опис JS коду:
 

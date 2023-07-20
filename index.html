@@ -68,12 +68,12 @@
         <div class="accordion-sort" id="accordionSort">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button p-16-auto-regular" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSort" aria-expanded="true" aria-controls="collapseSort">
+                    <button class="accordion-button collapsed p-16-auto-regular" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSort" aria-expanded="false" aria-controls="collapseSort">
                         Сортування
                     </button>
                 </h2>
-                <div id="collapseSort" class="accordion-collapse collapse show" aria-labelledby="headingSort"
+                <div id="collapseSort" class="accordion-collapse collapse " aria-labelledby="headingSort"
                     data-bs-parent="#accordionSort">
                     <div class="accordion-body">
                         <ul>
@@ -111,13 +111,14 @@
         <div class="accordion-user-page" id="accordionUserPage">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingheadingUserPage">
-                    <button class="accordion-button p-16-auto-bold red" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseUserPage" aria-expanded="true" aria-controls="collapseheadingUserPage">
+                    <button class="accordion-button collapsed p-16-auto-bold red" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseUserPage" aria-expanded="false"
+                        aria-controls="collapseheadingUserPage">
                         Особисті дані
                     </button>
                 </h2>
-                <div id="collapseUserPage" class="accordion-collapse collapse show"
-                    aria-labelledby="headingheadingUserPage" data-bs-parent="#accordionUserPage">
+                <div id="collapseUserPage" class="accordion-collapse collapse " aria-labelledby="headingheadingUserPage"
+                    data-bs-parent="#accordionUserPage">
                     <div class="accordion-body">
                         <ul>
                             <li>
@@ -143,6 +144,71 @@
                             <li>
                                 <a class="p-14-auto-medium">
                                     Розсилки
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACCORDION-FOR-LANG/CURRENCY -->
+    <h2 class="h1-42-auto-medium white">Accordion for lang/currency</h2>
+    <div class="group bg-white">
+
+        <!-- LANG -->
+
+        <div class="accordion-lang" id="accordionLang">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed p-16-auto-regular" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseLang" aria-expanded="false" aria-controls="collapseLang">
+                        Укр
+                    </button>
+                </h2>
+                <div id="collapseLang" class="accordion-collapse collapse " aria-labelledby="headingLang"
+                    data-bs-parent="#accordionLang">
+                    <div class="accordion-body ">
+                        <ul>
+                            <li>
+                                <a class="p-16-auto-regular grey">
+                                    Eng
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-16-auto-regular grey">
+                                    Pln
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CURRENCY -->
+
+        <div class="accordion-currency" id="accordionCurrency">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed p-16-auto-regular" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCurrency" aria-expanded="false" aria-controls="collapseCurrency">
+                        ₴ / UAH
+                    </button>
+                </h2>
+                <div id="collapseCurrency" class="accordion-collapse collapse" aria-labelledby="headingCurrency"
+                    data-bs-parent="#accordionCurrency">
+                    <div class="accordion-body ">
+                        <ul>
+                            <li>
+                                <a class="p-16-auto-regular grey">
+                                    $ / USD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-16-auto-regular grey">
+                                    € / EUR
                                 </a>
                             </li>
                         </ul>
@@ -517,13 +583,13 @@
             <div class="accordion-from-to" id="accordionFromToMoney">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button p-16-auto-medium" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFromToMoney" aria-expanded="true"
+                        <button class="accordion-button collapsed p-16-auto-medium" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFromToMoney" aria-expanded="false"
                             aria-controls="collapseFromToMoney">
                             Ціна
                         </button>
                     </h2>
-                    <div id="collapseFromToMoney" class="accordion-collapse collapse show" aria-labelledby="headingSort"
+                    <div id="collapseFromToMoney" class="accordion-collapse collapse " aria-labelledby="headingSort"
                         data-bs-parent="#accordionFromToMoney">
                         <div class="accordion-body">
                             <div class="from-to-input-container">
@@ -551,13 +617,13 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button p-16-auto-medium" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFromToAmount" aria-expanded="true"
+                        <button class="accordion-button collapsed p-16-auto-medium" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFromToAmount" aria-expanded="false"
                             aria-controls="collapseFromToAmount">
                             Кількість
                         </button>
                     </h2>
-                    <div id="collapseFromToAmount" class="accordion-collapse collapse show"
+                    <div id="collapseFromToAmount" class="accordion-collapse collapse "
                         aria-labelledby="headingFromToAmount" data-bs-parent="#accordionFromToAmount">
                         <div class="accordion-body">
                             <div class="from-to-input-container">
@@ -585,13 +651,13 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button p-16-auto-medium" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFromToSize" aria-expanded="true"
+                        <button class="accordion-button collapsed p-16-auto-medium" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFromToSize" aria-expanded="false"
                             aria-controls="collapseFromToSize">
                             Розмір
                         </button>
                     </h2>
-                    <div id="collapseFromToSize" class="accordion-collapse collapse show"
+                    <div id="collapseFromToSize" class="accordion-collapse collapse "
                         aria-labelledby="headingFromToSize" data-bs-parent="#accordionFromToSize">
                         <div class="accordion-body">
                             <div class="from-to-input-container">
@@ -713,11 +779,327 @@
 
     </div><!-- End // .slider-container -->
 
-    <!-- SLIDER header --> 
+    <!-- SLIDER-FAST-SEARCH -->
     <h2 class="h1-42-auto-medium white">Slider header</h2>
-    <div class="items-slider-container">
+    <section class="results-fast-search m-60">
+        <div class="results-fast-search-container">
+            <div class="title-box m-70">
+                <h4 class="h1-42-auto-bold ">Результати</h4>
+                <div class="fast-search-results-info">
+                    <p class="p-16-auto-medium">
+                        Знайдено
+                    </p>
+                    <p class="p-16-auto-medium red">
+                        <span class="fast-search-results-count"> 6 </span> товарів
+                    </p>
+                </div>
+            </div>
+            <div class="slider-product-container">
+                <div class="slide_viewer">
 
-    </div>
+                    <!-- SLIDE-GROUP -->
+        
+                    <div class="slide_group">
+        
+                        <!-- SLIDE -->
+        
+                        <div class="slide-card-container">
+
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+
+                        </div>
+        
+                        <div class="slide-card-container">
+
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+                            <div class="card-xl">
+                                <div class="discount">
+                                    <p class="p-16-auto-medium white">10%</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./img/flower-img.png" alt="name-of-this-flower">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-title">
+                                        <h3 class="h2-24-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                    </div>
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="h2-24-auto-medium red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-16-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-btn">
+                                    <a class="button-main p-16-auto-bold" href="#"><span class="icon"></span>До кошика</a>
+                                    <a class="p-16-auto-regular red" href="#">Швидке замовлення</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slide_buttons">
+                </div>
+    
+            </div>
+        </div>
+    </section>
 
     <!-- SCRIPT`S -->
 

@@ -595,10 +595,11 @@ button {
     }
 }
 
-.button-main:hover,
+.button-main-text-icon:hover,
+.button-main-text:hover,
 .cta-button:hover,
 .contact-us-btn:hover {
-    background: var(--gray);
+    background: var(--light-gray);
     color: var(--white, #FFF);
     transition: .3s;
 }

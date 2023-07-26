@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
   var input = document.querySelectorAll("input[name=leyka_donor_phone]");
   var iti_el = document.querySelector('.iti.iti--allow-dropdown.iti--separate-dial-code');
+  var submitButton = document.querySelector('.button-secondary-text');
   var iti;
 
   if (iti_el) {
@@ -152,11 +153,31 @@ document.addEventListener("DOMContentLoaded", function() {
     input[i].addEventListener("focus", function(e) {
       var pl = this.getAttribute('placeholder') + '';
       var res = pl.replace(/X/g, '9');
+  
       if (res != 'undefined') {
         $(this).inputmask(res, {
           placeholder: "X",
           clearMaskOnLostFocus: true
         });
+      }
+    });
+  
+    input[i].addEventListener("focusout", function(e) {
+      var intlNumber = iti.getNumber();
+  
+      // Подсчет количества символов во вводимом значении поля без учета пробелов
+      var characterCount = intlNumber.replace(/\s/g, '').length;
+      console.log("Количество символов без пробелов: " + characterCount);
+  
+      // Проверяем количество символов и изменяем класс кнопки
+      if (characterCount < 10) {
+        submitButton.classList.remove('button-main-text');
+        submitButton.classList.add('button-secondary-text');
+        submitButton.disabled = true; // Запрещаем нажатие кнопки
+      } else {
+        submitButton.classList.remove('button-secondary-text');
+        submitButton.classList.add('button-main-text');
+        submitButton.disabled = false; // Разрешаем нажатие кнопки
       }
     });
 

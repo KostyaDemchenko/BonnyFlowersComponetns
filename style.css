@@ -1584,6 +1584,7 @@ button {
     border-radius: 5px;
     max-width: 305px;
     width: 100%;
+    transition: ease-in-out .2s;
 }
 
 .card-xs .img-box {
@@ -2897,9 +2898,9 @@ button {
     }
 }
 
-/* HEADER-DESCTOP */
+/* HEADER-desktop */
 
-.header {
+.header-desktop {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -2979,14 +2980,16 @@ button {
     width: 100%;
 }
 
-header .search-results-container {
+.header-desktop .search-results-container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    display: none;
+    height: 0;
+    opacity: 0;
+    transition: ease-in-out .3s;
 }
 
-header .search-results-container ul {
+.header-desktop .search-results-container ul {
     display: flex;
     flex-direction: row;
     padding: 0 25px;

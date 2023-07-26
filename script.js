@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // INPUT-TELL
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var input = document.querySelectorAll("input[name=leyka_donor_phone]");
   var iti_el = document.querySelector('.iti.iti--allow-dropdown.iti--separate-dial-code');
   var submitButton = document.querySelector('.button-secondary-text');
@@ -144,16 +144,16 @@ document.addEventListener("DOMContentLoaded", function() {
       initialCountry: "auto",
       separateDialCode: true,
       preferredCountries: ['ua', 'pl'],
-      customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+      customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
         return '' + selectedCountryPlaceholder.replace(/[0-9]/g, 'X');
       },
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/utils.js"
     });
 
-    input[i].addEventListener("focus", function(e) {
+    input[i].addEventListener("focus", function (e) {
       var pl = this.getAttribute('placeholder') + '';
       var res = pl.replace(/X/g, '9');
-  
+
       if (res != 'undefined') {
         $(this).inputmask(res, {
           placeholder: "X",
@@ -161,14 +161,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       }
     });
-  
-    input[i].addEventListener("focusout", function(e) {
+
+    input[i].addEventListener("focusout", function (e) {
       var intlNumber = iti.getNumber();
-  
+
       // Подсчет количества символов во вводимом значении поля без учета пробелов
       var characterCount = intlNumber.replace(/\s/g, '').length;
       console.log("Количество символов без пробелов: " + characterCount);
-  
+
       // Проверяем количество символов и изменяем класс кнопки
       if (characterCount < 10) {
         submitButton.classList.remove('button-main-text');
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-    input[i].addEventListener("focusout", function(e) {
+    input[i].addEventListener("focusout", function (e) {
       var intlNumber = iti.getNumber();
       console.log(intlNumber);
     });
@@ -194,136 +194,136 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', function () {
   function isTouchDevice() {
-      return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
   }
 
   document.querySelectorAll('.slider-container-header').forEach(function (slider) {
-      const group = slider.querySelector('.slide_group');
-      const slides = slider.querySelectorAll('.slide-header');
-      const bulletArray = [];
-      let currentIndex = 0;
-      let timeout;
-      let touchStartX = 0;
-      let touchEndX = 0;
+    const group = slider.querySelector('.slide_group');
+    const slides = slider.querySelectorAll('.slide-header');
+    const bulletArray = [];
+    let currentIndex = 0;
+    let timeout;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-      function move(newIndex) {
-          let animateLeft, slideLeft;
+    function move(newIndex) {
+      let animateLeft, slideLeft;
 
-          advance();
-
-          if (group.classList.contains('animated') || currentIndex === newIndex) {
-              return;
-          }
-
-          bulletArray[currentIndex].classList.remove('active');
-          bulletArray[newIndex].classList.add('active');
-
-          if (newIndex > currentIndex) {
-              slideLeft = '100%';
-              animateLeft = '-100%';
-          } else {
-              slideLeft = '-100%';
-              animateLeft = '100%';
-          }
-
-          group.classList.add('animated');
-
-          slides[newIndex].style.opacity = '1';
-          slides[newIndex].style.zIndex = 'var(--layer-4)';
-          slides[newIndex].style.left = slideLeft;
-          group.style.left = animateLeft;
-
-          setTimeout(function () {
-              group.classList.remove('animated');
-
-              slides[currentIndex].style.opacity = '0';
-              slides[currentIndex].style.zIndex = '0';
-              slides[newIndex].style.left = '0';
-              group.style.left = '0';
-              currentIndex = newIndex;
-          }, 500);
-      }
-
-      function advance() {
-          clearTimeout(timeout);
-          timeout = setTimeout(function () {
-              if (currentIndex < (slides.length - 1)) {
-                  move(currentIndex + 1);
-              } else {
-                  move(0);
-              }
-          }, 4000); // Change the interval to 4000ms (4 seconds)
-      }
-
-      // Set initial opacity to 1 for the first slide
-      slides[currentIndex].style.opacity = '1';
-      slides[currentIndex].style.zIndex = 'var(--layer-4)';
-
-      slider.querySelector('.next_btn').addEventListener('click', function () {
-          if (currentIndex < (slides.length - 1)) {
-              move(currentIndex + 1);
-          } else {
-              move(0);
-          }
-      });
-
-      slider.querySelector('.previous_btn').addEventListener('click', function () {
-          if (currentIndex !== 0) {
-              move(currentIndex - 1);
-          } else {
-              move(slides.length - 1);
-          }
-      });
-
-      slides.forEach(function (slide, index) {
-          const button = document.createElement('a');
-          button.className = 'slide_btn';
-          button.innerHTML = ' ';
-
-          if (index === currentIndex) {
-              button.classList.add('active');
-          }
-
-          button.addEventListener('click', function () {
-              move(index);
-          });
-
-          slider.querySelector('.slide_buttons').appendChild(button);
-          bulletArray.push(button);
-      });
-
-      // Swipe Gesture Handling
-      if (isTouchDevice()) {
-          slider.addEventListener('touchstart', function (e) {
-              touchStartX = e.changedTouches[0].clientX;
-          });
-
-          slider.addEventListener('touchend', function (e) {
-              touchEndX = e.changedTouches[0].clientX;
-              handleSwipe();
-          });
-
-          function handleSwipe() {
-              const swipeThreshold = 50;
-
-              if (touchEndX - touchStartX > swipeThreshold) {
-                  if (currentIndex !== 0) {
-                      move(currentIndex - 1);
-                  } else {
-                      move(slides.length - 1);
-                  }
-              } else if (touchStartX - touchEndX > swipeThreshold) {
-                  if (currentIndex < slides.length - 1) {
-                      move(currentIndex + 1);
-                  } else {
-                      move(0);
-                  }
-              }
-          }
-      }
-
-      // Start the automatic slide transition
       advance();
+
+      if (group.classList.contains('animated') || currentIndex === newIndex) {
+        return;
+      }
+
+      bulletArray[currentIndex].classList.remove('active');
+      bulletArray[newIndex].classList.add('active');
+
+      if (newIndex > currentIndex) {
+        slideLeft = '100%';
+        animateLeft = '-100%';
+      } else {
+        slideLeft = '-100%';
+        animateLeft = '100%';
+      }
+
+      group.classList.add('animated');
+
+      slides[newIndex].style.opacity = '1';
+      slides[newIndex].style.zIndex = 'var(--layer-4)';
+      slides[newIndex].style.left = slideLeft;
+      group.style.left = animateLeft;
+
+      setTimeout(function () {
+        group.classList.remove('animated');
+
+        slides[currentIndex].style.opacity = '0';
+        slides[currentIndex].style.zIndex = '0';
+        slides[newIndex].style.left = '0';
+        group.style.left = '0';
+        currentIndex = newIndex;
+      }, 500);
+    }
+
+    function advance() {
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        if (currentIndex < (slides.length - 1)) {
+          move(currentIndex + 1);
+        } else {
+          move(0);
+        }
+      }, 4000); // Change the interval to 4000ms (4 seconds)
+    }
+
+    // Set initial opacity to 1 for the first slide
+    slides[currentIndex].style.opacity = '1';
+    slides[currentIndex].style.zIndex = 'var(--layer-4)';
+
+    slider.querySelector('.next_btn').addEventListener('click', function () {
+      if (currentIndex < (slides.length - 1)) {
+        move(currentIndex + 1);
+      } else {
+        move(0);
+      }
+    });
+
+    slider.querySelector('.previous_btn').addEventListener('click', function () {
+      if (currentIndex !== 0) {
+        move(currentIndex - 1);
+      } else {
+        move(slides.length - 1);
+      }
+    });
+
+    slides.forEach(function (slide, index) {
+      const button = document.createElement('a');
+      button.className = 'slide_btn';
+      button.innerHTML = ' ';
+
+      if (index === currentIndex) {
+        button.classList.add('active');
+      }
+
+      button.addEventListener('click', function () {
+        move(index);
+      });
+
+      slider.querySelector('.slide_buttons').appendChild(button);
+      bulletArray.push(button);
+    });
+
+    // Swipe Gesture Handling
+    if (isTouchDevice()) {
+      slider.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].clientX;
+      });
+
+      slider.addEventListener('touchend', function (e) {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+
+        if (touchEndX - touchStartX > swipeThreshold) {
+          if (currentIndex !== 0) {
+            move(currentIndex - 1);
+          } else {
+            move(slides.length - 1);
+          }
+        } else if (touchStartX - touchEndX > swipeThreshold) {
+          if (currentIndex < slides.length - 1) {
+            move(currentIndex + 1);
+          } else {
+            move(0);
+          }
+        }
+      }
+    }
+
+    // Start the automatic slide transition
+    advance();
   });
 });
 
@@ -432,3 +432,33 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// HEADER-desktop
+
+// SEARCH
+
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInputs = document.querySelectorAll('.search-input');
+  const searchResultsContainers = document.querySelectorAll('.search-results-container');
+
+  if (searchInputs.length !== searchResultsContainers.length) {
+    console.error('Number of search inputs does not match the number of result containers.');
+    return; // Stop execution if the number of inputs and containers don't match.
+  }
+
+  searchInputs.forEach((searchInput, index) => {
+    const searchResultsContainer = searchResultsContainers[index];
+
+    searchInput.addEventListener('focus', () => {
+      searchResultsContainer.style.maxHeight = '380px';
+      searchResultsContainer.style.height = '100%';
+      searchResultsContainer.style.opacity = '1';
+      searchResultsContainer.style.pointerEvents = 'auto';
+    });
+    
+    searchInput.addEventListener('blur', () => {
+      searchResultsContainer.style.height = '0';
+      searchResultsContainer.style.opacity = '0';
+      searchResultsContainer.style.pointerEvents = 'none';
+    });
+  });
+});

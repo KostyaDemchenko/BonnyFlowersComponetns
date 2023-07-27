@@ -469,49 +469,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // MENU-MOBILE
 
-document.addEventListener('DOMContentLoaded', function () {
+let startX; // Начальная координата касания
+const menu = document.getElementById('menu-header');
+const body = document.querySelector('body');
 
-  let startX; // Начальная координата касания
-
-  function toggleMenu() {
-    const menu = document.getElementById('menu-header');
+function toggleMenu() {
     menu.classList.toggle('menu-open');
-
-    // Добавляем/удаляем класс для блокировки прокрутки при открытии/закрытии меню
-    const body = document.querySelector('body');
     body.classList.toggle('menu-opened');
-  }
+}
 
-  function closeMenu() {
-    const menu = document.getElementById('menu-header');
+function closeMenu() {
     menu.classList.remove('menu-open');
-
-    // Удаляем класс для разблокировки прокрутки при закрытии меню
-    const body = document.querySelector('body');
     body.classList.remove('menu-opened');
-  }
+}
 
-  // Обработчик события касания (touchstart)
-  document.addEventListener('touchstart', function (e) {
-    startX = e.touches[0].clientX; // Записываем начальную координату касания
-  });
+document.addEventListener('DOMContentLoaded', function () {
+    // Обработчик события касания (touchstart)
+    document.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX; // Записываем начальную координату касания
+    });
 
-  // Обработчик события завершения касания (touchend)
-  document.addEventListener('touchend', function (e) {
-    const endX = e.changedTouches[0].clientX; // Получаем конечную координату касания
+    // Обработчик события завершения касания (touchend)
+    document.addEventListener('touchend', function (e) {
+        const endX = e.changedTouches[0].clientX; // Получаем конечную координату касания
+        const menuOpen = menu.classList.contains('menu-open');
 
-    const menu = document.getElementById('menu-header');
-    const menuOpen = menu.classList.contains('menu-open');
+        // Если меню открыто и пользователь свайпнул справа налево
+        if (menuOpen && endX < startX) {
+            closeMenu();
+        }
+    });
 
-    // Если меню открыто и пользователь свайпнул справа налево
-    if (menuOpen && endX < startX) {
-      closeMenu();
-    }
-  });
+    const trigger = document.querySelector('.header-menu-trigger');
+    trigger.addEventListener('click', toggleMenu);
 
-  const trigger = document.querySelector('.header-menu-trigger');
-  trigger.addEventListener('click', toggleMenu);
-
-  const overlay = document.getElementById('overlay');
-  overlay.addEventListener('click', closeMenu);
+    const overlay = document.getElementById('overlay');
+    overlay.addEventListener('click', closeMenu);
 });
+

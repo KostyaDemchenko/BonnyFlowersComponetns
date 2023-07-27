@@ -3061,14 +3061,16 @@ header {
     height: 100%;
     transition: left 0.3s ease;
     z-index: var(--layer-5);
-    overflow-y: auto; /* Позволяем контенту внутри меню прокручиваться */
+    overflow-y: auto;
+    /* Позволяем контенту внутри меню прокручиваться */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .menu-opened {
-    overflow: hidden; /* Применяем блокировку прокрутки только при открытом меню */
+    overflow: hidden;
+    /* Применяем блокировку прокрутки только при открытом меню */
 }
 
 .overlay {
@@ -3089,14 +3091,22 @@ header {
     left: 0;
 }
 
-.menu-open ~ .overlay {
+.menu-open~.overlay {
     opacity: 0.4;
     pointer-events: auto;
 }
 
-.menu-header .container{
+.menu-header .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+}
+
+@media screen and (min-width: 700px) {
+
+    .header-mobile {
+        display: none;
+    }
+
 }

@@ -47,7 +47,7 @@ openCtaGroup.addEventListener('click', () => {
 
 // COUNTER
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   // Получаем ссылки на все счетчики на странице
   let counters = document.querySelectorAll('.counter');
 
@@ -83,11 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // RANGE-FROM-TO-SLIDER
 
 (function () {
-  const sliders = document.querySelectorAll("#rangeSlider");
+  const sliders = document.querySelectorAll('#rangeSlider');
 
   sliders.forEach(function (parent) {
-    const rangeS = parent.querySelectorAll("input[type=range]");
-    const numberS = parent.querySelectorAll("input[type=number]");
+    const rangeS = parent.querySelectorAll('input[type=range]');
+    const numberS = parent.querySelectorAll('input[type=number]');
 
     rangeS.forEach(function (el) {
       el.oninput = function () {
@@ -126,48 +126,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // INPUT-TELL
 
-document.addEventListener("DOMContentLoaded", function () {
-  var input = document.querySelectorAll("input[name=leyka_donor_phone]");
-  var iti_el = document.querySelector('.iti.iti--allow-dropdown.iti--separate-dial-code');
-  var submitButton = document.querySelector('.button-secondary-text');
-  var iti;
+document.addEventListener('DOMContentLoaded', function () {
+  "use strict";
+  const input = document.querySelectorAll('input[name=leyka_donor_phone]');
+  const itiTel = document.querySelector('.iti.iti--allow-dropdown.iti--separate-dial-code');
+  const submitButton = document.querySelector('.button-secondary-text');
+  let iti;
 
-  if (iti_el) {
+  if (itiTel) {
     iti.destroy();
     // Get the current number in the given format
   }
 
-  for (var i = 0; i < input.length; i++) {
+  for (let i = 0; i < input.length; i++) {
     iti = intlTelInput(input[i], {
       autoHideDialCode: false,
-      autoPlaceholder: "aggressive",
-      initialCountry: "auto",
+      autoPlaceholder: 'aggressive',
+      initialCountry: 'auto',
       separateDialCode: true,
       preferredCountries: ['ua', 'pl'],
       customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
         return '' + selectedCountryPlaceholder.replace(/[0-9]/g, 'X');
       },
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/utils.js"
+      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/utils.js'
     });
 
-    input[i].addEventListener("focus", function (e) {
-      var pl = this.getAttribute('placeholder') + '';
-      var res = pl.replace(/X/g, '9');
+    input[i].addEventListener('focus', function (e) {
+      const pl = this.getAttribute('placeholder') + '';
+      const res = pl.replace(/X/g, '9');
 
       if (res != 'undefined') {
         $(this).inputmask(res, {
-          placeholder: "X",
+          placeholder: 'X',
           clearMaskOnLostFocus: true
         });
       }
     });
 
-    input[i].addEventListener("focusout", function (e) {
-      var intlNumber = iti.getNumber();
+    input[i].addEventListener('focusout', function (e) {
+      const intlNumber = iti.getNumber();
 
       // Подсчет количества символов во вводимом значении поля без учета пробелов
-      var characterCount = intlNumber.replace(/\s/g, '').length;
-      console.log("Количество символов без пробелов: " + characterCount);
+      const characterCount = intlNumber.replace(/\s/g, '').length;
+      console.log('Количество символов без пробелов: ' + characterCount);
 
       // Проверяем количество символов и изменяем класс кнопки
       if (characterCount < 10) {
@@ -181,8 +182,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    input[i].addEventListener("focusout", function (e) {
-      var intlNumber = iti.getNumber();
+    input[i].addEventListener('focusout', function (e) {
+      const intlNumber = iti.getNumber();
       console.log(intlNumber);
     });
   }
@@ -454,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function () {
       searchResultsContainer.style.opacity = '1';
       searchResultsContainer.style.pointerEvents = 'auto';
     });
-    
+
     searchInput.addEventListener('blur', () => {
       searchResultsContainer.style.height = '0';
       searchResultsContainer.style.opacity = '0';

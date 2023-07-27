@@ -36,7 +36,7 @@
     </div>
     <div class="cta-btn-group">
         <div class="contact-us">
-            <a id="open-cta" class="cta-button" href="#"><span class="icon"></span></a>
+            <button id="open-cta" class="cta-button"><span class="icon"></span></button>
             <div class="contact-us-btn-group">
                 <a href="#" class="contact-us-btn icon"></a>
                 <a href="#" class="contact-us-btn icon"></a>
@@ -1475,95 +1475,16 @@
 
         <div class="header-mobile">
             <div class="container">
+
                 <div class="left">
                     <div class="header-menu-trigger">
                         <span class="icon"></span>
                     </div>
-                    <div class="menu-header" id="menu-header">
-                        <div class="container">
-                            <div class="top">
-                                <span class="icon" onclick="closeMenu()"></span>
-                                <p class="h2-24-auto-bold">Меню</p>
-                            </div>
-                            <div class="middle">
-                                <div class="lang-value-container b-b-light-gray">
-
-                                    <!-- LANG -->
-
-                                    <div class="accordion-lang" id="accordionLang">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed p-16-auto-regular"
-                                                    type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseLang" aria-expanded="false"
-                                                    aria-controls="collapseLang">
-                                                    Укр
-                                                </button>
-                                            </h2>
-                                            <div id="collapseLang" class="accordion-collapse collapse "
-                                                aria-labelledby="headingLang" data-bs-parent="#accordionLang">
-                                                <div class="accordion-body ">
-                                                    <ul>
-                                                        <li>
-                                                            <a class="p-16-auto-regular grey">
-                                                                Eng
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="p-16-auto-regular grey">
-                                                                Pln
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- CURRENCY -->
-
-                                    <div class="accordion-currency" id="accordionCurrency">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed p-16-auto-regular"
-                                                    type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseCurrency" aria-expanded="false"
-                                                    aria-controls="collapseCurrency">
-                                                    ₴ / UAH
-                                                </button>
-                                            </h2>
-                                            <div id="collapseCurrency" class="accordion-collapse collapse"
-                                                aria-labelledby="headingCurrency" data-bs-parent="#accordionCurrency">
-                                                <div class="accordion-body ">
-                                                    <ul>
-                                                        <li>
-                                                            <a class="p-16-auto-regular grey">
-                                                                $ / USD
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="p-16-auto-regular grey">
-                                                                € / EUR
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="bottom">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
                     <div class="logo-box">
                         <img src="./img/logo.svg" alt="Logo">
                     </div>
                 </div>
+
                 <div class="right">
                     <div class="cart-link">
                         <span class="icon"></span>
@@ -1576,6 +1497,94 @@
 
         </div>
 
+        <div class="menu-header" id="menu-header">
+            <div class="container">
+                <div class="top">
+                    <span class="icon" onclick="closeMenu()"></span>
+                    <p class="h2-24-auto-bold">Меню</p>
+                </div>
+                <div class="middle">
+                    <div class="lang-value-container b-b-light-gray">
+
+                        <!-- LANG -->
+
+                        <div class="accordion-lang" id="accordionLang">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed p-16-auto-regular"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseLang" aria-expanded="false"
+                                        aria-controls="collapseLang">
+                                        Укр
+                                    </button>
+                                </h2>
+                                <div id="collapseLang" class="accordion-collapse collapse "
+                                    aria-labelledby="headingLang" data-bs-parent="#accordionLang">
+                                    <div class="accordion-body ">
+                                        <ul>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    Eng
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    Pln
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CURRENCY -->
+
+                        <div class="accordion-currency" id="accordionCurrency">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed p-16-auto-regular"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseCurrency" aria-expanded="false"
+                                        aria-controls="collapseCurrency">
+                                        ₴ / UAH
+                                    </button>
+                                </h2>
+                                <div id="collapseCurrency" class="accordion-collapse collapse"
+                                    aria-labelledby="headingCurrency" data-bs-parent="#accordionCurrency">
+                                    <div class="accordion-body ">
+                                        <ul>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    $ / USD
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    € / EUR
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="location">
+                        <button type="button" class="p-16-auto-regular b-a-light-gray" data-bs-toggle="modal"
+                        data-bs-target="#userLocationModal">
+                        <span class="icon"></span>
+                        Польща, Краків
+                    </button>
+                    </div>
+                </div>
+                <div class="bottom">
+
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
     </header>
 
     <!-- SCRIPT`S -->

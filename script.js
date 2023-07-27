@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
       group.classList.add('animated');
 
       slides[newIndex].style.opacity = '1';
-      slides[newIndex].style.zIndex = 'var(--layer-4)';
+      slides[newIndex].style.zIndex = 'var(--layer-2)';
       slides[newIndex].style.left = slideLeft;
       group.style.left = animateLeft;
 
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Set initial opacity to 1 for the first slide
     slides[currentIndex].style.opacity = '1';
-    slides[currentIndex].style.zIndex = 'var(--layer-4)';
+    slides[currentIndex].style.zIndex = 'var(--layer-2)';
 
     slider.querySelector('.next_btn').addEventListener('click', function () {
       if (currentIndex < (slides.length - 1)) {

@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function () {
       group.classList.add('animated');
 
       slides[newIndex].style.opacity = '1';
-      slides[newIndex].style.zIndex = 'var(--layer-4)';
+      slides[newIndex].style.zIndex = 'var(--layer-2)';
       slides[newIndex].style.left = slideLeft;
       group.style.left = animateLeft;
 
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Set initial opacity to 1 for the first slide
     slides[currentIndex].style.opacity = '1';
-    slides[currentIndex].style.zIndex = 'var(--layer-4)';
+    slides[currentIndex].style.zIndex = 'var(--layer-2)';
 
     slides.forEach(function (slide, index) {
       const button = document.createElement('a');
@@ -462,4 +462,56 @@ document.addEventListener('DOMContentLoaded', function () {
       searchResultsContainer.style.pointerEvents = 'none';
     });
   });
+});
+
+
+
+
+// MENU-MOBILE
+
+document.addEventListener('DOMContentLoaded', function () {
+  
+  let startX; // Начальная координата касания
+
+  function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("menu-open");
+
+      // Добавляем/удаляем класс для блокировки прокрутки при открытии/закрытии меню
+      const body = document.querySelector("body");
+      body.classList.toggle("menu-opened");
+  }
+
+  function closeMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.remove("menu-open");
+
+      // Удаляем класс для разблокировки прокрутки при закрытии меню
+      const body = document.querySelector("body");
+      body.classList.remove("menu-opened");
+  }
+
+  // Обработчик события касания (touchstart)
+  document.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX; // Записываем начальную координату касания
+  });
+
+  // Обработчик события завершения касания (touchend)
+  document.addEventListener('touchend', function (e) {
+      const endX = e.changedTouches[0].clientX; // Получаем конечную координату касания
+
+      const menu = document.getElementById("menu");
+      const menuOpen = menu.classList.contains("menu-open");
+
+      // Если меню открыто и пользователь свайпнул справа налево
+      if (menuOpen && endX < startX) {
+          closeMenu();
+      }
+  });
+
+  const trigger = document.querySelector(".header-menu-trigger");
+  trigger.addEventListener("click", toggleMenu);
+
+  const overlay = document.getElementById("overlay");
+  overlay.addEventListener("click", closeMenu);
 });

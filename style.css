@@ -3129,7 +3129,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding: 15px;
+    padding: 15px 15px 25px 15px;
 }
 
 /* HEDDER-MENU-TOP-SECTION */
@@ -3302,6 +3302,30 @@ header {
 .menu-header .container .middle .phone-numbers-ukr .list .icon,
 .menu-header .container .middle .phone-numbers-int .list .icon{
     font-size: 16px;
+}
+
+/* HEDDER-MENU-BOTTOM */
+
+.menu-header .bottom{
+    display: flex;
+    justify-content: center;
+    padding: 25px 15px;
+    width: 100%;
+}
+
+.menu-header .bottom .help-link{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.menu-header .bottom .help-link .box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
 }
 
 @media screen and (min-width: 700px) {

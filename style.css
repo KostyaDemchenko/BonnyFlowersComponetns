@@ -3039,9 +3039,9 @@ header {
     background-color: var(--white);
     width: 100%;
     transform: translateX(50%);
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .header-mobile .container {
@@ -3151,7 +3151,7 @@ header {
     width: 100%;
 }
 
-.menu-header .container .middle{
+.menu-header .container .middle {
     gap: 20px;
 }
 
@@ -3159,8 +3159,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid var(--gray);
 }
+
+/* HEDDER-MENU-MIDDLE-SECTION-LOCATION */
 
 .menu-header .container .middle .location {
     width: 100%;
@@ -3175,6 +3176,108 @@ header {
     padding: 10px;
     border-radius: 5px;
 }
+
+/* HEDDER-MENU-MIDDLE-SECTION-NAVIGATION */
+
+.menu-header .container .middle nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.menu-header .container .middle .link {
+    padding: 0 0 10px 10px;
+    width: 100%;
+    display: flex;
+}
+
+.menu-header .container .middle nav a:nth-child(1) {
+    font-weight: 600;
+    color: var(--red);
+}
+
+.menu-header .container .middle nav .accordion-nav-link-container {
+    width: 100%;
+
+}
+
+.menu-header .container .middle nav .accordion-item {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-header .container .middle nav .accordion-button:not(.collapsed) {
+    color: var(--dark-grey);
+    background-color: var(--light-red);
+    box-shadow: none;
+}
+
+.menu-header .container .middle nav .accordion-button:not(.collapsed) {
+    color: var(--dark-grey);
+    background-color: var(--white);
+    box-shadow: none;
+    width: 100%;
+}
+
+.menu-header .container .middle nav .accordion-body {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-header .container .middle nav .accordion-body a:nth-child(1) {
+    color: var(--dark-grey);
+    font-weight: 500;
+}
+
+/* HEDDER-MENU-MIDDLE-SECTION-USER-PAGE */
+
+.menu-header .container .middle .user-page-link {
+    align-items: center;
+    gap: 10px;
+}
+
+/* HEDDER-MENU-MIDDLE-SECTION-SOCIAL-MEDIA */
+
+.menu-header .container .middle .social-media-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-header .container .middle .social-media-link .contact-us-btn {
+    position: static;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    transform: translate(0);
+}
+
+/* HEDDER-MENU-MIDDLE-SECTION-CONTACTS-NUMBERS */
+
+.menu-header .container .middle .contacts-number {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-header .container .middle .call-back-menu-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
 
 @media screen and (min-width: 700px) {
 

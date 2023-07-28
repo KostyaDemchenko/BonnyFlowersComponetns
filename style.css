@@ -3267,6 +3267,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .menu-header .container .middle .call-back-menu-btn {
@@ -3277,7 +3278,31 @@ header {
     width: 100%;
 }
 
+.menu-header .container .middle .phone-numbers-ukr,
+.menu-header .container .middle .phone-numbers-int{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
+.menu-header .container .middle .phone-numbers-ukr .list,
+.menu-header .container .middle .phone-numbers-int .list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-header .container .middle .phone-numbers-ukr .list a,
+.menu-header .container .middle .phone-numbers-int .list a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-header .container .middle .phone-numbers-ukr .list .icon,
+.menu-header .container .middle .phone-numbers-int .list .icon{
+    font-size: 16px;
+}
 
 @media screen and (min-width: 700px) {
 

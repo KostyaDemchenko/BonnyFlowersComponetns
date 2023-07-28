@@ -3279,41 +3279,41 @@ header {
 }
 
 .menu-header .container .middle .phone-numbers-ukr,
-.menu-header .container .middle .phone-numbers-int{
+.menu-header .container .middle .phone-numbers-int {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .menu-header .container .middle .phone-numbers-ukr .list,
-.menu-header .container .middle .phone-numbers-int .list{
+.menu-header .container .middle .phone-numbers-int .list {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 .menu-header .container .middle .phone-numbers-ukr .list a,
-.menu-header .container .middle .phone-numbers-int .list a{
+.menu-header .container .middle .phone-numbers-int .list a {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .menu-header .container .middle .phone-numbers-ukr .list .icon,
-.menu-header .container .middle .phone-numbers-int .list .icon{
+.menu-header .container .middle .phone-numbers-int .list .icon {
     font-size: 16px;
 }
 
 /* HEDDER-MENU-BOTTOM */
 
-.menu-header .bottom{
+.menu-header .bottom {
     display: flex;
     justify-content: center;
     padding: 25px 15px;
     width: 100%;
 }
 
-.menu-header .bottom .help-link{
+.menu-header .bottom .help-link {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -3321,7 +3321,7 @@ header {
     align-items: flex-start;
 }
 
-.menu-header .bottom .help-link .box{
+.menu-header .bottom .help-link .box {
     display: flex;
     flex-direction: column;
     gap: 5px;

@@ -2864,6 +2864,10 @@ button {
     gap: 50px;
 }
 
+.modal-dialog {
+    transform: translate(0, 50%) !important;
+}
+
 .modal-dialog .btn-close {
     background-image: none;
     border: 0;
@@ -2884,7 +2888,8 @@ button {
 
 @media only screen and (max-width: 767px) {
     .modal-dialog {
-        margin: calc(50vh - 205px) 8vw;
+        margin: 50vh 8vw 0 8vw;
+        transform: translate(0, -50%) !important;
     }
 
     .modal-header {
@@ -3094,12 +3099,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
 }
 
 .menu-header::-webkit-scrollbar {
-    display: none; /* Safari и Chrome */
+    display: none;
+    /* Safari и Chrome */
 }
 
 .menu-opened {
@@ -3340,4 +3348,54 @@ header {
         display: none;
     }
 
+}
+
+/* MOBILE-HEDDER-SEARCH */
+
+@media only screen and (max-width: 700px) {
+    .mobileSearchModal .modal-dialog {
+        margin: 0;
+        transform: translate(0, 0) !important;
+    }
+
+    .mobileSearchModal .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: var(--white);
+        background-clip: padding-box;
+        border: 1px solid var(--gray);
+        border-radius: 0 0 5px 5px;
+        outline: 0;
+    }
+
+    .mobileSearchModal .modal-content .modal-body{
+        padding: 0 10px 0 10px;
+    }
+
+    .mobileSearchModal .modal-content .modal-body .search-container-mobile{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 300px;
+        height: 100%;
+        overflow-y: auto;
+        scrollbar-width: 2px; /* Firefox */
+    }
+    .mobileSearchModal .modal-content .modal-body .search-container-mobile::-webkit-scrollbar {
+        width: 3px; /* Safari и Chrome */
+    }
+
+    .mobileSearchModal .modal-content .btn-close{
+        position: absolute;
+        bottom: -20px;
+        right: 10px;
+        border-radius: 50vh;
+        width: 40px;
+        height: 40px;
+        box-shadow: var(--shadow-red);
+    }
 }

@@ -3003,6 +3003,27 @@ header {
     background-color: var(--transparent);
 }
 
+.cart-counter-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-counter-container .products-count{
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 50vh;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    position: absolute;
+    padding: 3px 7px;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
 /* BOTTOM-SECTION */
 
 .bottom-section {

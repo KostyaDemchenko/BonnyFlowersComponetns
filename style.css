@@ -2927,6 +2927,9 @@ button {
 header {
     width: 100%;
     background-color: var(--white);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* HEADER-desktop */
@@ -2936,6 +2939,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: var(--white);
+    z-index: var(--layer-3);
 }
 
 .top-section,
@@ -3032,11 +3039,11 @@ header {
     }
 }
 
+
+
 /* HEADER-MOBILE */
 
 .header-mobile {
-    margin-bottom: 350px;
-    /* for-test */
     position: fixed;
     top: 0;
     right: 50%;
@@ -3044,9 +3051,6 @@ header {
     background-color: var(--white);
     width: 100%;
     transform: translateX(50%);
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .header-mobile .container {

@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // SEARCH
 
 document.addEventListener('DOMContentLoaded', function () {
-  const searchInputs = document.querySelectorAll('.search-input');
+  const searchInputs = document.querySelectorAll('.search-input-trigger');
   const searchResultsContainers = document.querySelectorAll('.search-results-container');
 
   if (searchInputs.length !== searchResultsContainers.length) {

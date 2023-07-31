@@ -507,3 +507,19 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.addEventListener('click', closeMenu);
 });
 
+// HEADER-AUTO-MARGIN
+
+document.addEventListener('DOMContentLoaded', function () {
+  const headerElement = document.querySelector('header');
+  
+  // Если элемент <header> найден
+  if (headerElement) {
+      // Находим следующий элемент с помощью nextElementSibling
+      const nextElement = headerElement.nextElementSibling;
+  
+      // Если следующий элемент найден, добавляем класс "header-margin"
+      if (nextElement) {
+          nextElement.classList.add('header-margin');
+      }
+  }
+});

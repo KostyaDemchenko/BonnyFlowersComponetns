@@ -26,6 +26,476 @@
 </head>
 
 <body>
+    <!-- HEADER -->
+
+    <header>
+
+        <!-- HEADER-DESKTOP -->
+        <div class="header-desktop">
+
+            <!-- TOP-SECTION -->
+
+            <div class="top-section bg-light-red">
+                <div class="container">
+                    <div class="left">
+                        <div class="location">
+                            <!-- BUTTON-TRIGGER-MODAL-CALL-BACK -->
+                            <button type="button" class="p-16-auto-regular red" data-bs-toggle="modal"
+                                data-bs-target="#userLocationModal">
+                                <span class="icon"></span>
+                                Польща, Краків
+                            </button>
+                        </div>
+                        <div class="help-link">
+                            <a href="" class="p-14-auto-regular">Про нас</a>
+                            <a href="" class="p-14-auto-regular">Доставка і оплата</a>
+                            <a href="" class="p-14-auto-regular">Контакти</a>
+                        </div>
+                    </div>
+                    <div class="right">
+
+                        <!-- LANG -->
+
+                        <div class="accordion-lang" id="accordionLang">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseLang" aria-expanded="false"
+                                        aria-controls="collapseLang">
+                                        Укр
+                                    </button>
+                                </h2>
+                                <div id="collapseLang" class="accordion-collapse collapse "
+                                    aria-labelledby="headingLang" data-bs-parent="#accordionLang">
+                                    <div class="accordion-body ">
+                                        <ul>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    Eng
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    Pln
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CURRENCY -->
+
+                        <div class="accordion-currency" id="accordionCurrency">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseCurrency"
+                                        aria-expanded="false" aria-controls="collapseCurrency">
+                                        ₴ / UAH
+                                    </button>
+                                </h2>
+                                <div id="collapseCurrency" class="accordion-collapse collapse"
+                                    aria-labelledby="headingCurrency" data-bs-parent="#accordionCurrency">
+                                    <div class="accordion-body ">
+                                        <ul>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    $ / USD
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    € / EUR
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- MIDDLE-SECTION -->
+
+            <div class="middle-section">
+                <div class="container">
+
+                    <div class="logo-box">
+                        <img src="./img/logo.svg" alt="Site Logo">
+                    </div>
+                    <div class="search-input-container">
+                        <!-- SEARCH-INPUT -->
+                        <input type="text" class="p-16-auto-regular darck-gray search-input search-input-trigger"
+                            placeholder="Пошук...">
+                        <!-- SEARCH-ICON -->
+                        <button class="search-input-button icon"></button>
+                    </div>
+                    <a class="button-main-text-icon p-16-auto-regular user-page-link" href="#">
+                        <span class="icon"></span>
+                        Особистий кабінет
+                    </a>
+                    <a class="button-main-text-icon p-16-auto-regular cart-page-link" href="#">
+                        <div class="cart-counter-container">
+                            <span class="icon"></span>
+                            <span class="products-count">
+                                10
+                            </span>
+                        </div>
+                        Кошик
+                    </a>
+                    <div class="call-back-container">
+                        <div class="accordion-callback" id="accordionCallBack">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseCallBack"
+                                        aria-expanded="false" aria-controls="collapseCallBack">
+                                        <span class="icon"></span>
+                                        <a href="tel:+380000000000" class="number p-16-auto-regular">+380 00 000 00
+                                            00</a>
+                                    </button>
+                                </h2>
+                                <div id="collapseCallBack" class="accordion-collapse collapse"
+                                    aria-labelledby="headingCallBack" data-bs-parent="#accordionCallBack">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>
+                                                <a href="tel:+380632415657" class="p-16-auto-regular">
+                                                    +380 63 241 56 57
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="tel:+380632415657" class="p-16-auto-regular">
+                                                    +380 63 241 56 57
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BUTTON-TRIGGER-MODAL-CALL-BACK -->
+                        <button type="button" class="p-16-auto-regular red" data-bs-toggle="modal"
+                            data-bs-target="#callBackModal">
+                            Зворотній Дзвінок
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM-SECTION -->
+
+            <div class="bottom-section">
+                <div class="container">
+                    <nav class="m-b-60">
+                        <a class="p-16-auto-medium" href="">БУКЕТИ</a>
+                        <a class="p-16-auto-medium" href="">РОЗИ</a>
+                        <a class="p-16-auto-medium" href="">ТЮЛЬПАНИ</a>
+                        <a class="p-16-auto-medium" href="">КОМПОЗИЦІЇ В КОРОБЦІ</a>
+                        <a class="p-16-auto-medium" href="">ЕЛІТНІ БУКЕТИ</a>
+                        <a class="p-16-auto-medium" href="">ДРОПДАУН ТУТ</a>
+                        <a class="p-16-auto-medium" href="">АКЦІЇ</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="container search-results-container">
+                <ul>
+                    <li>
+                        <div class="card-xs">
+                            <div class="img-box">
+                                <img src="./img/flower-img.png" alt="name-of-this-flower">
+                            </div>
+                            <div class="prod-desc">
+                                <div class="card-top">
+                                    <div class="prod-title">
+                                        <h3 class="p-16-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                        <p class="p-16-auto-regular">
+                                            Артикул: 2222
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="p-16-auto-regular">
+                                                Ціна:
+                                            </p>
+                                            <p class="p-16-auto-bold red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-14-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-xs">
+                            <div class="img-box">
+                                <img src="./img/flower-img.png" alt="name-of-this-flower">
+                            </div>
+                            <div class="prod-desc">
+                                <div class="card-top">
+                                    <div class="prod-title">
+                                        <h3 class="p-16-auto-bold">
+                                            Назва квітки
+                                        </h3>
+                                        <p class="p-16-auto-regular">
+                                            Артикул: 2222
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="prod-price">
+                                        <div class="current-price">
+                                            <p class="p-16-auto-regular">
+                                                Ціна:
+                                            </p>
+                                            <p class="p-16-auto-bold red">
+                                                179,00 ₴
+                                            </p>
+                                        </div>
+                                        <div class="old-price">
+                                            <p class="p-14-auto-medium grey">
+                                                199 ₴
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- HEADER-MOBILE -->
+
+        <div class="header-mobile">
+            <div class="container">
+
+                <div class="left">
+                    <div class="header-menu-trigger">
+                        <span class="icon"></span>
+                    </div>
+                    <div class="logo-box">
+                        <img src="./img/logo.svg" alt="Logo">
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="cart-link">
+                        <a class="cart-page-link" href="#">
+                            <div class="cart-counter-container">
+                                <span class="icon"></span>
+                                <span class="products-count">
+                                    10
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search-trigger">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#mobileSearchModal">
+                            <span class="icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu-header" id="menu-header">
+            <div class="container">
+                <div class="top">
+                    <span class="icon" onclick="closeMenu()"></span>
+                    <p class="h2-24-auto-bold">Меню</p>
+                </div>
+                <div class="middle">
+                    <div class="lang-value-container b-b-light-gray">
+
+                        <!-- LANG -->
+
+                        <div class="accordion-lang" id="accordionLang">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseLang" aria-expanded="false"
+                                        aria-controls="collapseLang">
+                                        Укр
+                                    </button>
+                                </h2>
+                                <div id="collapseLang" class="accordion-collapse collapse "
+                                    aria-labelledby="headingLang" data-bs-parent="#accordionLang">
+                                    <div class="accordion-body ">
+                                        <ul>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    Eng
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    Pln
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CURRENCY -->
+
+                        <div class="accordion-currency" id="accordionCurrency">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseCurrency"
+                                        aria-expanded="false" aria-controls="collapseCurrency">
+                                        ₴ / UAH
+                                    </button>
+                                </h2>
+                                <div id="collapseCurrency" class="accordion-collapse collapse"
+                                    aria-labelledby="headingCurrency" data-bs-parent="#accordionCurrency">
+                                    <div class="accordion-body ">
+                                        <ul>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    $ / USD
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="p-16-auto-regular grey">
+                                                    € / EUR
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="location">
+                        <button type="button" class="p-16-auto-regular b-a-light-gray" data-bs-toggle="modal"
+                            data-bs-target="#userLocationModal">
+                            <span class="icon"></span>
+                            Польща, Краків
+                        </button>
+                    </div>
+                    <nav>
+                        <a href="" class="h3-20-auto-medium link b-b-light-gray">АКЦІЇ</a>
+                        <a href="" class="h3-20-auto-medium link b-b-light-gray">БУКЕТИ</a>
+                        <a href="" class="h3-20-auto-medium link b-b-light-gray">РОЗИ</a>
+                        <a href="" class="h3-20-auto-medium link b-b-light-gray">ТЮЛЬПАНИ</a>
+                        <a href="" class="h3-20-auto-medium link b-b-light-gray">КОМПОЗИЦІЇ В КОРОБЦІ</a>
+                        <a href="" class="h3-20-auto-medium link b-b-light-gray">ЕЛІТНІ БУКЕТИ</a>
+                        <div class="accordion-nav-link-container" id="accordionNavLinkContainer">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed h3-20-auto-medium link b-b-light-gray"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseNavLinkContainer" aria-expanded="false"
+                                        aria-controls="collapseNavLinkContainer">
+                                        ПОДАРУНКИ
+                                    </button>
+                                </h2>
+                                <div id="collapseNavLinkContainer" class="accordion-collapse collapse "
+                                    aria-labelledby="headingNavLinkContainer"
+                                    data-bs-parent="#accordionNavLinkContainer">
+                                    <div class="accordion-body">
+                                        <a class="h3-20-auto-medium link b-b-light-gray">
+                                            М’які іграшки
+                                        </a>
+
+                                        <a class="h3-20-auto-medium link b-b-light-gray">
+                                            Солодке
+                                        </a>
+
+                                        <a class="h3-20-auto-medium link b-b-light-gray">
+                                            Гелієви Шари
+                                        </a>
+
+                                        <a class="h3-20-auto-medium link b-b-light-gray">
+                                            Фрукти
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <a class="user-page-link b-b-light-gray h3-20-auto-medium link">
+                        <span class="icon"></span>
+                        Особистий кабінет
+                    </a>
+                    <div class="social-media-link">
+                        <a class="contact-us-btn icon" href=""></a>
+                        <a class="contact-us-btn icon" href=""></a>
+                        <a class="contact-us-btn icon" href=""></a>
+                    </div>
+                    <div class="contacts-number">
+                        <button type="button" class="call-back-menu-btn h3-20-auto-medium link b-b-light-gray"
+                            data-bs-toggle="modal" data-bs-target="#callBackModal">
+                            Зворотній Дзвінок
+                            <span class="icon"></span>
+                        </button>
+                        <div class="phone-numbers-ukr">
+                            <h3 class="h3-20-auto-light grey">
+                                Україна
+                            </h3>
+                            <div class="list">
+                                <a href="tel:+380980000000" class="p-16-auto-regular">
+                                    <span class="icon red"></span>
+                                    +380 98 000 00 00
+                                </a>
+                                <a href="tel:+380980000000" class="p-16-auto-regular">
+                                    <span class="icon red"></span>
+                                    +380 98 000 00 00
+                                </a>
+                            </div>
+                        </div>
+                        <div class="phone-numbers-int">
+                            <h3 class="h3-20-auto-light grey">
+                                Міжнародний
+                            </h3>
+                            <div class="list">
+                                <a href="tel:+44980000000" class="p-16-auto-regular">
+                                    <span class="icon red"></span>
+                                    +44 98 000 00 00
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom bg-light-red">
+                <div class="help-link">
+                    <div class="box">
+                        <a href="" class="h3-20-auto-light red">Заміна та повернення</a>
+                        <a href="" class="h3-20-auto-light red">Про нас</a>
+                    </div>
+                    <div class="box">
+                        <a href="" class="h3-20-auto-light red">Доставка і оплата</a>
+                        <a href="" class="h3-20-auto-light red">Контакти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+    </header>
 
     <!-- BUTTONS -->
 
@@ -1405,481 +1875,11 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn-close icon bg-red white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close icon bg-red white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
         </div>
     </div>
-
-    <!-- HEADER -->
-
-    <h2 class="h1-42-auto-medium white">Search</h2>
-    <header>
-
-        <!-- HEADER-DESKTOP -->
-        <div class="header-desktop">
-
-            <!-- TOP-SECTION -->
-
-            <div class="top-section bg-light-red">
-                <div class="container">
-                    <div class="left">
-                        <div class="location">
-                            <!-- BUTTON-TRIGGER-MODAL-CALL-BACK -->
-                            <button type="button" class="p-16-auto-regular red" data-bs-toggle="modal"
-                                data-bs-target="#userLocationModal">
-                                <span class="icon"></span>
-                                Польща, Краків
-                            </button>
-                        </div>
-                        <div class="help-link">
-                            <a href="" class="p-14-auto-regular">Про нас</a>
-                            <a href="" class="p-14-auto-regular">Доставка і оплата</a>
-                            <a href="" class="p-14-auto-regular">Контакти</a>
-                        </div>
-                    </div>
-                    <div class="right">
-
-                        <!-- LANG -->
-
-                        <div class="accordion-lang" id="accordionLang">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseLang" aria-expanded="false"
-                                        aria-controls="collapseLang">
-                                        Укр
-                                    </button>
-                                </h2>
-                                <div id="collapseLang" class="accordion-collapse collapse "
-                                    aria-labelledby="headingLang" data-bs-parent="#accordionLang">
-                                    <div class="accordion-body ">
-                                        <ul>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    Eng
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    Pln
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CURRENCY -->
-
-                        <div class="accordion-currency" id="accordionCurrency">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseCurrency"
-                                        aria-expanded="false" aria-controls="collapseCurrency">
-                                        ₴ / UAH
-                                    </button>
-                                </h2>
-                                <div id="collapseCurrency" class="accordion-collapse collapse"
-                                    aria-labelledby="headingCurrency" data-bs-parent="#accordionCurrency">
-                                    <div class="accordion-body ">
-                                        <ul>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    $ / USD
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    € / EUR
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- MIDDLE-SECTION -->
-
-            <div class="middle-section">
-                <div class="container">
-
-                    <div class="logo-box">
-                        <img src="./img/logo.svg" alt="Site Logo">
-                    </div>
-                    <div class="search-input-container">
-                        <!-- SEARCH-INPUT -->
-                        <input type="text" class="p-16-auto-regular darck-gray search-input search-input-trigger" placeholder="Пошук...">
-                        <!-- SEARCH-ICON -->
-                        <button class="search-input-button icon"></button>
-                    </div>
-                    <a class="button-main-text-icon p-16-auto-regular user-page-link" href="#">
-                        <span class="icon"></span>
-                        Особистий кабінет
-                    </a>
-                    <a class="button-main-text-icon p-16-auto-regular cart-page-link" href="#">
-                        <div class="cart-counter-container">
-                            <span class="icon"></span>
-                            <span class="products-count">
-                                10
-                            </span>
-                        </div>
-                        Кошик
-                    </a>
-                    <div class="call-back-container">
-                        <div class="accordion-callback" id="accordionCallBack">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseCallBack"
-                                        aria-expanded="false" aria-controls="collapseCallBack">
-                                        <span class="icon"></span>
-                                        <a href="tel:+380000000000" class="number p-16-auto-regular">+380 00 000 00
-                                            00</a>
-                                    </button>
-                                </h2>
-                                <div id="collapseCallBack" class="accordion-collapse collapse"
-                                    aria-labelledby="headingCallBack" data-bs-parent="#accordionCallBack">
-                                    <div class="accordion-body">
-                                        <ul>
-                                            <li>
-                                                <a href="tel:+380632415657" class="p-16-auto-regular">
-                                                    +380 63 241 56 57
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="tel:+380632415657" class="p-16-auto-regular">
-                                                    +380 63 241 56 57
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- BUTTON-TRIGGER-MODAL-CALL-BACK -->
-                        <button type="button" class="p-16-auto-regular red" data-bs-toggle="modal"
-                            data-bs-target="#callBackModal">
-                            Зворотній Дзвінок
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BOTTOM-SECTION -->
-
-            <div class="bottom-section">
-                <div class="container">
-                    <nav class="m-b-60">
-                        <a class="p-16-auto-medium" href="">БУКЕТИ</a>
-                        <a class="p-16-auto-medium" href="">РОЗИ</a>
-                        <a class="p-16-auto-medium" href="">ТЮЛЬПАНИ</a>
-                        <a class="p-16-auto-medium" href="">КОМПОЗИЦІЇ В КОРОБЦІ</a>
-                        <a class="p-16-auto-medium" href="">ЕЛІТНІ БУКЕТИ</a>
-                        <a class="p-16-auto-medium" href="">ДРОПДАУН ТУТ</a>
-                        <a class="p-16-auto-medium" href="">АКЦІЇ</a>
-                    </nav>
-                </div>
-            </div>
-            <div class="container search-results-container">
-                <ul>
-                    <li>
-                        <div class="card-xs">
-                            <div class="img-box">
-                                <img src="./img/flower-img.png" alt="name-of-this-flower">
-                            </div>
-                            <div class="prod-desc">
-                                <div class="card-top">
-                                    <div class="prod-title">
-                                        <h3 class="p-16-auto-bold">
-                                            Назва квітки
-                                        </h3>
-                                        <p class="p-16-auto-regular">
-                                            Артикул: 2222
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="prod-price">
-                                        <div class="current-price">
-                                            <p class="p-16-auto-regular">
-                                                Ціна:
-                                            </p>
-                                            <p class="p-16-auto-bold red">
-                                                179,00 ₴
-                                            </p>
-                                        </div>
-                                        <div class="old-price">
-                                            <p class="p-14-auto-medium grey">
-                                                199 ₴
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="card-xs">
-                            <div class="img-box">
-                                <img src="./img/flower-img.png" alt="name-of-this-flower">
-                            </div>
-                            <div class="prod-desc">
-                                <div class="card-top">
-                                    <div class="prod-title">
-                                        <h3 class="p-16-auto-bold">
-                                            Назва квітки
-                                        </h3>
-                                        <p class="p-16-auto-regular">
-                                            Артикул: 2222
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="prod-price">
-                                        <div class="current-price">
-                                            <p class="p-16-auto-regular">
-                                                Ціна:
-                                            </p>
-                                            <p class="p-16-auto-bold red">
-                                                179,00 ₴
-                                            </p>
-                                        </div>
-                                        <div class="old-price">
-                                            <p class="p-14-auto-medium grey">
-                                                199 ₴
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <!-- HEADER-MOBILE -->
-
-        <div class="header-mobile">
-            <div class="container">
-
-                <div class="left">
-                    <div class="header-menu-trigger">
-                        <span class="icon"></span>
-                    </div>
-                    <div class="logo-box">
-                        <img src="./img/logo.svg" alt="Logo">
-                    </div>
-                </div>
-
-                <div class="right">
-                    <div class="cart-link">
-                        <a class="cart-page-link" href="#">
-                            <div class="cart-counter-container">
-                                <span class="icon"></span>
-                                <span class="products-count">
-                                    10
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="search-trigger">
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#mobileSearchModal">
-                            <span class="icon"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="menu-header" id="menu-header">
-            <div class="container">
-                <div class="top">
-                    <span class="icon" onclick="closeMenu()"></span>
-                    <p class="h2-24-auto-bold">Меню</p>
-                </div>
-                <div class="middle">
-                    <div class="lang-value-container b-b-light-gray">
-
-                        <!-- LANG -->
-
-                        <div class="accordion-lang" id="accordionLang">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseLang" aria-expanded="false"
-                                        aria-controls="collapseLang">
-                                        Укр
-                                    </button>
-                                </h2>
-                                <div id="collapseLang" class="accordion-collapse collapse "
-                                    aria-labelledby="headingLang" data-bs-parent="#accordionLang">
-                                    <div class="accordion-body ">
-                                        <ul>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    Eng
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    Pln
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CURRENCY -->
-
-                        <div class="accordion-currency" id="accordionCurrency">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed p-16-auto-regular" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseCurrency"
-                                        aria-expanded="false" aria-controls="collapseCurrency">
-                                        ₴ / UAH
-                                    </button>
-                                </h2>
-                                <div id="collapseCurrency" class="accordion-collapse collapse"
-                                    aria-labelledby="headingCurrency" data-bs-parent="#accordionCurrency">
-                                    <div class="accordion-body ">
-                                        <ul>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    $ / USD
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="p-16-auto-regular grey">
-                                                    € / EUR
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="location">
-                        <button type="button" class="p-16-auto-regular b-a-light-gray" data-bs-toggle="modal"
-                            data-bs-target="#userLocationModal">
-                            <span class="icon"></span>
-                            Польща, Краків
-                        </button>
-                    </div>
-                    <nav>
-                        <a href="" class="h3-20-auto-medium link b-b-light-gray">АКЦІЇ</a>
-                        <a href="" class="h3-20-auto-medium link b-b-light-gray">БУКЕТИ</a>
-                        <a href="" class="h3-20-auto-medium link b-b-light-gray">РОЗИ</a>
-                        <a href="" class="h3-20-auto-medium link b-b-light-gray">ТЮЛЬПАНИ</a>
-                        <a href="" class="h3-20-auto-medium link b-b-light-gray">КОМПОЗИЦІЇ В КОРОБЦІ</a>
-                        <a href="" class="h3-20-auto-medium link b-b-light-gray">ЕЛІТНІ БУКЕТИ</a>
-                        <div class="accordion-nav-link-container" id="accordionNavLinkContainer">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed h3-20-auto-medium link b-b-light-gray"
-                                        type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseNavLinkContainer" aria-expanded="false"
-                                        aria-controls="collapseNavLinkContainer">
-                                        ПОДАРУНКИ
-                                    </button>
-                                </h2>
-                                <div id="collapseNavLinkContainer" class="accordion-collapse collapse "
-                                    aria-labelledby="headingNavLinkContainer"
-                                    data-bs-parent="#accordionNavLinkContainer">
-                                    <div class="accordion-body">
-                                        <a class="h3-20-auto-medium link b-b-light-gray">
-                                            М’які іграшки
-                                        </a>
-
-                                        <a class="h3-20-auto-medium link b-b-light-gray">
-                                            Солодке
-                                        </a>
-
-                                        <a class="h3-20-auto-medium link b-b-light-gray">
-                                            Гелієви Шари
-                                        </a>
-
-                                        <a class="h3-20-auto-medium link b-b-light-gray">
-                                            Фрукти
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                    <a class="user-page-link b-b-light-gray h3-20-auto-medium link">
-                        <span class="icon"></span>
-                        Особистий кабінет
-                    </a>
-                    <div class="social-media-link">
-                        <a class="contact-us-btn icon" href=""></a>
-                        <a class="contact-us-btn icon" href=""></a>
-                        <a class="contact-us-btn icon" href=""></a>
-                    </div>
-                    <div class="contacts-number">
-                        <button type="button" class="call-back-menu-btn h3-20-auto-medium link b-b-light-gray"
-                            data-bs-toggle="modal" data-bs-target="#callBackModal">
-                            Зворотній Дзвінок
-                            <span class="icon"></span>
-                        </button>
-                        <div class="phone-numbers-ukr">
-                            <h3 class="h3-20-auto-light grey">
-                                Україна
-                            </h3>
-                            <div class="list">
-                                <a href="tel:+380980000000" class="p-16-auto-regular">
-                                    <span class="icon red"></span>
-                                    +380 98 000 00 00
-                                </a>
-                                <a href="tel:+380980000000" class="p-16-auto-regular">
-                                    <span class="icon red"></span>
-                                    +380 98 000 00 00
-                                </a>
-                            </div>
-                        </div>
-                        <div class="phone-numbers-int">
-                            <h3 class="h3-20-auto-light grey">
-                                Міжнародний
-                            </h3>
-                            <div class="list">
-                                <a href="tel:+44980000000" class="p-16-auto-regular">
-                                    <span class="icon red"></span>
-                                    +44 98 000 00 00
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom bg-light-red">
-                <div class="help-link">
-                    <div class="box">
-                        <a href="" class="h3-20-auto-light red">Заміна та повернення</a>
-                        <a href="" class="h3-20-auto-light red">Про нас</a>
-                    </div>
-                    <div class="box">
-                        <a href="" class="h3-20-auto-light red">Доставка і оплата</a>
-                        <a href="" class="h3-20-auto-light red">Контакти</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
-    </header>
 
     <!-- SCRIPT`S -->
 

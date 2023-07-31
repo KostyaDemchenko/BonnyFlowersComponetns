@@ -249,24 +249,32 @@ button {
     margin-bottom: 100px;
 }
 
+.header-margin{
+    margin-top: 232px;
+}
+
 
 @media screen and (max-width: 700px) {
     .m-b-0 {
         margin-bottom: 0;
     }
-
+    
     .m-b-60 {
         margin-bottom: 35px;
     }
-
+    
     .m-70 {
         margin-bottom: 15px;
     }
-
+    
     .m-b-100 {
         margin-bottom: 25px;
     }
-
+    
+    .header-margin{
+        margin-top: 55px;
+    }
+    
 }
 
 /* FONTS-STYLES */

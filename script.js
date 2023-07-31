@@ -446,20 +446,34 @@ document.addEventListener('DOMContentLoaded', function () {
     return; // Stop execution if the number of inputs and containers don't match.
   }
 
+  function toggleSearchResults(searchResultsContainer) {
+    if (searchResultsContainer.classList.contains('open')) {
+      searchResultsContainer.style.maxHeight = '0';
+      searchResultsContainer.style.opacity = '0';
+      searchResultsContainer.style.pointerEvents = 'none';
+      setTimeout(() => {
+        searchResultsContainer.style.display = 'none';
+      }, 500); // Adjust the time to match your animation duration.
+    } else {
+      searchResultsContainer.style.display = 'flex';
+      setTimeout(() => {
+        searchResultsContainer.style.maxHeight = '380px';
+        searchResultsContainer.style.opacity = '1';
+        searchResultsContainer.style.pointerEvents = 'auto';
+      }, 10); // Wait for the container to be displayed before animating.
+    }
+    searchResultsContainer.classList.toggle('open');
+  }
+
   searchInputs.forEach((searchInput, index) => {
     const searchResultsContainer = searchResultsContainers[index];
 
     searchInput.addEventListener('focus', () => {
-      searchResultsContainer.style.maxHeight = '380px';
-      searchResultsContainer.style.height = '100%';
-      searchResultsContainer.style.opacity = '1';
-      searchResultsContainer.style.pointerEvents = 'auto';
+      toggleSearchResults(searchResultsContainer);
     });
 
     searchInput.addEventListener('blur', () => {
-      searchResultsContainer.style.height = '0';
-      searchResultsContainer.style.opacity = '0';
-      searchResultsContainer.style.pointerEvents = 'none';
+      toggleSearchResults(searchResultsContainer);
     });
   });
 });

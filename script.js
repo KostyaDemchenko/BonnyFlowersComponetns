@@ -478,6 +478,50 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Categoties
+
+document.addEventListener('DOMContentLoaded', function () {
+  const productCategoriesTriggers = document.querySelectorAll('.product-categories-container-trigger');
+  const productCategoriesContainers = document.querySelectorAll('.product-categories-container');
+
+  if (productCategoriesTriggers.length !== productCategoriesContainers.length) {
+    console.error('Number of product categories triggers does not match the number of product categories containers.');
+    return; // Stop execution if the number of triggers and containers don't match.
+  }
+
+  function toggleProductCategoriesContainer(productCategoriesContainer) {
+    if (productCategoriesContainer.classList.contains('open')) {
+      productCategoriesContainer.style.maxHeight = '0';
+      productCategoriesContainer.style.opacity = '0';
+      productCategoriesContainer.style.padding = '0';
+      productCategoriesContainer.style.pointerEvents = 'none';
+      setTimeout(() => {
+        productCategoriesContainer.style.display = 'none';
+      }, 500); // Adjust the time to match your animation duration.
+    } else {
+      productCategoriesContainer.style.display = 'flex';
+      setTimeout(() => {
+        productCategoriesContainer.style.maxHeight = '460px';
+        productCategoriesContainer.style.opacity = '1';
+        productCategoriesContainer.style.padding = '30px 0';
+        productCategoriesContainer.style.pointerEvents = 'auto';
+      }, 10); // Wait for the container to be displayed before animating.
+    }
+    productCategoriesContainer.classList.toggle('open');
+  }
+
+  productCategoriesTriggers.forEach((productCategoriesTrigger, index) => {
+    const productCategoriesContainer = productCategoriesContainers[index];
+
+    productCategoriesTrigger.addEventListener('focus', () => {
+      toggleProductCategoriesContainer(productCategoriesContainer);
+    });
+
+    productCategoriesTrigger.addEventListener('blur', () => {
+      toggleProductCategoriesContainer(productCategoriesContainer);
+    });
+  });
+});
 
 
 

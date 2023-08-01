@@ -532,52 +532,52 @@ const menu = document.getElementById('menu-header');
 const body = document.querySelector('body');
 
 function toggleMenu() {
-    menu.classList.toggle('menu-open');
-    body.classList.toggle('menu-opened');
+  menu.classList.toggle('menu-open');
+  body.classList.toggle('menu-opened');
 }
 
 function closeMenu() {
-    menu.classList.remove('menu-open');
-    body.classList.remove('menu-opened');
+  menu.classList.remove('menu-open');
+  body.classList.remove('menu-opened');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Обработчик события касания (touchstart)
-    document.addEventListener('touchstart', function (e) {
-        startX = e.touches[0].clientX; // Записываем начальную координату касания
-    });
+  // Обработчик события касания (touchstart)
+  document.addEventListener('touchstart', function (e) {
+    startX = e.touches[0].clientX; // Записываем начальную координату касания
+  });
 
-    // Обработчик события завершения касания (touchend)
-    document.addEventListener('touchend', function (e) {
-        const endX = e.changedTouches[0].clientX; // Получаем конечную координату касания
-        const menuOpen = menu.classList.contains('menu-open');
+  // Обработчик события завершения касания (touchend)
+  document.addEventListener('touchend', function (e) {
+    const endX = e.changedTouches[0].clientX; // Получаем конечную координату касания
+    const menuOpen = menu.classList.contains('menu-open');
 
-        // Если меню открыто и пользователь свайпнул справа налево
-        if (menuOpen && endX < startX) {
-            closeMenu();
-        }
-    });
+    // Если меню открыто и пользователь свайпнул справа налево
+    if (menuOpen && endX < startX) {
+      closeMenu();
+    }
+  });
 
-    const trigger = document.querySelector('.header-menu-trigger');
-    trigger.addEventListener('click', toggleMenu);
+  const trigger = document.querySelector('.header-menu-trigger');
+  trigger.addEventListener('click', toggleMenu);
 
-    const overlay = document.getElementById('overlay');
-    overlay.addEventListener('click', closeMenu);
+  const overlay = document.getElementById('overlay');
+  overlay.addEventListener('click', closeMenu);
 });
 
 // HEADER-AUTO-MARGIN
 
 document.addEventListener('DOMContentLoaded', function () {
   const headerElement = document.querySelector('header');
-  
+
   // Если элемент <header> найден
   if (headerElement) {
-      // Находим следующий элемент с помощью nextElementSibling
-      const nextElement = headerElement.nextElementSibling;
-  
-      // Если следующий элемент найден, добавляем класс "header-margin"
-      if (nextElement) {
-          nextElement.classList.add('header-margin');
-      }
+    // Находим следующий элемент с помощью nextElementSibling
+    const nextElement = headerElement.nextElementSibling;
+
+    // Если следующий элемент найден, добавляем класс "header-margin"
+    if (nextElement) {
+      nextElement.classList.add('header-margin');
+    }
   }
 });

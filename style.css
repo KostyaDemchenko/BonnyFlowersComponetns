@@ -93,7 +93,7 @@ a {
 }
 
 a:hover {
-    color: var(--red) !important;
+    color: var(--red);
     transition: .3s;
 }
 
@@ -237,7 +237,7 @@ button {
     margin-bottom: 0;
 }
 
-.m-b-50{
+.m-b-50 {
     margin-bottom: 50px;
 }
 
@@ -632,8 +632,7 @@ button {
 
 .button-main-text-icon:hover,
 .button-main-text:hover,
-.cta-button:hover,
-.contact-us-btn:hover {
+.cta-button:hover {
     background: var(--light-gray);
     color: var(--white, #FFF);
     transition: .3s;
@@ -709,24 +708,47 @@ button {
     transform: translate(-50%, -50%);
     font-size: 50px;
     line-height: 1;
+    transition: opacity 0.3s;
 }
 
-.contact-us-btn:nth-child(1) {
+.contact-us-btn:hover{
+    opacity: 0.7;
+    color: var(--white);
+}
+
+.contact-us .viber {
     right: 70px;
     top: 50%;
+}
+
+.viber {
     background: #7E57C2;
 }
 
-.contact-us-btn:nth-child(2) {
+.contact-us .telegram {
     right: 45px;
     top: -70%;
+}
+
+.telegram {
     background: linear-gradient(180deg, #2AABEE 0%, #229ED9 100%);
 }
 
-.contact-us-btn:nth-child(3) {
+.contact-us .whatsapp {
     left: 50%;
     bottom: 70px;
+}
+
+.whatsapp {
     background: linear-gradient(0deg, #20B038 0%, #60D66A 100%);
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.instagram {
+    background: linear-gradient(180deg, #7024C4 0%, #C3246C 50%, #E09B3D 100%);
 }
 
 .show-contact-us-btn-group {
@@ -3407,6 +3429,10 @@ header {
         transform: translate(0, 0) !important;
     }
 
+    .mobileSearchModal {
+        display: none;
+    }
+
     .mobileSearchModal .modal-content {
         position: relative;
         display: flex;
@@ -3461,42 +3487,38 @@ footer {
 
 /* FOOTER-desktop */
 
-.footer-desktop {
+.footer {
     width: 100%;
 }
 
-.footer-desktop .main-section {
+.footer .main-section {
     display: flex;
     justify-content: space-between;
     padding: 30px 0px;
 }
 
-.footer-desktop .logo-block {
+.footer .logo-block {
     display: flex;
     flex-direction: column;
     gap: 185px;
 }
 
-.footer-desktop .contact-us {
+.footer .contact-us {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.footer-desktop .contact-us-btn {
+.footer .contact-us-btn {
     position: static;
     width: 35px;
     height: 35px;
-    /* border-radius: 400; */
-    color: white;
+    transform: translate(0);
+    font-size: 30px;
 }
 
-.footer-desktop .contact-us-btn:nth-child(1) {
-    background: #1877F2;
-}
-
-.footer-desktop .user-page-link {
+.footer .user-page-link {
     padding: 0;
     box-shadow: none;
     color: var(--dark-grey);
@@ -3505,75 +3527,74 @@ footer {
     gap: 5px;
 }
 
-.contacts {
+.footer .contacts {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.contacts .top-section {
+.footer .contacts .top-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* flex: 1 1 auto */
 }
 
-.contacts .bottom-section {
+.footer .contacts .bottom-section {
     align-items: start;
 }
 
-.contacts .title {
+.footer .contacts .title {
     color: var(--dark-grey);
 }
 
-.contacts .phone-section {
+.footer .contacts .phone-section {
     display: flex;
     gap: 35px;
 }
 
-.contacts .phone-block {
+.footer .contacts .phone-block {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contacts .phone-block .numbers {
+.footer .contacts .phone-block .numbers {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.contacts .email-section {
+.footer .contacts .email-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footer-desktop .category {
+.footer .category {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.footer-desktop .category .info {
+.footer .category .info {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.footer-desktop .for-clients {
+.footer .for-clients {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.footer-desktop .for-clients .info-block {
+.footer .for-clients .info-block {
     display: flex;
     justify-content: space-between;
     gap: 65px;
 }
 
-.footer-desktop .for-clients .info {
+.footer .for-clients .info {
     display: flex;
     flex-direction: column;
     gap: 15px;

@@ -3507,7 +3507,21 @@ footer {
 .footer .main-section {
     display: flex;
     justify-content: space-between;
+    /* flex-direction: column; */
     padding: 30px 0px;
+}
+
+@media screen and (max-width: 700px) {
+    .footer h4 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .footer .main-section {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+    }
 }
 
 .footer .logo-block {
@@ -3516,11 +3530,26 @@ footer {
     gap: 185px;
 }
 
+.footer .logo-box img {
+    width: 100%;
+}
+
 .footer .contact-us {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .footer .logo-block .logo-box {
+        max-width: 85px;
+        width: 100%;
+    }
+
+    .footer .contact-us {
+        display: none;
+    }
 }
 
 .footer .contact-us-btn {
@@ -3583,6 +3612,40 @@ footer {
     gap: 10px;
 }
 
+@media screen and (max-width: 700px) {
+    .footer .contacts .top-section .icon {
+        font-size: 14px;
+    }
+
+    .footer .contacts .phone-block {
+        gap: 10px;
+    }
+
+    .footer .contacts .phone-block .numbers {
+        gap: 5px;
+    }
+
+    .footer .contacts .phone-block .numbers .p-16-auto-regular {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .footer .contacts .bottom-section {
+        display: none;
+    }
+
+    .footer .contacts .email-section .p-16-auto-regular {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
+
 .footer .category {
     display: flex;
     flex-direction: column;
@@ -3593,6 +3656,17 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .footer .category .info {
+        gap: 10px;
+    }
+
+    .footer .category .info .p-14-auto-light {
+        font-size: 12px;
+        font-weight: 300;
+    }
 }
 
 .footer .for-clients {
@@ -3611,4 +3685,52 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .footer .for-clients .info-block {
+        justify-content: start;
+        gap: 35px;
+    }
+
+    .footer .for-clients .info {
+        gap: 10px;
+    }
+
+    .footer .for-clients .info .p-14-auto-light {
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
+
+.footer .bottom .contact-us {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .bottom .contact-us .contact-us-btn {
+    position: static;
+    width: 25px;
+    height: 25px;
+    transform: translate(0);
+    font-size: 20px;
+}
+
+.footer .bottom .bottom-section {
+    align-items: start;
+    font-size: 10px;
+    font-family: Montserrat;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 700px) {
+    .footer .bottom .contact-us {
+        display: none;
+    }
+
+    .footer .bottom .bottom-section {
+        display: none;
+    }
 }

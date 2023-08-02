@@ -138,9 +138,15 @@ button {
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    max-width: 1390px;
+    max-width: 1420px;
     width: 100%;
-    padding: 0;
+    padding: 0 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 0;
+    }
 }
 
 /* COLORS */
@@ -2556,7 +2562,8 @@ button {
     justify-content: flex-start;
     height: 100%;
     width: 100%;
-    max-width: 1390px;
+    max-width: 1420px;
+    padding: 0 15px;
     z-index: var(--layer-2);
 }
 
@@ -2632,6 +2639,7 @@ button {
         align-items: center;
         height: 100%;
         width: 90%;
+        padding: 0;
     }
 
     .slider-container-header .slide-info {
@@ -2974,7 +2982,7 @@ header {
 
 .top-section .container {
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 15px;
 }
 
 .top-section .container .left,
@@ -3003,7 +3011,7 @@ header {
 
 .middle-section .container {
     justify-content: space-between;
-    padding: 24px 0;
+    padding: 24px 15px;
 }
 
 .user-page-link,
@@ -3614,7 +3622,7 @@ footer {
 
 @media screen and (max-width: 700px) {
     .footer .contacts .top-section .icon {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .footer .contacts .phone-block {
@@ -3635,14 +3643,6 @@ footer {
 
     .footer .contacts .bottom-section {
         display: none;
-    }
-
-    .footer .contacts .email-section .p-16-auto-regular {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0em;
-        text-align: left;
     }
 }
 
@@ -3703,14 +3703,20 @@ footer {
     }
 }
 
-.footer .bottom .contact-us {
+.footer .bottom-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer .bottom-mobile .contact-us {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 15px;
 }
 
-.footer .bottom .contact-us .contact-us-btn {
+.footer .bottom-mobile .contact-us .contact-us-btn {
     position: static;
     width: 25px;
     height: 25px;
@@ -3718,7 +3724,7 @@ footer {
     font-size: 20px;
 }
 
-.footer .bottom .bottom-section {
+.footer .bottom-mobile .bottom-section {
     align-items: start;
     font-size: 10px;
     font-family: Montserrat;
@@ -3726,11 +3732,11 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
-    .footer .bottom .contact-us {
+    .footer .bottom-mobile .contact-us {
         display: none;
     }
 
-    .footer .bottom .bottom-section {
+    .footer .bottom-mobile .bottom-section {
         display: none;
     }
 }

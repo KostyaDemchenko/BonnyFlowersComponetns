@@ -44,13 +44,11 @@
 /* SCROLL-BAR */
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--red);
-    border-radius: 50vh;
 }
 
 /* RESET-STYLES */
@@ -62,7 +60,7 @@
 }
 
 body {
-    background-color: var(--dark-grey);
+    background-color: var(--white);
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     line-height: 1;
@@ -258,7 +256,7 @@ button {
 }
 
 .header-margin {
-    margin-top: 232px;
+    margin-top: 222px;
 }
 
 @media screen and (max-width: 700px) {

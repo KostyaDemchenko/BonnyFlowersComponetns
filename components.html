@@ -791,6 +791,786 @@
             <div class="overlay" id="overlay" onclick="closeMenu()"></div>
         </header>
 
+        <!-- BUTTONS -->
+
+        <h2 class="h1-42-auto-medium white">Buttons</h2>
+        <div class="group">
+            <a class="button-main-text p-16-auto-bold" href="#"
+                >Замовити Зараз</a
+            >
+            <a class="button-main-text-icon p-16-auto-bold" href="#"
+                ><span class="icon"></span>Замовити Зараз</a
+            >
+        </div>
+        <div class="cta-btn-group">
+            <div class="contact-us">
+                <button id="open-cta" class="cta-button">
+                    <span class="icon"></span>
+                </button>
+                <div class="contact-us-btn-group">
+                    <a href="#" class="contact-us-btn viber icon"></a>
+                    <a href="#" class="contact-us-btn telegram icon"></a>
+                    <a href="#" class="contact-us-btn whatsapp icon"></a>
+                    <!-- <a href="#" class="contact-us-btn facebook icon"></a> -->
+                    <!-- <a href="#" class="contact-us-btn instagram icon"></a> -->
+                </div>
+            </div>
+            <a id="scroll-up" class="cta-button" href="#"
+                ><span class="icon"></span></a
+            >
+        </div>
+
+        <!-- INPUTS -->
+
+        <h2 class="h1-42-auto-medium white">Inputs</h2>
+        <div class="group">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="changeThisName-0"
+                id="changeThisId-0"
+            />
+            <input
+                class="form-check-input"
+                type="radio"
+                name="changeThisName-1"
+                id="changeThisId-1"
+            />
+            <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="changeThisId-2"
+            />
+            <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="changeThisId-3"
+            />
+            <div class="toggle-switch">
+                <input type="checkbox" id="switch" />
+                <label for="switch"></label>
+            </div>
+        </div>
+
+        <!-- ACCORDION-FOR-SORT -->
+
+        <h2 class="h1-42-auto-medium white">Accordion-for-sort</h2>
+        <div class="group">
+            <div class="accordion-sort" id="accordionSort">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button
+                            class="accordion-button collapsed p-16-auto-regular"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSort"
+                            aria-expanded="false"
+                            aria-controls="collapseSort"
+                        >
+                            Сортування
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseSort"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingSort"
+                        data-bs-parent="#accordionSort"
+                    >
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <a class="p-16-auto-regular">
+                                        Популярні товари
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="p-16-auto-regular"> Акції </a>
+                                </li>
+                                <li>
+                                    <a class="p-16-auto-regular">
+                                        Ціна (за зростанням)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="p-16-auto-regular">
+                                        Ціна (за зменшенням)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACCORDION-FOR-USER-PAGE -->
+
+        <h2 class="h1-42-auto-medium white">Accordion-for-user-page</h2>
+        <div class="group">
+            <div class="accordion-user-page" id="accordionUserPage">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingheadingUserPage">
+                        <button
+                            class="accordion-button collapsed p-16-auto-bold red"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseUserPage"
+                            aria-expanded="false"
+                            aria-controls="collapseheadingUserPage"
+                        >
+                            Особисті дані
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseUserPage"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingheadingUserPage"
+                        data-bs-parent="#accordionUserPage"
+                    >
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <a class="p-14-auto-medium">
+                                        Адресна книга
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="p-14-auto-medium"> Розсилки </a>
+                                </li>
+                                <li>
+                                    <a class="p-14-auto-medium"> Розсилки </a>
+                                </li>
+                                <li>
+                                    <a class="p-14-auto-medium"> Розсилки </a>
+                                </li>
+                                <li>
+                                    <a class="p-14-auto-medium"> Розсилки </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACCORDION-FOR-LANG/CURRENCY -->
+        <h2 class="h1-42-auto-medium white">Accordion for lang/currency</h2>
+        <div class="group bg-white">
+            <!-- LANG -->
+
+            <div class="accordion-lang" id="accordionLang">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button
+                            class="accordion-button collapsed p-16-auto-regular"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseLang"
+                            aria-expanded="false"
+                            aria-controls="collapseLang"
+                        >
+                            Укр
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseLang"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingLang"
+                        data-bs-parent="#accordionLang"
+                    >
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <a class="p-16-auto-regular grey"> Eng </a>
+                                </li>
+                                <li>
+                                    <a class="p-16-auto-regular grey"> Pln </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURRENCY -->
+
+            <div class="accordion-currency" id="accordionCurrency">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button
+                            class="accordion-button collapsed p-16-auto-regular"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseCurrency"
+                            aria-expanded="false"
+                            aria-controls="collapseCurrency"
+                        >
+                            ₴ / UAH
+                        </button>
+                    </h2>
+                    <div
+                        id="collapseCurrency"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingCurrency"
+                        data-bs-parent="#accordionCurrency"
+                    >
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <a class="p-16-auto-regular grey">
+                                        $ / USD
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="p-16-auto-regular grey">
+                                        € / EUR
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM card`S -->
+        <h2 class="h1-42-auto-medium white">Item card`s for pages link</h2>
+        <div class="group">
+            <!-- card-XL -->
+
+            <div class="card-xl">
+                <div class="discount">
+                    <p class="p-16-auto-medium white">10%</p>
+                </div>
+                <div class="img-box">
+                    <img src="./img/flower-img.png" alt="name-of-this-flower" />
+                </div>
+                <div class="prod-desc">
+                    <div class="prod-title">
+                        <h3 class="h2-24-auto-bold">Назва квітки</h3>
+                    </div>
+                    <div class="prod-price">
+                        <div class="current-price">
+                            <p class="h2-24-auto-medium red">179,00 ₴</p>
+                        </div>
+                        <div class="old-price">
+                            <p class="p-16-auto-medium grey">199 ₴</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-btn">
+                    <a class="button-main-text-icon p-16-auto-bold" href="#"
+                        ><span class="icon"></span>До кошика</a
+                    >
+                    <a class="p-16-auto-regular red" href="#"
+                        >Швидке замовлення</a
+                    >
+                </div>
+            </div>
+
+            <!-- card-L -->
+
+            <div class="card-l">
+                <div class="img-box">
+                    <img src="./img/flower-img.png" alt="name-of-this-flower" />
+                </div>
+                <div class="prod-desc">
+                    <div class="card-top">
+                        <div class="prod-title">
+                            <h3 class="h2-24-auto-bold">Назва квітки</h3>
+                            <p class="p-16-auto-regular">Артикул: 2222</p>
+                        </div>
+                        <div class="card-btn">
+                            <button class="delete-button icon"></button>
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="prod-price">
+                            <div class="current-price">
+                                <p class="p-16-auto-regular">Ціна:</p>
+                                <p class="h2-24-auto-bold red">179,00 ₴</p>
+                            </div>
+                            <div class="old-price">
+                                <p class="p-16-auto-medium grey">199 ₴</p>
+                            </div>
+                        </div>
+                        <div class="counter">
+                            <button class="decrement icon grey"></button>
+                            <span class="count p-14-auto-medium">1</span>
+                            <button class="increment icon red"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card-M -->
+
+            <div class="card-m">
+                <div class="img-box">
+                    <img src="./img/flower-img.png" alt="name-of-this-flower" />
+                </div>
+                <div class="prod-desc">
+                    <div class="card-top">
+                        <div class="prod-title">
+                            <h3 class="p-16-auto-bold">Назва квітки</h3>
+                            <div class="prod-price">
+                                <p class="p-16-auto-regular">Ціна:</p>
+                                <p class="p-16-auto-medium red">179,00 ₴</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="product-info">
+                            <div class="product-order-date">
+                                <p class="p-16-auto-regular">Дата замовленя:</p>
+                                <p class="p-16-auto-regular">22.12.23</p>
+                            </div>
+                            <div class="product-order-status">
+                                <p class="p-16-auto-regular">Статус:</p>
+                                <p class="p-16-auto-bold red">
+                                    Замовлення в обробці
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card-S -->
+
+            <div class="card-s">
+                <div class="img-box">
+                    <img src="./img/flower-img.png" alt="name-of-this-flower" />
+                </div>
+                <div class="prod-desc">
+                    <div class="card-top">
+                        <div class="prod-title">
+                            <h3 class="p-16-auto-bold">Назва квітки</h3>
+                            <p class="p-16-auto-regular">Артикул: 2222</p>
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="prod-price">
+                            <div class="current-price">
+                                <p class="p-16-auto-regular">Ціна:</p>
+                                <p class="p-16-auto-bold red">179,00 ₴</p>
+                            </div>
+                            <div class="old-price">
+                                <p class="p-16-auto-medium grey">199 ₴</p>
+                            </div>
+                        </div>
+                        <div class="product-count" id="counter">
+                            <p class="p-14-auto-medium">1 шт.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card-XS -->
+
+            <div class="card-xs">
+                <div class="img-box">
+                    <img src="./img/flower-img.png" alt="name-of-this-flower" />
+                </div>
+                <div class="prod-desc">
+                    <div class="card-top">
+                        <div class="prod-title">
+                            <h3 class="p-16-auto-bold">Назва квітки</h3>
+                            <p class="p-16-auto-regular">Артикул: 2222</p>
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="prod-price">
+                            <div class="current-price">
+                                <p class="p-16-auto-regular">Ціна:</p>
+                                <p class="p-16-auto-bold red">179,00 ₴</p>
+                            </div>
+                            <div class="old-price">
+                                <p class="p-14-auto-medium grey">199 ₴</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT-card-FOR-ORDERING-PAGE -->
+
+        <h2 class="h1-42-auto-medium white">Item card`s for pages link</h2>
+        <div class="group">
+            <div class="card-order-l">
+                <div class="discount">
+                    <p class="p-16-auto-medium white">10%</p>
+                </div>
+                <div class="img-box">
+                    <img src="./img/flower-img.png" alt="name-of-this-flower" />
+                </div>
+                <div class="prod-desc">
+                    <div class="prod-title">
+                        <h3 class="h2-24-auto-bold">Назва квітки</h3>
+                    </div>
+                    <div class="prod-price">
+                        <div class="current-price">
+                            <p class="h2-24-auto-bold red">179,00 ₴</p>
+                        </div>
+                        <div class="old-price">
+                            <p class="p-16-auto-medium grey">199 ₴</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-order-s">
+                <div class="img-box">
+                    <img src="./img/flower-img.png" alt="name-of-this-flower" />
+                </div>
+                <div class="prod-desc">
+                    <div class="card-top">
+                        <div class="prod-title">
+                            <h3 class="h3-20-auto-bold">Назва квітки</h3>
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="prod-price">
+                            <div class="current-price">
+                                <p class="h3-20-auto-bold red">179,00 ₴</p>
+                            </div>
+                            <div class="old-price">
+                                <p class="p-16-auto-medium grey">199 ₴</p>
+                            </div>
+                        </div>
+                        <div class="counter" id="counter">
+                            <button class="decrement icon grey"></button>
+                            <span class="count p-14-auto-medium">1</span>
+                            <button class="increment icon red"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION-BLOCK -->
+
+        <h2 class="h1-42-auto-medium white">Navigation block</h2>
+        <div class="group">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <!-- ARROW-LEFT -->
+                <a href="#" class="icon darck-gray"></a>
+                <!-- LINK`S LIST -->
+                <ul>
+                    <li>
+                        <a href="#" class="p-14-auto-regular grey"> Каталог </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-14-auto-regular grey"> Рози </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-14-auto-regular grey">
+                            Букет червоних роз 101 шт.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pagination">
+                <!-- ARROW-LEFT -->
+                <a href="#" class="icon darck-gray"></a>
+                <!-- PAGE-LIST -->
+                <ul>
+                    <li>
+                        <a href="#" class="p-16-auto-regular grey selected-page"
+                            >1</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="p-16-auto-regular grey">2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-16-auto-regular grey">3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-16-auto-regular grey">4</a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-16-auto-regular grey">5</a>
+                    </li>
+                </ul>
+                <!-- ARROW-RIGHT -->
+                <a href="#" class="icon darck-gray"></a>
+            </div>
+        </div>
+
+        <!-- INPUT`S -->
+        <h2 class="h1-42-auto-medium white">Inputs</h2>
+        <div class="group">
+            <!-- TEXT-INPUT`S -->
+            <input
+                type="text"
+                id="text"
+                class="p-16-auto-regular darck-gray input-text"
+                placeholder="Ім’я"
+            />
+
+            <!-- SEARCH 
+        <div class="search-input-container">
+            SEARCH-INPUT
+            <input type="text" class="p-16-auto-regular darck-gray search-input" placeholder="Пошук...">
+            SEARCH-ICON
+            <button class="search-input-button icon"></button>
+        </div>  -->
+
+            <!-- FROM-TO -->
+
+            <!-- PHONE INPUT -->
+
+            <div class="input-tell-container">
+                <form action="#" method="get">
+                    <div class="form-group">
+                        <input
+                            class="form-control tel"
+                            type="tel"
+                            name="leyka_donor_phone"
+                            inputmode="tel"
+                            value=""
+                        />
+                    </div>
+                    <button
+                        class="button-main-text p-16-auto-bold"
+                        type="subimit"
+                        value="Отправить"
+                    >
+                        Відправити
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PRICE-RANGE-SLIDER -->
+        <h2 class="h1-42-auto-medium white">Prise range slider</h2>
+
+        <div class="group">
+            <div class="filter-container">
+                <div class="accordion-from-to" id="accordionFromToMoney">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button
+                                class="accordion-button collapsed p-16-auto-medium"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFromToMoney"
+                                aria-expanded="false"
+                                aria-controls="collapseFromToMoney"
+                            >
+                                Ціна
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFromToMoney"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingSort"
+                            data-bs-parent="#accordionFromToMoney"
+                        >
+                            <div class="accordion-body">
+                                <div class="from-to-input-container">
+                                    <div id="rangeSlider" class="range-slider">
+                                        <!-- INPUT-GROUP -->
+                                        <div class="number-group">
+                                            <input
+                                                class="number-input p-16-auto-medium"
+                                                type="number"
+                                                value="1"
+                                                min="0"
+                                                max="100"
+                                                placeholder="Від..."
+                                            />
+                                            <input
+                                                class="number-input p-16-auto-medium"
+                                                type="number"
+                                                value="100"
+                                                min="0"
+                                                max="100"
+                                                placeholder="До..."
+                                            />
+                                        </div>
+
+                                        <!-- RANGE-GROUP -->
+                                        <div class="range-group">
+                                            <input
+                                                class="range-input"
+                                                value="1"
+                                                min="1"
+                                                max="100"
+                                                step="1"
+                                                type="range"
+                                            />
+                                            <input
+                                                class="range-input"
+                                                value="100"
+                                                min="1"
+                                                max="100"
+                                                step="1"
+                                                type="range"
+                                            />
+                                        </div>
+                                        <a
+                                            class="button-main-text p-16-auto-bold"
+                                            href="#"
+                                            >Підтвердити</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button
+                                class="accordion-button collapsed p-16-auto-medium"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFromToAmount"
+                                aria-expanded="false"
+                                aria-controls="collapseFromToAmount"
+                            >
+                                Кількість
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFromToAmount"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFromToAmount"
+                            data-bs-parent="#accordionFromToAmount"
+                        >
+                            <div class="accordion-body">
+                                <div class="from-to-input-container">
+                                    <div id="rangeSlider" class="range-slider">
+                                        <!-- INPUT-GROUP -->
+                                        <div class="number-group">
+                                            <input
+                                                class="number-input p-16-auto-medium"
+                                                type="number"
+                                                value="1"
+                                                min="0"
+                                                max="100"
+                                                placeholder="Від..."
+                                            />
+                                            <input
+                                                class="number-input p-16-auto-medium"
+                                                type="number"
+                                                value="100"
+                                                min="0"
+                                                max="100"
+                                                placeholder="До..."
+                                            />
+                                        </div>
+
+                                        <!-- RANGE-GROUP -->
+                                        <div class="range-group">
+                                            <input
+                                                class="range-input"
+                                                value="1"
+                                                min="1"
+                                                max="100"
+                                                step="1"
+                                                type="range"
+                                            />
+                                            <input
+                                                class="range-input"
+                                                value="100"
+                                                min="1"
+                                                max="100"
+                                                step="1"
+                                                type="range"
+                                            />
+                                        </div>
+                                        <a
+                                            class="button-main-text p-16-auto-bold"
+                                            href="#"
+                                            >Підтвердити</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button
+                                class="accordion-button collapsed p-16-auto-medium"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFromToSize"
+                                aria-expanded="false"
+                                aria-controls="collapseFromToSize"
+                            >
+                                Розмір
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFromToSize"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFromToSize"
+                            data-bs-parent="#accordionFromToSize"
+                        >
+                            <div class="accordion-body">
+                                <div class="from-to-input-container">
+                                    <div id="rangeSlider" class="range-slider">
+                                        <!-- INPUT-GROUP -->
+                                        <div class="number-group">
+                                            <input
+                                                class="number-input p-16-auto-medium"
+                                                type="number"
+                                                value="1"
+                                                min="0"
+                                                max="100"
+                                                placeholder="Від..."
+                                            />
+                                            <input
+                                                class="number-input p-16-auto-medium"
+                                                type="number"
+                                                value="100"
+                                                min="0"
+                                                max="100"
+                                                placeholder="До..."
+                                            />
+                                        </div>
+
+                                        <!-- RANGE-GROUP -->
+                                        <div class="range-group">
+                                            <input
+                                                class="range-input"
+                                                value="1"
+                                                min="1"
+                                                max="100"
+                                                step="1"
+                                                type="range"
+                                            />
+                                            <input
+                                                class="range-input"
+                                                value="100"
+                                                min="1"
+                                                max="100"
+                                                step="1"
+                                                type="range"
+                                            />
+                                        </div>
+                                        <a
+                                            class="button-main-text p-16-auto-bold"
+                                            href="#"
+                                            >Підтвердити</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDER header -->
+
+        <h2 class="h1-42-auto-medium white">Slider header</h2>
         <div class="slider-container-header">
             <div class="slide_viewer">
                 <!-- SLIDE-GROUP -->
@@ -911,6 +1691,7 @@
         <!-- End // .slider-container -->
 
         <!-- SLIDER-FAST-SEARCH -->
+        <h2 class="h1-42-auto-medium white">Slider header</h2>
         <section class="results-fast-search m-b-60">
             <div class="results-fast-search-container">
                 <div class="title-box m-b-70">
@@ -1383,6 +2164,62 @@
             </div>
         </section>
 
+        <!-- CALL-BACK-HEADER -->
+        <h2 class="h1-42-auto-medium white">Slider header</h2>
+        <div class="group">
+            <div class="call-back-container">
+                <div class="accordion-callback" id="accordionCallBack">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button
+                                class="accordion-button collapsed p-16-auto-regular"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseCallBack"
+                                aria-expanded="false"
+                                aria-controls="collapseCallBack"
+                            >
+                                <span class="icon"></span>
+                                <span class="number p-16-auto-regular"
+                                    >+380 00 000 00 00</span
+                                >
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseCallBack"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingCallBack"
+                            data-bs-parent="#accordionCallBack"
+                        >
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <a class="p-16-auto-regular">
+                                            +380 63 241 56 57
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="p-16-auto-regular">
+                                            +380 63 241 56 57
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BUTTON-TRIGGER-MODAL-CALL-BACK -->
+                <button
+                    type="button"
+                    class="p-16-auto-regular red"
+                    data-bs-toggle="modal"
+                    data-bs-target="#callBackModal"
+                >
+                    Зворотній Дзвінок
+                </button>
+            </div>
+        </div>
+
         <!-- MODALS -->
 
         <!-- MODAL-CALL-BACK -->
@@ -1727,6 +2564,7 @@
             </div>
         </div>
 
+        <h2 class="h1-42-auto-medium white">Footer</h2>
         <footer>
             <!-- FOOTER -->
 
@@ -1917,24 +2755,6 @@
                 </div>
             </div>
         </footer>
-
-        <div class="cta-btn-group">
-            <div class="contact-us">
-                <button id="open-cta" class="cta-button">
-                    <span class="icon"></span>
-                </button>
-                <div class="contact-us-btn-group">
-                    <a href="#" class="contact-us-btn viber icon"></a>
-                    <a href="#" class="contact-us-btn telegram icon"></a>
-                    <a href="#" class="contact-us-btn whatsapp icon"></a>
-                    <!-- <a href="#" class="contact-us-btn facebook icon"></a> -->
-                    <!-- <a href="#" class="contact-us-btn instagram icon"></a> -->
-                </div>
-            </div>
-            <a id="scroll-up" class="cta-button" href="#"
-                ><span class="icon"></span></a
-            >
-        </div>
 
         <!-- SCRIPT`S -->
 

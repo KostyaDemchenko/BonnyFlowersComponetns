@@ -791,7 +791,7 @@
             <div class="overlay" id="overlay" onclick="closeMenu()"></div>
         </header>
 
-        <div class="slider-container-header">
+        <div class="slider-container-header m-b-60">
             <div class="slide_viewer">
                 <!-- SLIDE-GROUP -->
 
@@ -909,6 +909,271 @@
             </div>
         </div>
         <!-- End // .slider-container -->
+
+        <!-- FAST-SEARCH -->
+        <section class="fast-search m-b-60">
+            <div class="fast-search-container">
+                <div class="quick-search-options">
+                    <div class="title-box">
+                        <h2 class="h1-42-auto-bold">Швидкий підбір</h2>
+                    </div>
+                    <div class="quick-search-options-box">
+                        <div class="filter-container">
+                            <div
+                                class="accordion-from-to"
+                                id="accordionFromToMoney"
+                            >
+                                <div class="accordion-item">
+                                    <h2
+                                        class="accordion-header"
+                                        id="headingOne"
+                                    >
+                                        <button
+                                            class="accordion-button collapsed p-16-auto-medium"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFromToMoney"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFromToMoney"
+                                        >
+                                            Ціна
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseFromToMoney"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingSort"
+                                        data-bs-parent="#accordionFromToMoney"
+                                    >
+                                        <div class="accordion-body">
+                                            <div
+                                                class="from-to-input-container"
+                                            >
+                                                <div
+                                                    id="rangeSlider"
+                                                    class="range-slider"
+                                                >
+                                                    <!-- INPUT-GROUP -->
+                                                    <div class="number-group">
+                                                        <input
+                                                            class="number-input p-16-auto-medium"
+                                                            type="number"
+                                                            value="1"
+                                                            min="0"
+                                                            max="100"
+                                                            placeholder="Від..."
+                                                        />
+                                                        <input
+                                                            class="number-input p-16-auto-medium"
+                                                            type="number"
+                                                            value="100"
+                                                            min="0"
+                                                            max="100"
+                                                            placeholder="До..."
+                                                        />
+                                                    </div>
+
+                                                    <!-- RANGE-GROUP -->
+                                                    <div class="range-group">
+                                                        <input
+                                                            class="range-input"
+                                                            value="1"
+                                                            min="1"
+                                                            max="100"
+                                                            step="1"
+                                                            type="range"
+                                                        />
+                                                        <input
+                                                            class="range-input"
+                                                            value="100"
+                                                            min="1"
+                                                            max="100"
+                                                            step="1"
+                                                            type="range"
+                                                        />
+                                                    </div>
+                                                    <a
+                                                        class="button-main-text p-16-auto-bold"
+                                                        href="#"
+                                                        >Підтвердити</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2
+                                        class="accordion-header"
+                                        id="headingTwo"
+                                    >
+                                        <button
+                                            class="accordion-button collapsed p-16-auto-medium"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFromToAmount"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFromToAmount"
+                                        >
+                                            Кількість
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseFromToAmount"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingFromToAmount"
+                                        data-bs-parent="#accordionFromToAmount"
+                                    >
+                                        <div class="accordion-body">
+                                            <div
+                                                class="from-to-input-container"
+                                            >
+                                                <div
+                                                    id="rangeSlider"
+                                                    class="range-slider"
+                                                >
+                                                    <!-- INPUT-GROUP -->
+                                                    <div class="number-group">
+                                                        <input
+                                                            class="number-input p-16-auto-medium"
+                                                            type="number"
+                                                            value="1"
+                                                            min="0"
+                                                            max="100"
+                                                            placeholder="Від..."
+                                                        />
+                                                        <input
+                                                            class="number-input p-16-auto-medium"
+                                                            type="number"
+                                                            value="100"
+                                                            min="0"
+                                                            max="100"
+                                                            placeholder="До..."
+                                                        />
+                                                    </div>
+
+                                                    <!-- RANGE-GROUP -->
+                                                    <div class="range-group">
+                                                        <input
+                                                            class="range-input"
+                                                            value="1"
+                                                            min="1"
+                                                            max="100"
+                                                            step="1"
+                                                            type="range"
+                                                        />
+                                                        <input
+                                                            class="range-input"
+                                                            value="100"
+                                                            min="1"
+                                                            max="100"
+                                                            step="1"
+                                                            type="range"
+                                                        />
+                                                    </div>
+                                                    <a
+                                                        class="button-main-text p-16-auto-bold"
+                                                        href="#"
+                                                        >Підтвердити</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2
+                                        class="accordion-header"
+                                        id="headingTwo"
+                                    >
+                                        <button
+                                            class="accordion-button collapsed p-16-auto-medium"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFromToSize"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFromToSize"
+                                        >
+                                            Розмір
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseFromToSize"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingFromToSize"
+                                        data-bs-parent="#accordionFromToSize"
+                                    >
+                                        <div class="accordion-body">
+                                            <div
+                                                class="from-to-input-container"
+                                            >
+                                                <div
+                                                    id="rangeSlider"
+                                                    class="range-slider"
+                                                >
+                                                    <!-- INPUT-GROUP -->
+                                                    <div class="number-group">
+                                                        <input
+                                                            class="number-input p-16-auto-medium"
+                                                            type="number"
+                                                            value="1"
+                                                            min="0"
+                                                            max="100"
+                                                            placeholder="Від..."
+                                                        />
+                                                        <input
+                                                            class="number-input p-16-auto-medium"
+                                                            type="number"
+                                                            value="100"
+                                                            min="0"
+                                                            max="100"
+                                                            placeholder="До..."
+                                                        />
+                                                    </div>
+
+                                                    <!-- RANGE-GROUP -->
+                                                    <div class="range-group">
+                                                        <input
+                                                            class="range-input"
+                                                            value="1"
+                                                            min="1"
+                                                            max="100"
+                                                            step="1"
+                                                            type="range"
+                                                        />
+                                                        <input
+                                                            class="range-input"
+                                                            value="100"
+                                                            min="1"
+                                                            max="100"
+                                                            step="1"
+                                                            type="range"
+                                                        />
+                                                    </div>
+                                                    <a
+                                                        class="button-main-text p-16-auto-bold"
+                                                        href="#"
+                                                        >Підтвердити</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-btn-box">
+                        <a class="button-main-text p-16-auto-bold" href="#">
+                            Підібрати
+                        </a>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./img/fast-search-container.jpg" alt="flowers" />
+                </div>
+            </div>
+        </section>
 
         <!-- SLIDER-FAST-SEARCH -->
         <section class="results-fast-search m-b-60">

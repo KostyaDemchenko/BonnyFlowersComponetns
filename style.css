@@ -429,21 +429,21 @@ button {
 @media screen and (max-width: 700px) {
     .h1-42-auto-bold {
         /* p-16-Auto/Bold */
-        font-size: 16px;
+        font-size: 18px;
         font-family: Montserrat;
         font-weight: 700;
     }
 
     .h1-42-auto-medium {
         /* p-16-Auto/Medium */
-        font-size: 16px;
+        font-size: 18px;
         font-family: Montserrat;
         font-weight: 500;
     }
 
     .h1-42-auto-regular {
         /* p-16-Auto/Regular */
-        font-size: 16px;
+        font-size: 18px;
         font-family: Montserrat;
     }
 
@@ -3759,10 +3759,24 @@ footer {
     padding: 20px;
 }
 
+.fast-search-container .title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .quick-search-options {
     display: flex;
     flex-direction: column;
     gap: 70px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.fast-search-container .accordion-from-to .accordion-button,
+.fast-search-container .accordion-from-to {
+    max-width: 100%;
+    border-radius: calc(0.5rem - 1px);
 }
 
 @media screen and (max-width: 700px) {
@@ -3782,5 +3796,9 @@ footer {
 
     .fast-search-container .quick-search-options .quick-search-options-box {
         width: 100%;
+    }
+
+    .fast-search-container .accordion-from-to .accordion-button {
+        border: 1px solid var(--light-gray);
     }
 }

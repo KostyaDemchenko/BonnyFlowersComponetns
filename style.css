@@ -262,6 +262,10 @@ button {
         margin-bottom: 0;
     }
 
+    .m-b-50 {
+        margin-bottom: 20px;
+    }
+
     .m-b-60 {
         margin-bottom: 35px;
     }
@@ -1098,11 +1102,6 @@ button {
     .accordion-from-to .accordion-button {
         max-width: 100%;
         width: 100%;
-    }
-
-    .accordion-button {
-        border-radius: 5px;
-        border: 1px solid var(--light-gray);
     }
 
     .accordion-from-to .accordion-body {
@@ -2653,6 +2652,12 @@ button {
 
 /* SLIDER-FAST-SEARCH */
 
+.results-fast-search {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
 .results-fast-search-container {
     margin: 0 auto;
     display: flex;
@@ -2661,7 +2666,7 @@ button {
     background-color: var(--white);
     max-width: 1390px;
     width: 100%;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .title-box {

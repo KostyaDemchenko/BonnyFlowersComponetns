@@ -581,3 +581,32 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+
+// FAST-SEARCH-SHOW-ANIM
+
+document.addEventListener("DOMContentLoaded", function () {
+  const showBlockFastSearchButton = document.getElementById("showBlockFastSearchButton");
+  const hiddenBlockFastSearch = document.getElementById("hiddenBlockFastSearch");
+  let isOpen = false;
+
+  showBlockFastSearchButton.addEventListener("click", function () {
+    if (!isOpen) {
+      hiddenBlockFastSearch.style.display = "block";
+      setTimeout(() => {
+        hiddenBlockFastSearch.style.maxHeight = hiddenBlockFastSearch.scrollHeight + "px";
+      }, 10); // Небольшая задержка перед анимацией
+      isOpen = true;
+    }
+
+    // re-click-on-the-btn(hidden)
+    // else {
+    //   hiddenBlockFastSearch.style.maxHeight = "0px";
+    //   setTimeout(() => {
+    //     hiddenBlockFastSearch.style.display = "none";
+    //   }, 500); // Задержка перед скрытием (время анимации 0.5 секунд)
+    //   isOpen = false;
+    // }
+  });
+});
+
+

@@ -3889,10 +3889,34 @@ footer {
 
 /* BEST-SELLERS, ADDITIONAL */
 
-.best-sellers {
+.best-sellers,
+.additional-items {
     width: 100%;
 }
 
 .best-sellers .best-sellers-container .slider-product-container {
     margin: 0 auto;
+}
+
+.additional-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.additional-items .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+@media screen and (max-width: 700px) {
+    .additional-items .card-container {
+        gap: 10px;
+    }
+
+    .card-container .card-xl:nth-child(odd):last-child {
+        display: none;
+    }
 }
